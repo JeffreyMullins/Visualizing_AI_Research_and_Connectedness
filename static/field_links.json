@@ -1,0 +1,742 @@
+[
+  {
+    "source": "Arts and Humanities",
+    "target": "Social Sciences",
+    "count": 141
+  },
+  {
+    "source": "Computer Science",
+    "target": "Engineering",
+    "count": 65
+  },
+  {
+    "source": "Engineering",
+    "target": "Materials Science",
+    "count": 53
+  },
+  {
+    "source": "Computer Science",
+    "target": "Social Sciences",
+    "count": 47
+  },
+  {
+    "source": "Health Professions",
+    "target": "Social Sciences",
+    "count": 41
+  },
+  {
+    "source": "Engineering",
+    "target": "Physics and Astronomy",
+    "count": 39
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Social Sciences",
+    "count": 30
+  },
+  {
+    "source": "Engineering",
+    "target": "Environmental Science",
+    "count": 30
+  },
+  {
+    "source": "Environmental Science",
+    "target": "Social Sciences",
+    "count": 26
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Medicine",
+    "count": 25
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Biochemistry, Genetics and Molecular Biology",
+    "count": 25
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Computer Science",
+    "count": 25
+  },
+  {
+    "source": "Engineering",
+    "target": "Medicine",
+    "count": 23
+  },
+  {
+    "source": "Business, Management and Accounting",
+    "target": "Social Sciences",
+    "count": 22
+  },
+  {
+    "source": "Engineering",
+    "target": "Social Sciences",
+    "count": 22
+  },
+  {
+    "source": "Psychology",
+    "target": "Social Sciences",
+    "count": 22
+  },
+  {
+    "source": "Decision Sciences",
+    "target": "Social Sciences",
+    "count": 21
+  },
+  {
+    "source": "Decision Sciences",
+    "target": "Engineering",
+    "count": 20
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Environmental Science",
+    "count": 20
+  },
+  {
+    "source": "Economics, Econometrics and Finance",
+    "target": "Social Sciences",
+    "count": 19
+  },
+  {
+    "source": "Earth and Planetary Sciences",
+    "target": "Engineering",
+    "count": 19
+  },
+  {
+    "source": "Computer Science",
+    "target": "Mathematics",
+    "count": 19
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Earth and Planetary Sciences",
+    "count": 19
+  },
+  {
+    "source": "Computer Science",
+    "target": "Psychology",
+    "count": 18
+  },
+  {
+    "source": "Earth and Planetary Sciences",
+    "target": "Environmental Science",
+    "count": 17
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Psychology",
+    "count": 17
+  },
+  {
+    "source": "Computer Science",
+    "target": "Decision Sciences",
+    "count": 17
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Engineering",
+    "count": 14
+  },
+  {
+    "source": "Business, Management and Accounting",
+    "target": "Computer Science",
+    "count": 14
+  },
+  {
+    "source": "Health Professions",
+    "target": "Medicine",
+    "count": 12
+  },
+  {
+    "source": "Medicine",
+    "target": "Psychology",
+    "count": 12
+  },
+  {
+    "source": "Chemistry",
+    "target": "Engineering",
+    "count": 12
+  },
+  {
+    "source": "Business, Management and Accounting",
+    "target": "Engineering",
+    "count": 12
+  },
+  {
+    "source": "Engineering",
+    "target": "Mathematics",
+    "count": 11
+  },
+  {
+    "source": "Health Professions",
+    "target": "Psychology",
+    "count": 10
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Engineering",
+    "count": 9
+  },
+  {
+    "source": "Computer Science",
+    "target": "Physics and Astronomy",
+    "count": 9
+  },
+  {
+    "source": "Earth and Planetary Sciences",
+    "target": "Social Sciences",
+    "count": 9
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Physics and Astronomy",
+    "count": 9
+  },
+  {
+    "source": "Earth and Planetary Sciences",
+    "target": "Physics and Astronomy",
+    "count": 8
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Arts and Humanities",
+    "count": 8
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Earth and Planetary Sciences",
+    "count": 8
+  },
+  {
+    "source": "Business, Management and Accounting",
+    "target": "Economics, Econometrics and Finance",
+    "count": 7
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Engineering",
+    "count": 7
+  },
+  {
+    "source": "Engineering",
+    "target": "Health Professions",
+    "count": 7
+  },
+  {
+    "source": "Business, Management and Accounting",
+    "target": "Decision Sciences",
+    "count": 7
+  },
+  {
+    "source": "Neuroscience",
+    "target": "Psychology",
+    "count": 7
+  },
+  {
+    "source": "Chemistry",
+    "target": "Medicine",
+    "count": 7
+  },
+  {
+    "source": "Medicine",
+    "target": "Neuroscience",
+    "count": 7
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Computer Science",
+    "count": 7
+  },
+  {
+    "source": "Environmental Science",
+    "target": "Health Professions",
+    "count": 6
+  },
+  {
+    "source": "Medicine",
+    "target": "Social Sciences",
+    "count": 6
+  },
+  {
+    "source": "Engineering",
+    "target": "Psychology",
+    "count": 6
+  },
+  {
+    "source": "Chemistry",
+    "target": "Physics and Astronomy",
+    "count": 6
+  },
+  {
+    "source": "Mathematics",
+    "target": "Physics and Astronomy",
+    "count": 6
+  },
+  {
+    "source": "Computer Science",
+    "target": "Neuroscience",
+    "count": 6
+  },
+  {
+    "source": "Chemistry",
+    "target": "Materials Science",
+    "count": 6
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Environmental Science",
+    "count": 5
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Medicine",
+    "count": 5
+  },
+  {
+    "source": "Immunology and Microbiology",
+    "target": "Medicine",
+    "count": 5
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Business, Management and Accounting",
+    "count": 5
+  },
+  {
+    "source": "Materials Science",
+    "target": "Physics and Astronomy",
+    "count": 5
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Chemistry",
+    "count": 5
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Economics, Econometrics and Finance",
+    "count": 4
+  },
+  {
+    "source": "Decision Sciences",
+    "target": "Health Professions",
+    "count": 4
+  },
+  {
+    "source": "Energy",
+    "target": "Engineering",
+    "count": 4
+  },
+  {
+    "source": "Chemical Engineering",
+    "target": "Engineering",
+    "count": 4
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Pharmacology, Toxicology and Pharmaceutics",
+    "count": 4
+  },
+  {
+    "source": "Computer Science",
+    "target": "Medicine",
+    "count": 4
+  },
+  {
+    "source": "Economics, Econometrics and Finance",
+    "target": "Energy",
+    "count": 4
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Materials Science",
+    "count": 4
+  },
+  {
+    "source": "Computer Science",
+    "target": "Earth and Planetary Sciences",
+    "count": 4
+  },
+  {
+    "source": "Health Professions",
+    "target": "Neuroscience",
+    "count": 4
+  },
+  {
+    "source": "Chemistry",
+    "target": "Environmental Science",
+    "count": 3
+  },
+  {
+    "source": "Economics, Econometrics and Finance",
+    "target": "Engineering",
+    "count": 3
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Nursing",
+    "count": 3
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Immunology and Microbiology",
+    "count": 3
+  },
+  {
+    "source": "Dentistry",
+    "target": "Engineering",
+    "count": 3
+  },
+  {
+    "source": "Computer Science",
+    "target": "Materials Science",
+    "count": 3
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Health Professions",
+    "count": 3
+  },
+  {
+    "source": "Economics, Econometrics and Finance",
+    "target": "Health Professions",
+    "count": 3
+  },
+  {
+    "source": "Chemical Engineering",
+    "target": "Materials Science",
+    "count": 3
+  },
+  {
+    "source": "Materials Science",
+    "target": "Medicine",
+    "count": 3
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Neuroscience",
+    "count": 3
+  },
+  {
+    "source": "Earth and Planetary Sciences",
+    "target": "Materials Science",
+    "count": 3
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Health Professions",
+    "count": 2
+  },
+  {
+    "source": "Decision Sciences",
+    "target": "Environmental Science",
+    "count": 2
+  },
+  {
+    "source": "Dentistry",
+    "target": "Medicine",
+    "count": 2
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Decision Sciences",
+    "count": 2
+  },
+  {
+    "source": "Computer Science",
+    "target": "Economics, Econometrics and Finance",
+    "count": 2
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Chemistry",
+    "count": 2
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Medicine",
+    "count": 2
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Immunology and Microbiology",
+    "count": 2
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Environmental Science",
+    "count": 2
+  },
+  {
+    "source": "Business, Management and Accounting",
+    "target": "Psychology",
+    "count": 2
+  },
+  {
+    "source": "Decision Sciences",
+    "target": "Psychology",
+    "count": 2
+  },
+  {
+    "source": "Economics, Econometrics and Finance",
+    "target": "Medicine",
+    "count": 2
+  },
+  {
+    "source": "Mathematics",
+    "target": "Social Sciences",
+    "count": 2
+  },
+  {
+    "source": "Medicine",
+    "target": "Pharmacology, Toxicology and Pharmaceutics",
+    "count": 2
+  },
+  {
+    "source": "Chemistry",
+    "target": "Computer Science",
+    "count": 2
+  },
+  {
+    "source": "Medicine",
+    "target": "Physics and Astronomy",
+    "count": 2
+  },
+  {
+    "source": "Business, Management and Accounting",
+    "target": "Health Professions",
+    "count": 2
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Earth and Planetary Sciences",
+    "count": 2
+  },
+  {
+    "source": "Business, Management and Accounting",
+    "target": "Environmental Science",
+    "count": 2
+  },
+  {
+    "source": "Engineering",
+    "target": "Neuroscience",
+    "count": 2
+  },
+  {
+    "source": "Decision Sciences",
+    "target": "Mathematics",
+    "count": 2
+  },
+  {
+    "source": "Environmental Science",
+    "target": "Physics and Astronomy",
+    "count": 2
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Mathematics",
+    "count": 2
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Nursing",
+    "count": 2
+  },
+  {
+    "source": "Energy",
+    "target": "Materials Science",
+    "count": 2
+  },
+  {
+    "source": "Business, Management and Accounting",
+    "target": "Medicine",
+    "count": 2
+  },
+  {
+    "source": "Economics, Econometrics and Finance",
+    "target": "Environmental Science",
+    "count": 1
+  },
+  {
+    "source": "Environmental Science",
+    "target": "Immunology and Microbiology",
+    "count": 1
+  },
+  {
+    "source": "Energy",
+    "target": "Social Sciences",
+    "count": 1
+  },
+  {
+    "source": "Neuroscience",
+    "target": "Social Sciences",
+    "count": 1
+  },
+  {
+    "source": "Computer Science",
+    "target": "Environmental Science",
+    "count": 1
+  },
+  {
+    "source": "Dentistry",
+    "target": "Environmental Science",
+    "count": 1
+  },
+  {
+    "source": "Dentistry",
+    "target": "Health Professions",
+    "count": 1
+  },
+  {
+    "source": "Environmental Science",
+    "target": "Medicine",
+    "count": 1
+  },
+  {
+    "source": "Decision Sciences",
+    "target": "Economics, Econometrics and Finance",
+    "count": 1
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Business, Management and Accounting",
+    "count": 1
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Physics and Astronomy",
+    "count": 1
+  },
+  {
+    "source": "Mathematics",
+    "target": "Medicine",
+    "count": 1
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Chemical Engineering",
+    "count": 1
+  },
+  {
+    "source": "Earth and Planetary Sciences",
+    "target": "Psychology",
+    "count": 1
+  },
+  {
+    "source": "Chemistry",
+    "target": "Neuroscience",
+    "count": 1
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Psychology",
+    "count": 1
+  },
+  {
+    "source": "Chemical Engineering",
+    "target": "Decision Sciences",
+    "count": 1
+  },
+  {
+    "source": "Materials Science",
+    "target": "Nursing",
+    "count": 1
+  },
+  {
+    "source": "Decision Sciences",
+    "target": "Earth and Planetary Sciences",
+    "count": 1
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Veterinary",
+    "count": 1
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Chemistry",
+    "count": 1
+  },
+  {
+    "source": "Earth and Planetary Sciences",
+    "target": "Mathematics",
+    "count": 1
+  },
+  {
+    "source": "Engineering",
+    "target": "Nursing",
+    "count": 1
+  },
+  {
+    "source": "Chemistry",
+    "target": "Nursing",
+    "count": 1
+  },
+  {
+    "source": "Medicine",
+    "target": "Nursing",
+    "count": 1
+  },
+  {
+    "source": "Computer Science",
+    "target": "Health Professions",
+    "count": 1
+  },
+  {
+    "source": "Arts and Humanities",
+    "target": "Biochemistry, Genetics and Molecular Biology",
+    "count": 1
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Decision Sciences",
+    "count": 1
+  },
+  {
+    "source": "Chemistry",
+    "target": "Earth and Planetary Sciences",
+    "count": 1
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Decision Sciences",
+    "count": 1
+  },
+  {
+    "source": "Environmental Science",
+    "target": "Pharmacology, Toxicology and Pharmaceutics",
+    "count": 1
+  },
+  {
+    "source": "Agricultural and Biological Sciences",
+    "target": "Neuroscience",
+    "count": 1
+  },
+  {
+    "source": "Earth and Planetary Sciences",
+    "target": "Economics, Econometrics and Finance",
+    "count": 1
+  },
+  {
+    "source": "Neuroscience",
+    "target": "Physics and Astronomy",
+    "count": 1
+  },
+  {
+    "source": "Chemistry",
+    "target": "Psychology",
+    "count": 1
+  },
+  {
+    "source": "Biochemistry, Genetics and Molecular Biology",
+    "target": "Pharmacology, Toxicology and Pharmaceutics",
+    "count": 1
+  },
+  {
+    "source": "Chemical Engineering",
+    "target": "Earth and Planetary Sciences",
+    "count": 1
+  }
+]

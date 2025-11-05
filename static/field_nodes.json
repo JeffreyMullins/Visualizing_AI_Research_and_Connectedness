@@ -1,0 +1,106 @@
+[
+  {
+    "id": "Social Sciences",
+    "count": 581
+  },
+  {
+    "id": "Engineering",
+    "count": 486
+  },
+  {
+    "id": "Computer Science",
+    "count": 301
+  },
+  {
+    "id": "Arts and Humanities",
+    "count": 293
+  },
+  {
+    "id": "Agricultural and Biological Sciences",
+    "count": 177
+  },
+  {
+    "id": "Medicine",
+    "count": 146
+  },
+  {
+    "id": "Environmental Science",
+    "count": 126
+  },
+  {
+    "id": "Biochemistry, Genetics and Molecular Biology",
+    "count": 114
+  },
+  {
+    "id": "Business, Management and Accounting",
+    "count": 100
+  },
+  {
+    "id": "Health Professions",
+    "count": 95
+  },
+  {
+    "id": "Earth and Planetary Sciences",
+    "count": 94
+  },
+  {
+    "id": "Physics and Astronomy",
+    "count": 91
+  },
+  {
+    "id": "Psychology",
+    "count": 90
+  },
+  {
+    "id": "Materials Science",
+    "count": 80
+  },
+  {
+    "id": "Decision Sciences",
+    "count": 76
+  },
+  {
+    "id": "Mathematics",
+    "count": 62
+  },
+  {
+    "id": "Economics, Econometrics and Finance",
+    "count": 57
+  },
+  {
+    "id": "Chemistry",
+    "count": 46
+  },
+  {
+    "id": "Neuroscience",
+    "count": 31
+  },
+  {
+    "id": "Energy",
+    "count": 14
+  },
+  {
+    "id": "Nursing",
+    "count": 11
+  },
+  {
+    "id": "Dentistry",
+    "count": 10
+  },
+  {
+    "id": "Immunology and Microbiology",
+    "count": 9
+  },
+  {
+    "id": "Chemical Engineering",
+    "count": 6
+  },
+  {
+    "id": "Pharmacology, Toxicology and Pharmaceutics",
+    "count": 6
+  },
+  {
+    "id": "Veterinary",
+    "count": 2
+  }
+]
