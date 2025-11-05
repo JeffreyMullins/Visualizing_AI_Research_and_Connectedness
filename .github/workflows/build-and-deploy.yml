@@ -24,7 +24,7 @@ jobs:
 
       - name: build
         env:
-           BASE_PATH: '/my-vis-5609'
+           BASE_PATH: '/Visualizing_AI_Research_and_Connectedness'
         run: npm run build
 
       - name: Upload Artifacts
