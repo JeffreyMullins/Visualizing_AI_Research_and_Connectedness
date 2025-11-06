@@ -24,7 +24,7 @@ export type TAuthor = {
     work_id: string;
     a_id: string;
     position: string;
-    counties: string[];
+    countries: string[];
 }
 
 export type TKeyword = {
@@ -49,3 +49,10 @@ export type TTopic = {
     topic_domain_display_name: string;
 }
 
+export type Tworks_with_author = {
+    work_id: string;
+    author_id: string;
+    countries: string[];
+    topic_field_display_name: string;
+    pub_year: number;
+}
