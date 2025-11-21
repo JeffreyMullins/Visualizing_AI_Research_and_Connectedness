@@ -3,6 +3,10 @@
   import { onMount } from "svelte";
   import type { TTopic } from "../../types";
   import Bar_topics from "$lib/Bar_topics.svelte";
+  import FieldsGalaxy from "$lib/vis/FieldsGalaxy.svelte";
+  import FieldTrends from "$lib/vis/FieldTrends.svelte";
+  import AiGeoMap from "$lib/vis/AiGeoMap.svelte";
+  import CoauthorNetwork from "$lib/vis/CoauthorNetwork.svelte";
 
   // --- Topic data ---
   let topics: TTopic[] = [];
@@ -200,7 +204,7 @@
   </header>
 
   <section class="layout-grid">
-    <!-- Left panel: Bar chart -->
+    <!-- Jeff: Bar chart -->
     <section class="panel">
       <div class="panel-header">
         <h2>Topic Distribution</h2>
@@ -215,7 +219,7 @@
       </div>
     </section>
 
-    <!-- Right panel: Network -->
+    <!-- Wenwen: Network -->
     <section class="panel">
       <div class="panel-header">
         <h2>Field Co-occurrence Network</h2>
@@ -234,6 +238,22 @@
         </p>
       </div>
     </section>
+  </section>
+  <!-- Mingyang: Author -->
+  <section class="panel">
+    <FieldsGalaxy />
+    <FieldTrends />
+  </section>
+
+  <section class="panel">
+    <FieldTrends />
+  </section>
+
+  <section class="panel">
+    <AiGeoMap />
+  </section>
+  <section class="panel">
+    <CoauthorNetwork />
   </section>
 
   <footer class="footer">
