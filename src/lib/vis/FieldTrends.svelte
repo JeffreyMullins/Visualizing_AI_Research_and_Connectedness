@@ -29,7 +29,7 @@
   let sel1 = "";
   let sel2 = "";
 
-  // hover state
+  // hover state (for tooltip)
   type HoverRow = {
     name: string;
     value: number;
@@ -154,7 +154,7 @@
       }
     }
 
-    // build time series arrays
+    // build time series arrays (ensure every year is present)
     for (const f of byFA.keys()) {
       seriesUnique.set(
         f,
@@ -228,10 +228,8 @@
     redrawMain();
   }
 
-  // ✅ FIXED: take checked value from the event (no double-toggle)
-  function onToggleTotal(e: Event) {
-    const input = e.target as HTMLInputElement;
-    showTotal = input.checked;
+  function onToggleTotal() {
+    showTotal = !showTotal;
     redrawMain();
   }
 
@@ -330,6 +328,7 @@
       .attr("class", "axis axis-y")
       .call(yAxis);
 
+    // line generator
     const lineGen = d3
       .line<[number, number]>()
       .x(([year]) => xScale(year))
@@ -418,20 +417,21 @@
       .curve(d3.curveMonotoneX);
 
     svg
-      .append("rect")
-      .attr("x", marginMini.left)
-      .attr("y", marginMini.top)
-      .attr("width", w - marginMini.left - marginMini.right)
-      .attr("height", h - marginMini.top - marginMini.bottom)
-      .attr("fill", "#e5e7eb");
-
-    svg
       .append("path")
       .datum(data)
       .attr("fill", "rgba(59,130,246,0.25)")
       .attr("stroke", "rgba(59,130,246,0.9)")
       .attr("stroke-width", 1.2)
       .attr("d", area);
+
+    // simple baseline
+    svg
+      .append("line")
+      .attr("x1", marginMini.left)
+      .attr("x2", w - marginMini.right)
+      .attr("y1", h - marginMini.bottom + 0.5)
+      .attr("y2", h - marginMini.bottom + 0.5)
+      .attr("stroke", "#d1d5db");
 
     const brush = d3
       .brushX()
@@ -472,7 +472,7 @@
     redrawMain();
   }
 
-  // -------------------- HOVER --------------------
+  // -------------------- HOVER HANDLERS --------------------
   function handleMove(event: any, x: d3.ScaleLinear<number, number>) {
     if (!years.length) return;
 
@@ -480,6 +480,7 @@
     const [mx] = d3.pointer(event, svg.node() as any);
     const xVal = x.invert(mx);
 
+    // find the nearest existing year within current range
     let bestYear = years[0];
     let bestDist = Infinity;
     for (const yr of years) {
@@ -587,8 +588,11 @@
     </label>
 
     <label class="toggle-total">
-      <!-- ✅ FIXED: no bind:checked; change handler uses checked value -->
-      <input type="checkbox" checked={showTotal} on:change={onToggleTotal} />
+      <input
+        type="checkbox"
+        bind:checked={showTotal}
+        on:change={onToggleTotal}
+      />
       <span>Show Total</span>
     </label>
 

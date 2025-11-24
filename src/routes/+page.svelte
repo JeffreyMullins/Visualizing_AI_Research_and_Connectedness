@@ -242,6 +242,9 @@
   <!-- Mingyang: Author -->
   <section class="panel">
     <FieldsGalaxy />
+  </section>
+
+  <section class="panel">
     <FieldTrends />
   </section>
 
