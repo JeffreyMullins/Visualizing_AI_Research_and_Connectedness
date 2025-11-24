@@ -245,10 +245,6 @@
   </section>
 
   <section class="panel">
-    <FieldTrends />
-  </section>
-
-  <section class="panel">
     <AiGeoMap />
   </section>
   <section class="panel">

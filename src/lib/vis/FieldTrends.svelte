@@ -14,10 +14,10 @@
 
   let rows: WorkRow[] = [];
   let years: number[] = [];
-  let yearMin = 1970;
-  let yearMax = 2025;
-  let rangeStart: number;
-  let rangeEnd: number;
+  let yearMin = 0;
+  let yearMax = 0;
+  let rangeStart = 0;
+  let rangeEnd = 0;
 
   // per-field series: Map<FieldName, Array<[year, value]>>
   const seriesUnique = new Map<string, Array<[number, number]>>();
@@ -29,7 +29,7 @@
   let sel1 = "";
   let sel2 = "";
 
-  // hover state (for tooltip)
+  // hover state
   type HoverRow = {
     name: string;
     value: number;
@@ -69,8 +69,7 @@
       return;
     }
 
-    years = yearsFrom(rows);
-    years.sort((a, b) => a - b);
+    years = yearsFrom(rows).sort((a, b) => a - b);
     yearMin = years[0];
     yearMax = years[years.length - 1];
 
@@ -79,9 +78,7 @@
     rangeStart = yearMin;
     rangeEnd = yearMax;
 
-    if (wrap) {
-      width = wrap.clientWidth || 900;
-    }
+    if (wrap) width = wrap.clientWidth || 900;
 
     redrawBoth();
 
@@ -131,7 +128,7 @@
 
       // per-field
       for (const f of fields) {
-        // unique authors
+        // unique
         let uMap = byFU.get(f);
         if (!uMap) {
           uMap = new Map<number, Set<string>>();
@@ -154,7 +151,7 @@
       }
     }
 
-    // build time series arrays (ensure every year is present)
+    // build series arrays (0-filled where no value)
     for (const f of byFA.keys()) {
       seriesUnique.set(
         f,
@@ -179,12 +176,8 @@
     );
     colorScale = d3.scaleOrdinal<string, string>().domain(allFields).range(pal);
 
-    if (!sel1 && allFields.length > 0) {
-      sel1 = allFields[0];
-    }
-    if (!sel2) {
-      sel2 = "";
-    }
+    if (!sel1 && allFields.length > 0) sel1 = allFields[0];
+    if (!sel2) sel2 = "";
   }
 
   // -------------------- HELPERS --------------------
@@ -194,12 +187,6 @@
 
   function totalSeries() {
     return metric === "unique" ? totalUnique : totalAuth;
-  }
-
-  function metricLabel() {
-    return metric === "unique"
-      ? "Unique authors per year"
-      : "Total authorships per year";
   }
 
   function redrawMain() {
@@ -228,8 +215,9 @@
     redrawMain();
   }
 
-  function onToggleTotal() {
-    showTotal = !showTotal;
+  function onToggleTotal(e: Event) {
+    const input = e.target as HTMLInputElement;
+    showTotal = input.checked;
     redrawMain();
   }
 
@@ -243,7 +231,6 @@
 
     svg.attr("viewBox", `0 0 ${w} ${h}`);
 
-    // x-scale based on current brush range
     xScale = d3
       .scaleLinear()
       .domain([rangeStart, rangeEnd])
@@ -328,25 +315,45 @@
       .attr("class", "axis axis-y")
       .call(yAxis);
 
-    // line generator
     const lineGen = d3
       .line<[number, number]>()
       .x(([year]) => xScale(year))
       .y(([, v]) => yScale(v))
       .curve(d3.curveMonotoneX);
 
-    // draw series
-    for (const s of lines) {
-      svg
+    // helper to draw + animate one line
+    function drawAnimatedLine(
+      data: [number, number][],
+      color: string,
+      dashed: boolean,
+      isTotal: boolean,
+    ) {
+      const path = svg
         .append("path")
-        .datum(s.data)
+        .datum(data)
         .attr("fill", "none")
-        .attr("stroke", s.color)
-        .attr("stroke-width", s.isTotal ? 2.4 : 2.2)
+        .attr("stroke", color)
+        .attr("stroke-width", isTotal ? 2.6 : 2.2)
         .attr("stroke-linecap", "round")
         .attr("stroke-linejoin", "round")
-        .attr("stroke-dasharray", s.dashed ? "4 3" : null)
+        .attr("stroke-dasharray", dashed ? "4 3" : null)
         .attr("d", lineGen);
+
+      // line-draw animation from left to right
+      const node = path.node() as SVGPathElement | null;
+      if (!node) return;
+      const len = node.getTotalLength();
+      path
+        .attr("stroke-dasharray", `${len} ${len}`)
+        .attr("stroke-dashoffset", len)
+        .transition()
+        .duration(900)
+        .ease(d3.easeCubicOut)
+        .attr("stroke-dashoffset", 0);
+    }
+
+    for (const s of lines) {
+      drawAnimatedLine(s.data, s.color, !!s.dashed, !!s.isTotal);
     }
 
     // y-axis label
@@ -370,7 +377,7 @@
       .attr("stroke-dasharray", "3,3")
       .style("opacity", 0);
 
-    // overlay for pointer events
+    // pointer overlay
     svg
       .append("rect")
       .attr("class", "overlay")
@@ -416,22 +423,23 @@
       .y1(([, v]) => yMiniScale(v))
       .curve(d3.curveMonotoneX);
 
+    // light background
+    svg
+      .append("rect")
+      .attr("x", marginMini.left)
+      .attr("y", marginMini.top)
+      .attr("width", w - marginMini.left - marginMini.right)
+      .attr("height", h - marginMini.top - marginMini.bottom)
+      .attr("fill", "#e5e7eb");
+
+    // area of total series
     svg
       .append("path")
       .datum(data)
-      .attr("fill", "rgba(59,130,246,0.25)")
-      .attr("stroke", "rgba(59,130,246,0.9)")
-      .attr("stroke-width", 1.2)
+      .attr("fill", "rgba(37,99,235,0.25)")
+      .attr("stroke", "rgba(37,99,235,0.9)")
+      .attr("stroke-width", 1.1)
       .attr("d", area);
-
-    // simple baseline
-    svg
-      .append("line")
-      .attr("x1", marginMini.left)
-      .attr("x2", w - marginMini.right)
-      .attr("y1", h - marginMini.bottom + 0.5)
-      .attr("y2", h - marginMini.bottom + 0.5)
-      .attr("stroke", "#d1d5db");
 
     const brush = d3
       .brushX()
@@ -452,6 +460,14 @@
       xMiniScale(rangeEnd),
     ];
     gBrush.call((brush as any).move, initialSel);
+
+    // style the brush selection rectangle
+    gBrush
+      .selectAll<SVGRectElement, unknown>(".selection")
+      .attr("fill", "rgba(59,130,246,0.45)")
+      .attr("stroke", "#1d4ed8")
+      .attr("stroke-width", 1.2)
+      .attr("rx", 4);
   }
 
   function brushed(event: any, xMini: d3.ScaleLinear<number, number>) {
@@ -472,7 +488,7 @@
     redrawMain();
   }
 
-  // -------------------- HOVER HANDLERS --------------------
+  // -------------------- HOVER --------------------
   function handleMove(event: any, x: d3.ScaleLinear<number, number>) {
     if (!years.length) return;
 
@@ -480,7 +496,7 @@
     const [mx] = d3.pointer(event, svg.node() as any);
     const xVal = x.invert(mx);
 
-    // find the nearest existing year within current range
+    // nearest year within range
     let bestYear = years[0];
     let bestDist = Infinity;
     for (const yr of years) {
@@ -525,6 +541,8 @@
       vals.push({ name: "Total", value: v, color: "#111827", isTotal: true });
     }
 
+    // sort so larger values are on top in tooltip
+    vals.sort((a, b) => b.value - a.value);
     hoverValues = vals;
   }
 
@@ -588,11 +606,7 @@
     </label>
 
     <label class="toggle-total">
-      <input
-        type="checkbox"
-        bind:checked={showTotal}
-        on:change={onToggleTotal}
-      />
+      <input type="checkbox" checked={showTotal} on:change={onToggleTotal} />
       <span>Show Total</span>
     </label>
 
@@ -720,7 +734,7 @@
     border-radius: 0.75rem;
     padding: 0.4rem 0.7rem;
     box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-    min-width: 110px;
+    min-width: 120px;
   }
 
   .hover-card.hidden {
