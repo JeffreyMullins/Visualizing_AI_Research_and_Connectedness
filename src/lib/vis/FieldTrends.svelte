@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
+  import { browser } from "$app/environment";
   import * as d3 from "d3";
   import {
     loadWorks,
@@ -63,6 +64,9 @@
 
   // -------------------- LIFECYCLE --------------------
   onMount(async () => {
+    // onMount never runs during SSR, but guard anyway for safety
+    if (!browser) return;
+
     rows = await loadWorks();
     if (!rows.length) {
       console.warn("FieldTrends: loadWorks() returned no rows.");
@@ -82,10 +86,14 @@
 
     redrawBoth();
 
-    window.addEventListener("resize", handleResize);
+    // guard window usage with browser flag
+    if (browser) {
+      window.addEventListener("resize", handleResize);
+    }
   });
 
   onDestroy(() => {
+    if (!browser) return;
     window.removeEventListener("resize", handleResize);
   });
 
@@ -276,7 +284,7 @@
     }
 
     const allVals = lines.flatMap((s) => s.data.map((d) => d[1]));
-    const yMax = (d3.max(allVals) ?? 1) * 1.05;
+    const yMax = ((d3.max(allVals) ?? 1) || 1) * 1.05;
 
     yScale = d3
       .scaleLinear()
