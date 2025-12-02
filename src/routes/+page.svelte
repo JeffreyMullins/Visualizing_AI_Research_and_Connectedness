@@ -242,7 +242,6 @@
   <!-- Mingyang: Author -->
   <section class="panel">
     <FieldsGalaxy />
-    <FieldTrends />
   </section>
 
   <section class="panel">
@@ -252,6 +251,7 @@
   <section class="panel">
     <AiGeoMap />
   </section>
+
   <section class="panel">
     <CoauthorNetwork />
   </section>

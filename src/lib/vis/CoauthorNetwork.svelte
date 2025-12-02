@@ -819,19 +819,6 @@
 
 <div class="tooltip" bind:this={tooltipEl}></div>
 
-<h2
-  style="font-family: 'Georgia', serif; font-style: italic; font-weight: 200;"
->
-  --- Time range; different graph metrics; top authors; hover & click for
-  details.
-</h2>
-<h2
-  style="font-family: 'Georgia', serif; font-style: italic; font-weight: 200;"
->
-  --- Now using OpenAlex author names from <code>authors.csv</code> rather than raw
-  IDs.
-</h2>
-
 <style>
   :root {
     --line: #e5e7eb;
