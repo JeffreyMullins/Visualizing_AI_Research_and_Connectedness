@@ -1,0 +1,2682 @@
+pub_year,topic_field_display_name,num_publications,cross_collaboration_metric,authors
+1900,Agricultural and Biological Sciences,5,1.0,11
+1900,Arts and Humanities,12,0.9375,20
+1900,"Biochemistry, Genetics and Molecular Biology",3,0.6666666666666666,9
+1900,"Business, Management and Accounting",1,0.0,0
+1900,Chemical Engineering,1,1.0,1
+1900,Dentistry,1,0.0,0
+1900,Earth and Planetary Sciences,1,1.0,2
+1900,"Economics, Econometrics and Finance",3,1.0,5
+1900,Engineering,3,1.0,4
+1900,Environmental Science,6,1.0,9
+1900,Health Professions,7,0.8571428571428571,6
+1900,Immunology and Microbiology,2,1.0,2
+1900,Medicine,17,0.8333333333333334,21
+1900,Neuroscience,2,1.0,2
+1900,Physics and Astronomy,2,1.0,2
+1900,Social Sciences,10,0.9047619047619048,20
+1900,Veterinary,1,1.0,1
+1901,Agricultural and Biological Sciences,6,1.0,19
+1901,Arts and Humanities,15,0.9047619047619048,40
+1901,"Biochemistry, Genetics and Molecular Biology",1,1.0,12
+1901,"Business, Management and Accounting",1,1.0,2
+1901,Chemistry,2,1.0,2
+1901,Computer Science,2,1.0,3
+1901,"Economics, Econometrics and Finance",2,1.0,7
+1901,Energy,1,1.0,2
+1901,Engineering,8,0.625,9
+1901,Environmental Science,6,0.8333333333333334,14
+1901,Health Professions,2,0.5,9
+1901,Mathematics,4,1.0,7
+1901,Medicine,15,0.7058823529411765,34
+1901,Neuroscience,1,0.0,0
+1901,Nursing,1,1.0,1
+1901,Physics and Astronomy,6,1.0,9
+1901,Psychology,1,1.0,2
+1901,Social Sciences,13,0.7333333333333333,33
+1902,Agricultural and Biological Sciences,5,0.8,27
+1902,Arts and Humanities,20,0.92,66
+1902,"Biochemistry, Genetics and Molecular Biology",2,0.6666666666666666,14
+1902,"Business, Management and Accounting",4,0.25,5
+1902,Chemical Engineering,1,0.0,0
+1902,Chemistry,1,1.0,3
+1902,Earth and Planetary Sciences,2,1.0,6
+1902,Energy,1,1.0,3
+1902,Engineering,1,1.0,12
+1902,Environmental Science,5,0.3333333333333333,17
+1902,Health Professions,4,1.0,17
+1902,Immunology and Microbiology,2,0.5,3
+1902,Materials Science,1,0.0,0
+1902,Mathematics,2,0.5,8
+1902,Medicine,17,0.8333333333333334,51
+1902,Physics and Astronomy,1,1.0,10
+1902,Psychology,1,1.0,3
+1902,Social Sciences,17,0.8260869565217391,51
+1903,Agricultural and Biological Sciences,4,1.0,32
+1903,Arts and Humanities,17,0.9,85
+1903,"Biochemistry, Genetics and Molecular Biology",2,1.0,19
+1903,Computer Science,3,0.6666666666666666,5
+1903,Earth and Planetary Sciences,1,1.0,8
+1903,"Economics, Econometrics and Finance",1,1.0,8
+1903,Engineering,7,0.875,28
+1903,Environmental Science,1,0.0,0
+1903,Health Professions,2,0.5,19
+1903,Immunology and Microbiology,1,0.0,0
+1903,Materials Science,3,0.3333333333333333,1
+1903,Mathematics,2,1.0,11
+1903,Medicine,20,0.9090909090909091,73
+1903,Neuroscience,1,0.0,0
+1903,Physics and Astronomy,3,0.75,14
+1903,Psychology,2,0.5,6
+1903,Social Sciences,19,0.8421052631578947,69
+1904,Agricultural and Biological Sciences,5,1.0,37
+1904,Arts and Humanities,18,0.8333333333333334,98
+1904,"Biochemistry, Genetics and Molecular Biology",2,0.5,21
+1904,"Business, Management and Accounting",1,1.0,7
+1904,Computer Science,1,1.0,6
+1904,Earth and Planetary Sciences,2,1.0,11
+1904,Engineering,2,1.0,31
+1904,Environmental Science,4,0.8,21
+1904,Health Professions,1,1.0,20
+1904,Mathematics,2,1.0,12
+1904,Medicine,17,0.9047619047619048,92
+1904,Physics and Astronomy,4,0.5,16
+1904,Psychology,3,0.6666666666666666,8
+1904,Social Sciences,10,0.8666666666666667,82
+1905,Agricultural and Biological Sciences,8,1.0,47
+1905,Arts and Humanities,21,0.9047619047619048,123
+1905,"Biochemistry, Genetics and Molecular Biology",3,0.5,24
+1905,"Business, Management and Accounting",1,1.0,9
+1905,Computer Science,1,1.0,7
+1905,Earth and Planetary Sciences,2,0.5,13
+1905,"Economics, Econometrics and Finance",1,1.0,9
+1905,Energy,1,1.0,5
+1905,Engineering,6,0.6666666666666666,36
+1905,Environmental Science,5,0.4,24
+1905,Health Professions,3,0.3333333333333333,22
+1905,Mathematics,2,1.0,21
+1905,Medicine,19,0.8181818181818182,111
+1905,Neuroscience,2,0.5,4
+1905,Nursing,1,0.0,0
+1905,Physics and Astronomy,3,1.0,24
+1905,Psychology,1,1.0,9
+1905,Social Sciences,25,0.88,102
+1906,Agricultural and Biological Sciences,3,1.0,51
+1906,Arts and Humanities,17,1.0,145
+1906,"Biochemistry, Genetics and Molecular Biology",7,1.0,32
+1906,"Business, Management and Accounting",1,1.0,10
+1906,Chemistry,1,1.0,6
+1906,Decision Sciences,1,1.0,2
+1906,Engineering,6,0.7647058823529411,48
+1906,Environmental Science,2,1.0,26
+1906,Health Professions,2,0.6666666666666666,24
+1906,Materials Science,1,0.0,0
+1906,Medicine,21,0.9545454545454546,133
+1906,Neuroscience,1,0.0,0
+1906,Nursing,1,0.0,0
+1906,Physics and Astronomy,1,0.0,0
+1906,Psychology,1,1.0,10
+1906,Social Sciences,17,0.88,118
+1906,Veterinary,1,0.0,0
+1907,Agricultural and Biological Sciences,6,1.0,58
+1907,Arts and Humanities,20,0.8,168
+1907,"Biochemistry, Genetics and Molecular Biology",2,0.0,0
+1907,"Business, Management and Accounting",2,1.0,12
+1907,Computer Science,2,0.5,9
+1907,"Economics, Econometrics and Finance",1,1.0,10
+1907,Engineering,5,0.8571428571428571,55
+1907,Environmental Science,3,0.3333333333333333,27
+1907,Health Professions,1,1.0,26
+1907,Materials Science,1,0.0,0
+1907,Mathematics,1,0.0,0
+1907,Medicine,20,0.9285714285714286,157
+1907,Neuroscience,1,1.0,6
+1907,Nursing,2,1.0,3
+1907,Physics and Astronomy,2,1.0,26
+1907,Psychology,2,1.0,12
+1907,Social Sciences,21,0.7692307692307693,135
+1908,Agricultural and Biological Sciences,7,1.0,68
+1908,Arts and Humanities,28,0.8125,193
+1908,"Biochemistry, Genetics and Molecular Biology",4,0.75,38
+1908,"Business, Management and Accounting",2,1.0,15
+1908,Chemistry,1,1.0,7
+1908,Earth and Planetary Sciences,2,1.0,17
+1908,"Economics, Econometrics and Finance",3,1.0,15
+1908,Engineering,3,1.0,58
+1908,Environmental Science,2,0.6666666666666666,29
+1908,Health Professions,2,1.0,31
+1908,Immunology and Microbiology,1,0.0,0
+1908,Materials Science,1,1.0,3
+1908,Mathematics,2,1.0,23
+1908,Medicine,21,0.9230769230769231,182
+1908,Neuroscience,1,1.0,7
+1908,Physics and Astronomy,2,1.0,28
+1908,Psychology,3,0.75,15
+1908,Social Sciences,19,0.6,149
+1909,Agricultural and Biological Sciences,4,1.0,76
+1909,Arts and Humanities,29,0.975,239
+1909,"Biochemistry, Genetics and Molecular Biology",2,0.5,39
+1909,"Business, Management and Accounting",1,1.0,16
+1909,Chemistry,3,1.0,11
+1909,Computer Science,1,0.0,0
+1909,Dentistry,1,0.0,0
+1909,Earth and Planetary Sciences,2,0.5,20
+1909,"Economics, Econometrics and Finance",3,1.0,19
+1909,Engineering,8,0.875,66
+1909,Environmental Science,5,0.6,32
+1909,Health Professions,2,1.0,35
+1909,Mathematics,2,1.0,25
+1909,Medicine,25,0.7575757575757576,206
+1909,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1909,Physics and Astronomy,3,0.3333333333333333,29
+1909,Psychology,6,0.5,19
+1909,Social Sciences,27,0.8064516129032258,172
+1910,Agricultural and Biological Sciences,3,1.0,83
+1910,Arts and Humanities,22,0.8387096774193549,270
+1910,"Biochemistry, Genetics and Molecular Biology",5,0.8333333333333334,46
+1910,"Business, Management and Accounting",1,1.0,19
+1910,Chemistry,3,0.6666666666666666,16
+1910,Computer Science,1,1.0,11
+1910,Earth and Planetary Sciences,1,0.0,0
+1910,"Economics, Econometrics and Finance",1,1.0,21
+1910,Engineering,4,0.8333333333333334,72
+1910,Environmental Science,8,0.625,38
+1910,Health Professions,3,1.0,39
+1910,Immunology and Microbiology,1,0.0,0
+1910,Materials Science,3,0.5,5
+1910,Mathematics,1,1.0,26
+1910,Medicine,18,0.9,225
+1910,Neuroscience,2,0.5,8
+1910,Physics and Astronomy,3,0.3333333333333333,30
+1910,Psychology,2,0.3333333333333333,20
+1910,Social Sciences,21,0.72,185
+1911,Agricultural and Biological Sciences,8,1.0,90
+1911,Arts and Humanities,31,0.9230769230769231,309
+1911,"Biochemistry, Genetics and Molecular Biology",1,1.0,48
+1911,Chemical Engineering,1,0.0,0
+1911,Chemistry,1,1.0,17
+1911,Computer Science,1,1.0,12
+1911,"Economics, Econometrics and Finance",5,0.8888888888888888,29
+1911,Engineering,4,1.0,92
+1911,Environmental Science,7,0.42857142857142855,41
+1911,Health Professions,4,0.75,43
+1911,Immunology and Microbiology,1,0.0,0
+1911,Materials Science,1,0.0,0
+1911,Mathematics,2,1.0,29
+1911,Medicine,25,0.9375,253
+1911,Neuroscience,1,1.0,9
+1911,Nursing,1,1.0,4
+1911,Physics and Astronomy,4,1.0,35
+1911,Psychology,2,0.5,22
+1911,Social Sciences,19,0.6666666666666666,200
+1912,Agricultural and Biological Sciences,8,1.0,101
+1912,Arts and Humanities,19,0.95,331
+1912,"Biochemistry, Genetics and Molecular Biology",2,0.5,50
+1912,"Business, Management and Accounting",2,1.0,25
+1912,Chemistry,2,1.0,20
+1912,Computer Science,1,0.0,0
+1912,Decision Sciences,2,0.5,4
+1912,Dentistry,1,1.0,1
+1912,Earth and Planetary Sciences,2,1.0,23
+1912,"Economics, Econometrics and Finance",5,0.8,34
+1912,Engineering,8,0.875,99
+1912,Environmental Science,4,1.0,46
+1912,Health Professions,2,1.0,48
+1912,Mathematics,3,1.0,33
+1912,Medicine,32,0.8974358974358975,286
+1912,Physics and Astronomy,5,1.0,39
+1912,Psychology,2,1.0,25
+1912,Social Sciences,24,0.6923076923076923,216
+1913,Agricultural and Biological Sciences,9,1.0,108
+1913,Arts and Humanities,21,0.8378378378378378,367
+1913,"Biochemistry, Genetics and Molecular Biology",4,1.0,57
+1913,"Business, Management and Accounting",6,0.6666666666666666,32
+1913,Chemistry,3,0.75,26
+1913,Computer Science,3,0.6666666666666666,18
+1913,Earth and Planetary Sciences,4,0.5,25
+1913,"Economics, Econometrics and Finance",3,1.0,38
+1913,Engineering,5,1.0,104
+1913,Environmental Science,1,1.0,47
+1913,Health Professions,2,0.5,53
+1913,Immunology and Microbiology,1,0.0,0
+1913,Materials Science,1,0.0,0
+1913,Mathematics,2,1.0,35
+1913,Medicine,32,0.85,321
+1913,Neuroscience,1,0.0,0
+1913,Nursing,5,0.4,6
+1913,Physics and Astronomy,2,1.0,42
+1913,Social Sciences,21,0.75,235
+1914,Agricultural and Biological Sciences,7,1.0,118
+1914,Arts and Humanities,18,0.9130434782608695,394
+1914,"Biochemistry, Genetics and Molecular Biology",4,0.6,63
+1914,Chemistry,2,1.0,28
+1914,Computer Science,1,1.0,19
+1914,Earth and Planetary Sciences,2,0.3333333333333333,26
+1914,"Economics, Econometrics and Finance",3,0.3333333333333333,40
+1914,Engineering,4,0.75,107
+1914,Environmental Science,3,0.6,52
+1914,Health Professions,2,1.0,56
+1914,Materials Science,1,1.0,6
+1914,Mathematics,4,0.75,38
+1914,Medicine,25,0.8214285714285714,341
+1914,Neuroscience,1,1.0,10
+1914,Nursing,3,0.25,8
+1914,Physics and Astronomy,3,1.0,47
+1914,Psychology,3,0.3333333333333333,0
+1914,Social Sciences,21,0.7037037037037037,255
+1915,Agricultural and Biological Sciences,8,1.0,130
+1915,Arts and Humanities,31,0.9375,428
+1915,"Biochemistry, Genetics and Molecular Biology",3,0.5,69
+1915,"Business, Management and Accounting",1,1.0,39
+1915,Chemistry,3,0.6666666666666666,30
+1915,Earth and Planetary Sciences,2,1.0,28
+1915,"Economics, Econometrics and Finance",4,0.75,44
+1915,Energy,2,1.0,17
+1915,Engineering,8,1.0,124
+1915,Environmental Science,5,0.6,55
+1915,Health Professions,4,0.5,58
+1915,Immunology and Microbiology,1,0.0,0
+1915,Mathematics,2,1.0,42
+1915,Medicine,20,0.9090909090909091,364
+1915,Neuroscience,1,0.0,0
+1915,"Pharmacology, Toxicology and Pharmaceutics",2,0.0,0
+1915,Physics and Astronomy,5,1.0,52
+1915,Psychology,4,0.6,28
+1915,Social Sciences,29,0.7105263157894737,283
+1916,Agricultural and Biological Sciences,5,1.0,137
+1916,Arts and Humanities,15,0.9473684210526315,447
+1916,"Biochemistry, Genetics and Molecular Biology",4,0.75,73
+1916,Chemistry,1,1.0,32
+1916,Dentistry,2,1.0,3
+1916,Earth and Planetary Sciences,1,1.0,29
+1916,"Economics, Econometrics and Finance",1,1.0,45
+1916,Engineering,10,0.9285714285714286,137
+1916,Environmental Science,5,0.6,58
+1916,Health Professions,4,0.75,62
+1916,Immunology and Microbiology,1,1.0,8
+1916,Materials Science,1,1.0,7
+1916,Mathematics,2,1.0,45
+1916,Medicine,18,0.9090909090909091,386
+1916,Physics and Astronomy,4,1.0,56
+1916,Psychology,2,1.0,31
+1916,Social Sciences,28,0.7096774193548387,300
+1917,Agricultural and Biological Sciences,3,1.0,145
+1917,Arts and Humanities,25,0.8666666666666667,476
+1917,"Biochemistry, Genetics and Molecular Biology",4,0.75,77
+1917,"Business, Management and Accounting",2,1.0,41
+1917,Computer Science,1,1.0,22
+1917,Dentistry,3,0.3333333333333333,4
+1917,"Economics, Econometrics and Finance",3,1.0,48
+1917,Engineering,3,1.0,142
+1917,Environmental Science,6,0.7857142857142857,69
+1917,Health Professions,4,0.75,66
+1917,Materials Science,1,0.0,0
+1917,Mathematics,2,1.0,47
+1917,Medicine,17,0.75,403
+1917,"Pharmacology, Toxicology and Pharmaceutics",2,0.0,0
+1917,Physics and Astronomy,6,0.5714285714285714,61
+1917,Social Sciences,18,0.6774193548387096,323
+1918,Agricultural and Biological Sciences,9,1.0,161
+1918,Arts and Humanities,21,0.9285714285714286,504
+1918,"Biochemistry, Genetics and Molecular Biology",1,1.0,78
+1918,"Business, Management and Accounting",4,0.5,43
+1918,Chemistry,3,1.0,36
+1918,Computer Science,2,1.0,24
+1918,Decision Sciences,1,1.0,5
+1918,Earth and Planetary Sciences,1,0.0,0
+1918,"Economics, Econometrics and Finance",1,1.0,50
+1918,Energy,1,1.0,19
+1918,Engineering,4,0.9090909090909091,154
+1918,Environmental Science,2,0.5,70
+1918,Health Professions,6,1.0,74
+1918,Materials Science,2,0.5,8
+1918,Mathematics,2,0.5,48
+1918,Medicine,17,0.8,418
+1918,Neuroscience,1,1.0,11
+1918,Physics and Astronomy,1,1.0,64
+1918,Psychology,5,0.8,35
+1918,Social Sciences,21,0.6818181818181818,336
+1919,Agricultural and Biological Sciences,6,0.8571428571428571,168
+1919,Arts and Humanities,15,0.7727272727272727,525
+1919,"Biochemistry, Genetics and Molecular Biology",2,0.5,79
+1919,"Business, Management and Accounting",1,1.0,44
+1919,Chemistry,5,0.6,39
+1919,Computer Science,4,0.5,28
+1919,Decision Sciences,1,0.0,0
+1919,Earth and Planetary Sciences,3,1.0,34
+1919,"Economics, Econometrics and Finance",1,1.0,51
+1919,Engineering,6,0.875,162
+1919,Environmental Science,1,0.0,0
+1919,Health Professions,3,0.6666666666666666,76
+1919,Materials Science,1,0.0,0
+1919,Mathematics,2,1.0,50
+1919,Medicine,24,0.9615384615384616,443
+1919,Neuroscience,2,0.0,0
+1919,Psychology,2,0.5,37
+1919,Social Sciences,18,0.72,357
+1920,Agricultural and Biological Sciences,8,1.0,180
+1920,Arts and Humanities,14,1.0,541
+1920,"Biochemistry, Genetics and Molecular Biology",2,0.5,80
+1920,"Business, Management and Accounting",1,0.0,0
+1920,Chemistry,4,1.0,44
+1920,Computer Science,2,0.5,29
+1920,Earth and Planetary Sciences,2,0.5,36
+1920,"Economics, Econometrics and Finance",3,1.0,55
+1920,Engineering,4,1.0,168
+1920,Environmental Science,8,0.6666666666666666,76
+1920,Health Professions,10,0.9,84
+1920,Materials Science,1,0.0,0
+1920,Medicine,18,0.9473684210526315,461
+1920,Nursing,1,1.0,9
+1920,Physics and Astronomy,1,1.0,67
+1920,Psychology,1,1.0,39
+1920,Social Sciences,24,0.8214285714285714,380
+1921,Agricultural and Biological Sciences,3,1.0,185
+1921,Arts and Humanities,19,0.9090909090909091,562
+1921,"Biochemistry, Genetics and Molecular Biology",1,1.0,82
+1921,"Business, Management and Accounting",2,0.3333333333333333,47
+1921,Chemical Engineering,1,1.0,7
+1921,Chemistry,1,1.0,46
+1921,Computer Science,2,1.0,33
+1921,Decision Sciences,1,0.0,0
+1921,Earth and Planetary Sciences,1,1.0,37
+1921,"Economics, Econometrics and Finance",2,0.25,57
+1921,Engineering,6,0.625,174
+1921,Environmental Science,4,0.75,79
+1921,Health Professions,2,1.0,86
+1921,Immunology and Microbiology,1,1.0,9
+1921,Materials Science,1,0.0,0
+1921,Mathematics,1,1.0,51
+1921,Medicine,17,1.0,481
+1921,Neuroscience,1,1.0,12
+1921,"Pharmacology, Toxicology and Pharmaceutics",1,1.0,1
+1921,Physics and Astronomy,4,1.0,71
+1921,Psychology,4,1.0,43
+1921,Social Sciences,21,0.9047619047619048,420
+1922,Agricultural and Biological Sciences,9,0.7272727272727273,193
+1922,Arts and Humanities,23,0.8571428571428571,598
+1922,"Biochemistry, Genetics and Molecular Biology",4,1.0,91
+1922,"Business, Management and Accounting",4,0.75,51
+1922,Chemistry,2,1.0,49
+1922,Computer Science,1,1.0,35
+1922,Dentistry,3,1.0,8
+1922,Earth and Planetary Sciences,2,1.0,40
+1922,"Economics, Econometrics and Finance",2,1.0,59
+1922,Engineering,6,1.0,182
+1922,Environmental Science,6,0.5714285714285714,84
+1922,Health Professions,6,1.0,94
+1922,Immunology and Microbiology,2,0.3333333333333333,10
+1922,Materials Science,2,0.0,0
+1922,Mathematics,1,1.0,53
+1922,Medicine,9,0.6666666666666666,488
+1922,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1922,Physics and Astronomy,4,1.0,74
+1922,Psychology,4,1.0,47
+1922,Social Sciences,37,0.7333333333333333,456
+1923,Agricultural and Biological Sciences,10,1.0,204
+1923,Arts and Humanities,21,0.9545454545454546,623
+1923,"Biochemistry, Genetics and Molecular Biology",1,0.0,0
+1923,"Business, Management and Accounting",1,1.0,55
+1923,Chemical Engineering,1,1.0,8
+1923,Chemistry,2,1.0,51
+1923,Computer Science,1,0.0,0
+1923,Earth and Planetary Sciences,2,0.6666666666666666,42
+1923,"Economics, Econometrics and Finance",9,0.8,69
+1923,Engineering,7,0.9,191
+1923,Environmental Science,1,0.0,0
+1923,Health Professions,6,0.8333333333333334,100
+1923,Immunology and Microbiology,1,1.0,12
+1923,Mathematics,2,1.0,55
+1923,Medicine,26,0.9142857142857143,521
+1923,Neuroscience,1,0.0,0
+1923,Nursing,2,0.5,11
+1923,Physics and Astronomy,2,1.0,76
+1923,Psychology,6,0.7142857142857143,52
+1923,Social Sciences,27,0.75,478
+1924,Agricultural and Biological Sciences,12,1.0,218
+1924,Arts and Humanities,20,0.95,647
+1924,"Biochemistry, Genetics and Molecular Biology",2,0.0,0
+1924,"Business, Management and Accounting",2,0.5,56
+1924,Chemical Engineering,1,1.0,84
+1924,Chemistry,1,1.0,52
+1924,Computer Science,1,1.0,36
+1924,Dentistry,1,1.0,9
+1924,Earth and Planetary Sciences,2,0.5,44
+1924,"Economics, Econometrics and Finance",2,1.0,71
+1924,Energy,2,1.0,21
+1924,Engineering,7,0.5,195
+1924,Environmental Science,2,0.5,85
+1924,Health Professions,5,0.8,104
+1924,Immunology and Microbiology,1,0.0,0
+1924,Materials Science,1,0.0,0
+1924,Mathematics,4,1.0,60
+1924,Medicine,15,0.8666666666666667,535
+1924,Neuroscience,4,0.5,14
+1924,Nursing,1,1.0,12
+1924,Physics and Astronomy,2,1.0,80
+1924,Psychology,5,0.8,56
+1924,Social Sciences,27,0.8148148148148148,500
+1925,Agricultural and Biological Sciences,9,1.0,232
+1925,Arts and Humanities,28,0.8181818181818182,675
+1925,"Biochemistry, Genetics and Molecular Biology",2,1.0,93
+1925,"Business, Management and Accounting",5,0.5,59
+1925,Chemistry,4,0.75,57
+1925,Earth and Planetary Sciences,3,1.0,47
+1925,"Economics, Econometrics and Finance",4,0.75,75
+1925,Energy,1,1.0,22
+1925,Engineering,6,0.8571428571428571,200
+1925,Environmental Science,5,0.6,88
+1925,Health Professions,4,1.0,110
+1925,Mathematics,3,1.0,63
+1925,Medicine,15,1.0,552
+1925,Neuroscience,1,1.0,15
+1925,Nursing,2,0.3333333333333333,13
+1925,"Pharmacology, Toxicology and Pharmaceutics",1,1.0,2
+1925,Physics and Astronomy,2,1.0,83
+1925,Psychology,3,0.6666666666666666,58
+1925,Social Sciences,28,0.9,529
+1926,Agricultural and Biological Sciences,10,0.9166666666666666,246
+1926,Arts and Humanities,36,0.9333333333333333,719
+1926,"Biochemistry, Genetics and Molecular Biology",4,0.5,97
+1926,"Business, Management and Accounting",6,0.8571428571428571,69
+1926,Chemical Engineering,1,1.0,86
+1926,Chemistry,4,1.0,62
+1926,Decision Sciences,1,0.5,6
+1926,Dentistry,1,1.0,10
+1926,Earth and Planetary Sciences,5,0.6,52
+1926,"Economics, Econometrics and Finance",10,0.75,85
+1926,Energy,1,0.0,0
+1926,Engineering,13,0.6428571428571429,213
+1926,Environmental Science,7,0.5714285714285714,93
+1926,Health Professions,4,1.0,117
+1926,Immunology and Microbiology,1,1.0,13
+1926,Materials Science,4,0.5,11
+1926,Mathematics,2,1.0,65
+1926,Medicine,30,0.8333333333333334,588
+1926,Neuroscience,1,0.0,0
+1926,"Pharmacology, Toxicology and Pharmaceutics",2,0.0,0
+1926,Physics and Astronomy,3,0.5,86
+1926,Psychology,6,0.42857142857142855,61
+1926,Social Sciences,38,0.8780487804878049,563
+1927,Agricultural and Biological Sciences,14,0.9444444444444444,268
+1927,Arts and Humanities,32,0.9318181818181818,771
+1927,"Biochemistry, Genetics and Molecular Biology",7,0.7142857142857143,103
+1927,"Business, Management and Accounting",4,0.5,71
+1927,Chemical Engineering,2,0.3333333333333333,87
+1927,Chemistry,7,0.9,73
+1927,Computer Science,3,0.3333333333333333,38
+1927,Decision Sciences,3,0.5,8
+1927,Dentistry,1,0.0,0
+1927,"Economics, Econometrics and Finance",4,1.0,89
+1927,Engineering,7,1.0,228
+1927,Environmental Science,6,0.7142857142857143,100
+1927,Health Professions,13,0.375,122
+1927,Immunology and Microbiology,2,0.5,14
+1927,Materials Science,1,1.0,12
+1927,Mathematics,6,0.8333333333333334,70
+1927,Medicine,32,0.9459459459459459,627
+1927,Neuroscience,3,0.0,0
+1927,Nursing,1,0.0,0
+1927,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1927,Physics and Astronomy,5,0.4,88
+1927,Psychology,4,1.0,66
+1927,Social Sciences,38,0.6744186046511628,591
+1928,Agricultural and Biological Sciences,6,0.875,277
+1928,Arts and Humanities,36,0.9130434782608695,815
+1928,"Biochemistry, Genetics and Molecular Biology",8,0.75,111
+1928,"Business, Management and Accounting",4,1.0,78
+1928,Chemistry,3,1.0,78
+1928,Earth and Planetary Sciences,5,0.8,60
+1928,"Economics, Econometrics and Finance",4,0.6,92
+1928,Engineering,11,0.5625,238
+1928,Environmental Science,7,1.0,108
+1928,Health Professions,3,0.6666666666666666,125
+1928,Immunology and Microbiology,1,1.0,15
+1928,Materials Science,2,0.5,13
+1928,Mathematics,6,0.8333333333333334,75
+1928,Medicine,39,0.926829268292683,665
+1928,Neuroscience,2,1.0,17
+1928,Nursing,1,0.0,0
+1928,Physics and Astronomy,7,0.8571428571428571,94
+1928,Psychology,3,0.6666666666666666,69
+1928,Social Sciences,49,0.8,635
+1929,Agricultural and Biological Sciences,10,1.0,293
+1929,Arts and Humanities,32,0.8484848484848485,851
+1929,"Biochemistry, Genetics and Molecular Biology",9,0.8333333333333334,124
+1929,"Business, Management and Accounting",3,1.0,84
+1929,Chemical Engineering,1,1.0,90
+1929,Chemistry,5,1.0,85
+1929,Computer Science,2,0.6666666666666666,43
+1929,Dentistry,1,1.0,0
+1929,Earth and Planetary Sciences,4,0.6,63
+1929,"Economics, Econometrics and Finance",5,0.7,99
+1929,Engineering,10,0.9166666666666666,249
+1929,Environmental Science,4,0.6,112
+1929,Health Professions,10,0.9333333333333333,142
+1929,Immunology and Microbiology,2,0.0,0
+1929,Materials Science,4,0.8,17
+1929,Mathematics,7,0.5714285714285714,81
+1929,Medicine,40,0.7272727272727273,701
+1929,Neuroscience,2,0.5,18
+1929,Nursing,3,0.3333333333333333,14
+1929,Physics and Astronomy,4,1.0,99
+1929,Psychology,6,0.8571428571428571,74
+1929,Social Sciences,37,0.9444444444444444,688
+1930,Agricultural and Biological Sciences,15,0.8235294117647058,313
+1930,Arts and Humanities,44,0.9,907
+1930,"Biochemistry, Genetics and Molecular Biology",7,0.6666666666666666,133
+1930,"Business, Management and Accounting",4,1.0,89
+1930,Chemistry,8,1.0,96
+1930,Computer Science,5,0.6,49
+1930,Decision Sciences,1,1.0,9
+1930,Earth and Planetary Sciences,4,0.4,64
+1930,"Economics, Econometrics and Finance",4,0.75,102
+1930,Energy,1,1.0,24
+1930,Engineering,15,0.8421052631578947,266
+1930,Environmental Science,4,0.5,117
+1930,Health Professions,6,0.9285714285714286,156
+1930,Immunology and Microbiology,1,1.0,16
+1930,Materials Science,2,0.5,18
+1930,Mathematics,9,0.9090909090909091,92
+1930,Medicine,32,0.9210526315789473,737
+1930,Neuroscience,5,0.6,22
+1930,Nursing,2,0.5,15
+1930,"Pharmacology, Toxicology and Pharmaceutics",1,1.0,4
+1930,Physics and Astronomy,6,0.7142857142857143,104
+1930,Psychology,4,0.5,77
+1930,Social Sciences,36,0.6818181818181818,721
+1930,Veterinary,1,1.0,2
+1931,Agricultural and Biological Sciences,15,0.8888888888888888,332
+1931,Arts and Humanities,25,0.8148148148148148,940
+1931,"Biochemistry, Genetics and Molecular Biology",8,0.6,141
+1931,"Business, Management and Accounting",6,1.0,100
+1931,Chemistry,6,0.75,103
+1931,Computer Science,1,1.0,50
+1931,Decision Sciences,2,1.0,11
+1931,Earth and Planetary Sciences,2,0.0,0
+1931,"Economics, Econometrics and Finance",3,1.0,108
+1931,Engineering,10,0.9,283
+1931,Environmental Science,7,0.8571428571428571,125
+1931,Health Professions,9,0.6666666666666666,169
+1931,Immunology and Microbiology,1,1.0,17
+1931,Materials Science,4,0.3333333333333333,20
+1931,Mathematics,3,1.0,95
+1931,Medicine,26,0.9545454545454546,777
+1931,Neuroscience,3,0.6666666666666666,24
+1931,Nursing,2,0.0,0
+1931,"Pharmacology, Toxicology and Pharmaceutics",1,1.0,5
+1931,Physics and Astronomy,4,1.0,110
+1931,Social Sciences,43,0.5645161290322581,758
+1932,Agricultural and Biological Sciences,15,0.8260869565217391,355
+1932,Arts and Humanities,34,0.9285714285714286,986
+1932,"Biochemistry, Genetics and Molecular Biology",11,0.5384615384615384,151
+1932,"Business, Management and Accounting",3,0.6666666666666666,105
+1932,Chemical Engineering,2,1.0,97
+1932,Chemistry,5,1.0,107
+1932,Computer Science,1,1.0,51
+1932,Decision Sciences,1,1.0,12
+1932,Dentistry,1,1.0,11
+1932,Earth and Planetary Sciences,4,0.6,69
+1932,"Economics, Econometrics and Finance",5,0.6,111
+1932,Engineering,19,0.8846153846153846,309
+1932,Environmental Science,10,0.7272727272727273,136
+1932,Health Professions,4,0.75,174
+1932,Immunology and Microbiology,2,1.0,19
+1932,Materials Science,4,0.4,22
+1932,Mathematics,9,0.7,103
+1932,Medicine,34,0.8947368421052632,812
+1932,Neuroscience,2,0.5,25
+1932,Nursing,3,0.3333333333333333,16
+1932,Physics and Astronomy,4,0.75,113
+1932,Psychology,8,0.5,83
+1932,Social Sciences,42,0.6744186046511628,788
+1932,Veterinary,1,1.0,3
+1933,Agricultural and Biological Sciences,20,0.9285714285714286,385
+1933,Arts and Humanities,29,0.8205128205128205,1024
+1933,"Biochemistry, Genetics and Molecular Biology",7,0.8181818181818182,162
+1933,"Business, Management and Accounting",4,1.0,111
+1933,Chemical Engineering,3,0.4,103
+1933,Chemistry,6,0.7,116
+1933,Computer Science,7,1.0,62
+1933,Decision Sciences,1,1.0,13
+1933,Dentistry,1,1.0,15
+1933,Earth and Planetary Sciences,2,1.0,74
+1933,"Economics, Econometrics and Finance",4,1.0,116
+1933,Engineering,18,0.625,326
+1933,Environmental Science,11,0.8461538461538461,148
+1933,Health Professions,5,0.3333333333333333,177
+1933,Immunology and Microbiology,3,0.5,21
+1933,Materials Science,3,0.75,27
+1933,Mathematics,6,1.0,109
+1933,Medicine,24,0.8076923076923077,835
+1933,Neuroscience,1,1.0,27
+1933,"Pharmacology, Toxicology and Pharmaceutics",1,1.0,6
+1933,Physics and Astronomy,3,0.75,115
+1933,Psychology,7,0.5555555555555556,89
+1933,Social Sciences,45,0.7843137254901961,829
+1933,Veterinary,1,0.0,0
+1934,Agricultural and Biological Sciences,17,0.875,411
+1934,Arts and Humanities,36,0.9090909090909091,1078
+1934,"Biochemistry, Genetics and Molecular Biology",10,0.7272727272727273,172
+1934,"Business, Management and Accounting",3,1.0,115
+1934,Chemistry,4,1.0,126
+1934,Computer Science,3,1.0,68
+1934,Decision Sciences,1,1.0,15
+1934,Earth and Planetary Sciences,2,0.5,76
+1934,"Economics, Econometrics and Finance",9,0.7,125
+1934,Energy,3,0.6666666666666666,26
+1934,Engineering,12,0.6428571428571429,337
+1934,Environmental Science,4,0.5,150
+1934,Health Professions,5,0.8,182
+1934,Immunology and Microbiology,4,0.5,24
+1934,Materials Science,3,0.6666666666666666,31
+1934,Mathematics,3,1.0,113
+1934,Medicine,35,0.9302325581395349,874
+1934,Neuroscience,2,1.0,28
+1934,Physics and Astronomy,8,0.5454545454545454,121
+1934,Psychology,6,0.38461538461538464,94
+1934,Social Sciences,45,0.7169811320754716,869
+1935,Agricultural and Biological Sciences,16,0.9166666666666666,443
+1935,Arts and Humanities,32,0.8717948717948718,1124
+1935,"Biochemistry, Genetics and Molecular Biology",8,0.6428571428571429,185
+1935,"Business, Management and Accounting",5,0.8333333333333334,120
+1935,Chemistry,4,1.0,141
+1935,Computer Science,3,1.0,74
+1935,Decision Sciences,1,0.0,0
+1935,Earth and Planetary Sciences,6,0.9090909090909091,86
+1935,"Economics, Econometrics and Finance",5,0.6,130
+1935,Engineering,15,0.9,358
+1935,Environmental Science,10,0.6666666666666666,158
+1935,Health Professions,9,0.8461538461538461,194
+1935,Immunology and Microbiology,1,1.0,25
+1935,Materials Science,5,0.5,35
+1935,Mathematics,11,0.7272727272727273,118
+1935,Medicine,60,0.9130434782608695,935
+1935,Neuroscience,1,1.0,30
+1935,"Pharmacology, Toxicology and Pharmaceutics",3,0.6666666666666666,8
+1935,Physics and Astronomy,8,0.7777777777777778,128
+1935,Psychology,6,0.75,101
+1935,Social Sciences,52,0.803030303030303,922
+1935,Veterinary,1,1.0,4
+1936,Agricultural and Biological Sciences,19,1.0,478
+1936,Arts and Humanities,32,0.9736842105263158,1200
+1936,"Biochemistry, Genetics and Molecular Biology",9,0.7777777777777778,196
+1936,"Business, Management and Accounting",3,1.0,126
+1936,Chemical Engineering,3,1.0,108
+1936,Chemistry,2,0.6666666666666666,144
+1936,Computer Science,8,0.5,79
+1936,Decision Sciences,1,0.0,0
+1936,Earth and Planetary Sciences,7,0.8888888888888888,95
+1936,"Economics, Econometrics and Finance",5,1.0,138
+1936,Energy,2,1.0,29
+1936,Engineering,17,0.9411764705882353,376
+1936,Environmental Science,9,0.7777777777777778,164
+1936,Health Professions,8,0.5555555555555556,200
+1936,Immunology and Microbiology,6,0.6666666666666666,29
+1936,Materials Science,3,0.6,38
+1936,Mathematics,10,0.6666666666666666,126
+1936,Medicine,35,0.8775510204081632,978
+1936,Neuroscience,3,1.0,34
+1936,Nursing,3,0.4,18
+1936,"Pharmacology, Toxicology and Pharmaceutics",2,0.3333333333333333,9
+1936,Physics and Astronomy,6,0.0967741935483871,131
+1936,Psychology,7,0.8888888888888888,109
+1936,Social Sciences,57,0.7682926829268293,983
+1937,Agricultural and Biological Sciences,12,0.9375,498
+1937,Arts and Humanities,44,0.8813559322033898,1265
+1937,"Biochemistry, Genetics and Molecular Biology",12,0.47058823529411764,204
+1937,"Business, Management and Accounting",5,0.8571428571428571,133
+1937,Chemical Engineering,1,0.0,0
+1937,Chemistry,9,1.0,163
+1937,Computer Science,3,1.0,88
+1937,Dentistry,1,1.0,16
+1937,Earth and Planetary Sciences,13,0.8,107
+1937,"Economics, Econometrics and Finance",6,1.0,149
+1937,Engineering,17,0.9090909090909091,401
+1937,Environmental Science,8,0.45454545454545453,171
+1937,Health Professions,8,0.6666666666666666,207
+1937,Immunology and Microbiology,3,0.6,32
+1937,Materials Science,4,0.7142857142857143,43
+1937,Mathematics,7,0.875,133
+1937,Medicine,31,0.8285714285714286,1009
+1937,Neuroscience,2,0.5,35
+1937,Nursing,3,0.6666666666666666,22
+1937,Physics and Astronomy,7,1.0,140
+1937,Psychology,4,0.6666666666666666,114
+1937,Social Sciences,44,0.8070175438596491,1030
+1938,Agricultural and Biological Sciences,12,0.8947368421052632,522
+1938,Arts and Humanities,35,0.9583333333333334,1319
+1938,"Biochemistry, Genetics and Molecular Biology",5,0.8571428571428571,213
+1938,"Business, Management and Accounting",4,0.75,136
+1938,Chemistry,7,1.0,175
+1938,Computer Science,7,0.4444444444444444,95
+1938,Earth and Planetary Sciences,4,1.0,112
+1938,"Economics, Econometrics and Finance",9,0.7777777777777778,155
+1938,Energy,2,1.0,31
+1938,Engineering,10,0.7692307692307693,412
+1938,Environmental Science,7,0.6666666666666666,175
+1938,Health Professions,9,0.5,215
+1938,Immunology and Microbiology,1,0.0,0
+1938,Materials Science,3,1.0,48
+1938,Mathematics,6,0.5,136
+1938,Medicine,32,0.8378378378378378,1039
+1938,Neuroscience,1,1.0,36
+1938,Nursing,3,1.0,25
+1938,"Pharmacology, Toxicology and Pharmaceutics",1,1.0,10
+1938,Physics and Astronomy,4,0.75,142
+1938,Psychology,8,0.6153846153846154,122
+1938,Social Sciences,44,0.8181818181818182,1076
+1939,Agricultural and Biological Sciences,8,0.8181818181818182,538
+1939,Arts and Humanities,47,0.8035714285714286,1369
+1939,"Biochemistry, Genetics and Molecular Biology",10,0.5454545454545454,224
+1939,"Business, Management and Accounting",4,0.5,139
+1939,Chemistry,4,0.8,179
+1939,Computer Science,3,0.3333333333333333,96
+1939,Decision Sciences,1,1.0,17
+1939,Earth and Planetary Sciences,7,0.9,124
+1939,"Economics, Econometrics and Finance",5,1.0,162
+1939,Energy,3,1.0,51
+1939,Engineering,20,0.8181818181818182,432
+1939,Environmental Science,5,0.375,178
+1939,Health Professions,10,0.4166666666666667,222
+1939,Immunology and Microbiology,1,0.0,0
+1939,Materials Science,1,1.0,49
+1939,Mathematics,6,1.0,144
+1939,Medicine,32,0.9318181818181818,1085
+1939,Neuroscience,2,0.5,37
+1939,Nursing,2,0.5,26
+1939,Physics and Astronomy,6,0.8571428571428571,148
+1939,Psychology,7,0.7142857142857143,127
+1939,Social Sciences,52,0.8181818181818182,1138
+1940,Agricultural and Biological Sciences,1,1.0,540
+1940,Arts and Humanities,1,1.0,1370
+1940,"Business, Management and Accounting",1,1.0,140
+1940,Computer Science,1,1.0,97
+1940,Engineering,1,1.0,433
+1940,Environmental Science,2,0.5,179
+1940,Materials Science,2,1.0,51
+1940,Mathematics,4,1.0,148
+1940,Medicine,2,1.0,1087
+1940,Psychology,2,1.0,129
+1941,Agricultural and Biological Sciences,8,0.9090909090909091,556
+1941,Arts and Humanities,29,0.9736842105263158,1413
+1941,"Biochemistry, Genetics and Molecular Biology",5,0.16666666666666666,228
+1941,"Business, Management and Accounting",3,1.0,148
+1941,Chemical Engineering,1,1.0,111
+1941,Chemistry,5,1.0,189
+1941,Computer Science,5,0.7142857142857143,105
+1941,Decision Sciences,1,1.0,18
+1941,Dentistry,1,1.0,17
+1941,Earth and Planetary Sciences,2,0.5,127
+1941,"Economics, Econometrics and Finance",1,1.0,166
+1941,Energy,1,1.0,52
+1941,Engineering,18,0.8695652173913043,456
+1941,Environmental Science,12,0.7333333333333333,190
+1941,Health Professions,9,0.6,228
+1941,Immunology and Microbiology,1,0.0,0
+1941,Materials Science,4,0.6,54
+1941,Mathematics,5,0.5555555555555556,153
+1941,Medicine,24,0.9,1117
+1941,Nursing,3,0.75,29
+1941,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1941,Physics and Astronomy,5,0.42857142857142855,150
+1941,Psychology,5,0.6,132
+1941,Social Sciences,41,0.851063829787234,1179
+1941,Veterinary,2,0.5,5
+1942,Agricultural and Biological Sciences,12,1.0,579
+1942,Arts and Humanities,19,0.9583333333333334,1441
+1942,"Biochemistry, Genetics and Molecular Biology",8,0.875,242
+1942,"Business, Management and Accounting",6,0.5,154
+1942,Chemical Engineering,1,1.0,113
+1942,Chemistry,5,0.875,196
+1942,Computer Science,2,1.0,107
+1942,Decision Sciences,1,1.0,19
+1942,Earth and Planetary Sciences,4,0.75,131
+1942,"Economics, Econometrics and Finance",6,0.7142857142857143,172
+1942,Engineering,16,0.88,479
+1942,Environmental Science,7,0.375,193
+1942,Health Professions,5,0.6,232
+1942,Immunology and Microbiology,1,0.0,0
+1942,Materials Science,4,1.0,60
+1942,Mathematics,4,0.5,155
+1942,Medicine,32,0.9545454545454546,1157
+1942,Nursing,2,0.0,0
+1942,"Pharmacology, Toxicology and Pharmaceutics",1,1.0,11
+1942,Physics and Astronomy,2,1.0,152
+1942,Psychology,8,0.6363636363636364,139
+1942,Social Sciences,51,0.859375,1238
+1943,Agricultural and Biological Sciences,17,0.8695652173913043,602
+1943,Arts and Humanities,28,0.9411764705882353,1479
+1943,"Biochemistry, Genetics and Molecular Biology",5,0.8,251
+1943,"Business, Management and Accounting",5,1.0,160
+1943,Chemical Engineering,2,0.6,116
+1943,Computer Science,3,1.0,110
+1943,Decision Sciences,1,1.0,20
+1943,Dentistry,1,1.0,18
+1943,Earth and Planetary Sciences,3,0.75,134
+1943,"Economics, Econometrics and Finance",8,0.8181818181818182,181
+1943,Energy,1,1.0,54
+1943,Engineering,6,1.0,490
+1943,Environmental Science,9,0.7,200
+1943,Health Professions,5,0.8,245
+1943,Materials Science,2,0.5,61
+1943,Mathematics,3,1.0,158
+1943,Medicine,31,0.9285714285714286,1194
+1943,Neuroscience,3,0.4166666666666667,43
+1943,Nursing,2,0.5,30
+1943,"Pharmacology, Toxicology and Pharmaceutics",3,0.0,0
+1943,Physics and Astronomy,1,1.0,153
+1943,Psychology,5,0.6666666666666666,143
+1943,Social Sciences,38,0.7755102040816326,1276
+1944,Agricultural and Biological Sciences,12,1.0,620
+1944,Arts and Humanities,24,0.896551724137931,1513
+1944,"Biochemistry, Genetics and Molecular Biology",5,0.6666666666666666,259
+1944,"Business, Management and Accounting",1,1.0,162
+1944,Chemical Engineering,2,1.0,118
+1944,Chemistry,2,1.0,203
+1944,Computer Science,3,0.8,116
+1944,Earth and Planetary Sciences,2,1.0,136
+1944,"Economics, Econometrics and Finance",8,0.75,187
+1944,Energy,2,1.0,56
+1944,Engineering,9,1.0,500
+1944,Environmental Science,5,0.5,203
+1944,Health Professions,9,0.5555555555555556,251
+1944,Immunology and Microbiology,1,0.0,0
+1944,Materials Science,2,0.6666666666666666,63
+1944,Mathematics,6,0.5,161
+1944,Medicine,20,0.9583333333333334,1220
+1944,Neuroscience,1,0.0,0
+1944,Nursing,4,1.0,38
+1944,Physics and Astronomy,4,1.0,157
+1944,Psychology,5,0.875,150
+1944,Social Sciences,36,0.7894736842105263,1305
+1945,Agricultural and Biological Sciences,15,1.0,642
+1945,Arts and Humanities,41,0.8928571428571429,1566
+1945,"Biochemistry, Genetics and Molecular Biology",13,0.9285714285714286,274
+1945,"Business, Management and Accounting",4,0.4,166
+1945,Chemical Engineering,2,0.0,0
+1945,Chemistry,6,0.6666666666666666,211
+1945,Computer Science,6,0.875,123
+1945,Decision Sciences,1,1.0,21
+1945,Earth and Planetary Sciences,2,1.0,138
+1945,"Economics, Econometrics and Finance",5,1.0,212
+1945,Engineering,12,0.8333333333333334,513
+1945,Environmental Science,5,1.0,209
+1945,Health Professions,16,0.6111111111111112,264
+1945,Materials Science,2,1.0,73
+1945,Mathematics,4,1.0,165
+1945,Medicine,52,0.9154929577464789,1286
+1945,Neuroscience,2,0.0,0
+1945,Nursing,4,1.0,42
+1945,Physics and Astronomy,4,0.8333333333333334,162
+1945,Psychology,6,0.6666666666666666,155
+1945,Social Sciences,48,0.6271186440677966,1347
+1946,Agricultural and Biological Sciences,16,0.9444444444444444,664
+1946,Arts and Humanities,35,1.0,1621
+1946,"Biochemistry, Genetics and Molecular Biology",11,0.7142857142857143,288
+1946,"Business, Management and Accounting",1,0.0,0
+1946,Chemistry,2,0.75,214
+1946,Computer Science,4,1.0,127
+1946,Decision Sciences,2,1.0,23
+1946,Earth and Planetary Sciences,1,0.0,0
+1946,"Economics, Econometrics and Finance",8,0.625,219
+1946,Engineering,9,0.9090909090909091,528
+1946,Environmental Science,5,0.6,213
+1946,Health Professions,21,0.9130434782608695,288
+1946,Materials Science,5,0.5,76
+1946,Mathematics,2,1.0,169
+1946,Medicine,91,0.9285714285714286,1412
+1946,Neuroscience,1,0.0,0
+1946,Nursing,3,0.75,45
+1946,Physics and Astronomy,8,0.75,166
+1946,Psychology,8,0.875,174
+1946,Social Sciences,41,0.8431372549019608,1387
+1946,Veterinary,1,1.0,6
+1947,Agricultural and Biological Sciences,15,0.9565217391304348,699
+1947,Arts and Humanities,56,0.9166666666666666,1692
+1947,"Biochemistry, Genetics and Molecular Biology",16,0.6956521739130435,312
+1947,"Business, Management and Accounting",5,1.0,176
+1947,Chemistry,5,0.5714285714285714,220
+1947,Computer Science,6,0.7142857142857143,137
+1947,Decision Sciences,3,0.4,25
+1947,Dentistry,2,0.0,0
+1947,Earth and Planetary Sciences,1,1.0,139
+1947,"Economics, Econometrics and Finance",7,0.875,226
+1947,Engineering,21,0.68,548
+1947,Environmental Science,6,0.7142857142857143,218
+1947,Health Professions,21,0.7727272727272727,311
+1947,Immunology and Microbiology,5,0.7142857142857143,40
+1947,Materials Science,3,0.75,80
+1947,Mathematics,4,0.5,171
+1947,Medicine,128,0.8950276243093923,1584
+1947,Neuroscience,5,0.0,0
+1947,Nursing,5,0.5,48
+1947,"Pharmacology, Toxicology and Pharmaceutics",3,0.0,0
+1947,Physics and Astronomy,3,1.0,170
+1947,Psychology,8,0.8,182
+1947,Social Sciences,65,0.7875,1452
+1947,Veterinary,2,0.0,0
+1948,Agricultural and Biological Sciences,27,0.8823529411764706,733
+1948,Arts and Humanities,43,0.95,1754
+1948,"Biochemistry, Genetics and Molecular Biology",21,0.68,338
+1948,"Business, Management and Accounting",6,0.8333333333333334,181
+1948,Chemical Engineering,1,1.0,128
+1948,Chemistry,11,1.0,244
+1948,Computer Science,10,0.9333333333333333,152
+1948,Decision Sciences,5,0.5,28
+1948,Dentistry,1,1.0,25
+1948,Earth and Planetary Sciences,6,0.625,144
+1948,"Economics, Econometrics and Finance",3,0.6666666666666666,228
+1948,Energy,1,0.0,0
+1948,Engineering,26,0.95,592
+1948,Environmental Science,11,0.7692307692307693,232
+1948,Health Professions,14,0.75,326
+1948,Immunology and Microbiology,8,0.2727272727272727,43
+1948,Materials Science,7,0.7777777777777778,87
+1948,Mathematics,5,1.0,176
+1948,Medicine,125,0.936046511627907,1757
+1948,Neuroscience,5,0.8571428571428571,49
+1948,Nursing,2,1.0,51
+1948,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1948,Physics and Astronomy,12,0.4117647058823529,179
+1948,Psychology,13,0.75,194
+1948,Social Sciences,61,0.8939393939393939,1512
+1948,Veterinary,5,0.8571428571428571,12
+1949,Agricultural and Biological Sciences,17,0.8461538461538461,763
+1949,Arts and Humanities,56,0.9253731343283582,1830
+1949,"Biochemistry, Genetics and Molecular Biology",15,0.6785714285714286,367
+1949,"Business, Management and Accounting",5,0.75,187
+1949,Chemistry,5,1.0,256
+1949,Computer Science,3,0.4,155
+1949,Decision Sciences,3,0.0,0
+1949,Dentistry,1,1.0,26
+1949,Earth and Planetary Sciences,7,1.0,155
+1949,"Economics, Econometrics and Finance",6,0.8888888888888888,238
+1949,Engineering,35,0.875,638
+1949,Environmental Science,10,0.75,244
+1949,Health Professions,17,0.6111111111111112,339
+1949,Immunology and Microbiology,6,0.36363636363636365,48
+1949,Materials Science,6,0.0,0
+1949,Mathematics,3,1.0,179
+1949,Medicine,119,0.9125,1913
+1949,Neuroscience,7,0.36363636363636365,54
+1949,Nursing,1,1.0,52
+1949,"Pharmacology, Toxicology and Pharmaceutics",2,1.0,18
+1949,Physics and Astronomy,7,0.8571428571428571,187
+1949,Psychology,9,0.9285714285714286,208
+1949,Social Sciences,69,0.8673469387755102,1597
+1949,Veterinary,2,0.0,0
+1950,Agricultural and Biological Sciences,54,0.9305555555555556,849
+1950,Arts and Humanities,71,0.9375,1919
+1950,"Biochemistry, Genetics and Molecular Biology",30,0.8541666666666666,415
+1950,"Business, Management and Accounting",7,0.75,196
+1950,Chemical Engineering,2,1.0,133
+1950,Chemistry,9,0.9166666666666666,269
+1950,Computer Science,6,0.625,162
+1950,Decision Sciences,1,1.0,31
+1950,Earth and Planetary Sciences,5,0.8333333333333334,160
+1950,"Economics, Econometrics and Finance",10,0.5833333333333334,247
+1950,Engineering,31,0.9743589743589743,683
+1950,Environmental Science,16,0.8333333333333334,269
+1950,Health Professions,16,0.5263157894736842,351
+1950,Immunology and Microbiology,4,0.16666666666666666,52
+1950,Materials Science,8,0.6363636363636364,95
+1950,Mathematics,3,1.0,182
+1950,Medicine,116,0.8863636363636364,2073
+1950,Neuroscience,3,0.0,0
+1950,Nursing,4,0.75,55
+1950,"Pharmacology, Toxicology and Pharmaceutics",2,0.0,0
+1950,Physics and Astronomy,6,0.375,190
+1950,Psychology,8,0.7777777777777778,216
+1950,Social Sciences,77,0.8061224489795918,1677
+1950,Veterinary,2,0.3333333333333333,13
+1951,Agricultural and Biological Sciences,16,0.96875,884
+1951,Arts and Humanities,57,0.96,1997
+1951,"Biochemistry, Genetics and Molecular Biology",15,0.9523809523809523,452
+1951,"Business, Management and Accounting",7,0.9,206
+1951,Chemical Engineering,4,1.0,139
+1951,Chemistry,14,0.8181818181818182,291
+1951,Computer Science,9,0.7692307692307693,177
+1951,Decision Sciences,3,0.6666666666666666,33
+1951,Dentistry,1,1.0,28
+1951,Earth and Planetary Sciences,6,0.42857142857142855,162
+1951,"Economics, Econometrics and Finance",9,0.9,256
+1951,Engineering,25,0.8648648648648649,726
+1951,Environmental Science,12,0.625,286
+1951,Health Professions,16,0.8888888888888888,374
+1951,Immunology and Microbiology,4,0.2,53
+1951,Materials Science,9,0.8461538461538461,107
+1951,Mathematics,5,0.875,189
+1951,Medicine,114,0.8679245283018868,2214
+1951,Neuroscience,6,0.3,59
+1951,Nursing,5,0.6,58
+1951,Physics and Astronomy,4,0.25,193
+1951,Psychology,9,0.875,233
+1951,Social Sciences,93,0.8173913043478261,1767
+1952,Agricultural and Biological Sciences,25,0.95,931
+1952,Arts and Humanities,54,0.8194444444444444,2068
+1952,"Biochemistry, Genetics and Molecular Biology",16,0.9230769230769231,489
+1952,"Business, Management and Accounting",6,0.8333333333333334,215
+1952,Chemical Engineering,1,1.0,140
+1952,Chemistry,16,1.0,318
+1952,Computer Science,6,1.0,184
+1952,Dentistry,2,0.6666666666666666,31
+1952,Earth and Planetary Sciences,9,0.6666666666666666,170
+1952,"Economics, Econometrics and Finance",8,0.625,262
+1952,Energy,2,1.0,62
+1952,Engineering,32,0.8888888888888888,767
+1952,Environmental Science,17,0.8636363636363636,308
+1952,Health Professions,14,0.631578947368421,389
+1952,Immunology and Microbiology,7,0.4166666666666667,61
+1952,Materials Science,7,0.4,112
+1952,Mathematics,7,0.7142857142857143,194
+1952,Medicine,92,0.8723404255319149,2345
+1952,Neuroscience,3,0.7142857142857143,66
+1952,Nursing,2,1.0,63
+1952,"Pharmacology, Toxicology and Pharmaceutics",2,0.0,0
+1952,Physics and Astronomy,13,0.5882352941176471,203
+1952,Psychology,11,0.7142857142857143,244
+1952,Social Sciences,81,0.8842105263157894,1854
+1952,Veterinary,1,0.0,0
+1953,Agricultural and Biological Sciences,1,1.0,932
+1953,Engineering,2,1.0,773
+1953,Environmental Science,1,1.0,309
+1953,Materials Science,2,0.6666666666666666,114
+1953,Mathematics,1,1.0,195
+1953,Medicine,4,0.8888888888888888,2353
+1953,Psychology,1,1.0,245
+1954,Agricultural and Biological Sciences,13,1.0,956
+1954,Arts and Humanities,55,0.8888888888888888,2137
+1954,"Biochemistry, Genetics and Molecular Biology",18,0.8888888888888888,522
+1954,"Business, Management and Accounting",8,0.6666666666666666,223
+1954,Chemical Engineering,1,1.0,143
+1954,Chemistry,13,0.88,345
+1954,Computer Science,7,0.3333333333333333,187
+1954,Decision Sciences,1,1.0,34
+1954,Dentistry,2,1.0,34
+1954,Earth and Planetary Sciences,10,0.5454545454545454,178
+1954,"Economics, Econometrics and Finance",13,0.7142857142857143,271
+1954,Engineering,27,0.9142857142857143,811
+1954,Environmental Science,19,0.6785714285714286,327
+1954,Health Professions,12,0.7692307692307693,401
+1954,Immunology and Microbiology,2,1.0,64
+1954,Materials Science,7,0.7272727272727273,124
+1954,Mathematics,4,1.0,199
+1954,Medicine,93,0.9172413793103448,2489
+1954,Neuroscience,5,0.8333333333333334,72
+1954,Nursing,6,0.375,66
+1954,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1954,Physics and Astronomy,11,0.4666666666666667,212
+1954,Psychology,8,0.8888888888888888,255
+1954,Social Sciences,77,0.7888888888888889,1935
+1955,Agricultural and Biological Sciences,22,0.7586206896551724,984
+1955,Arts and Humanities,59,0.9305555555555556,2210
+1955,"Biochemistry, Genetics and Molecular Biology",11,0.8709677419354839,568
+1955,"Business, Management and Accounting",7,0.75,230
+1955,Chemical Engineering,4,0.875,151
+1955,Chemistry,10,0.7692307692307693,359
+1955,Computer Science,7,0.7142857142857143,196
+1955,Decision Sciences,5,0.6666666666666666,38
+1955,Dentistry,3,0.5714285714285714,38
+1955,Earth and Planetary Sciences,2,1.0,182
+1955,"Economics, Econometrics and Finance",5,1.0,283
+1955,Energy,1,0.0,0
+1955,Engineering,40,0.9122807017543859,875
+1955,Environmental Science,18,0.6451612903225806,351
+1955,Health Professions,16,0.84,428
+1955,Immunology and Microbiology,5,1.0,72
+1955,Materials Science,12,0.7894736842105263,139
+1955,Mathematics,7,0.7777777777777778,205
+1955,Medicine,109,0.9158415841584159,2683
+1955,Neuroscience,4,0.6666666666666666,76
+1955,Nursing,3,0.8,70
+1955,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1955,Physics and Astronomy,10,0.7142857142857143,224
+1955,Psychology,8,0.75,266
+1955,Social Sciences,80,0.7659574468085106,2010
+1955,Veterinary,1,0.0,0
+1956,Agricultural and Biological Sciences,23,1.0,1052
+1956,Arts and Humanities,61,0.9066666666666666,2290
+1956,"Biochemistry, Genetics and Molecular Biology",19,0.96875,605
+1956,"Business, Management and Accounting",7,0.75,236
+1956,Chemistry,14,0.8095238095238095,377
+1956,Computer Science,7,0.8571428571428571,202
+1956,Decision Sciences,4,0.75,42
+1956,Earth and Planetary Sciences,2,1.0,186
+1956,"Economics, Econometrics and Finance",8,1.0,295
+1956,Energy,3,1.0,67
+1956,Engineering,37,0.9375,927
+1956,Environmental Science,15,0.2037037037037037,365
+1956,Health Professions,16,0.7777777777777778,443
+1956,Immunology and Microbiology,7,0.9230769230769231,84
+1956,Materials Science,2,1.0,142
+1956,Mathematics,5,1.0,215
+1956,Medicine,99,0.9017341040462428,2836
+1956,Neuroscience,8,0.9411764705882353,92
+1956,Nursing,3,0.3333333333333333,71
+1956,"Pharmacology, Toxicology and Pharmaceutics",1,1.0,22
+1956,Physics and Astronomy,6,0.7142857142857143,230
+1956,Psychology,11,0.7333333333333333,277
+1956,Social Sciences,87,0.86,2092
+1956,Veterinary,1,1.0,15
+1957,Agricultural and Biological Sciences,34,0.8727272727272727,1114
+1957,Arts and Humanities,58,1.0,2367
+1957,"Biochemistry, Genetics and Molecular Biology",21,0.6666666666666666,651
+1957,"Business, Management and Accounting",6,1.0,246
+1957,Chemical Engineering,3,1.0,155
+1957,Chemistry,14,0.9090909090909091,405
+1957,Computer Science,9,0.9090909090909091,212
+1957,Decision Sciences,1,1.0,43
+1957,Dentistry,1,1.0,42
+1957,Earth and Planetary Sciences,6,0.5714285714285714,192
+1957,"Economics, Econometrics and Finance",9,0.9230769230769231,308
+1957,Energy,2,0.3333333333333333,68
+1957,Engineering,33,0.8363636363636363,993
+1957,Environmental Science,12,0.6923076923076923,373
+1957,Health Professions,9,0.8333333333333334,454
+1957,Immunology and Microbiology,3,0.3,91
+1957,Materials Science,13,0.5,162
+1957,Mathematics,8,0.5,220
+1957,Medicine,116,0.8854166666666666,3011
+1957,Nursing,4,0.0,0
+1957,"Pharmacology, Toxicology and Pharmaceutics",3,0.0,0
+1957,Physics and Astronomy,17,0.42857142857142855,238
+1957,Psychology,9,0.6923076923076923,286
+1957,Social Sciences,85,0.8095238095238095,2179
+1958,Agricultural and Biological Sciences,34,0.8958333333333334,1168
+1958,Arts and Humanities,60,0.922077922077922,2451
+1958,"Biochemistry, Genetics and Molecular Biology",28,0.7317073170731707,690
+1958,"Business, Management and Accounting",5,1.0,258
+1958,Chemical Engineering,1,1.0,157
+1958,Chemistry,12,1.0,433
+1958,Computer Science,6,1.0,225
+1958,Decision Sciences,1,1.0,45
+1958,Dentistry,1,1.0,43
+1958,Earth and Planetary Sciences,17,0.8846153846153846,215
+1958,"Economics, Econometrics and Finance",13,0.7857142857142857,319
+1958,Energy,1,0.0,0
+1958,Engineering,48,0.8947368421052632,1078
+1958,Environmental Science,14,0.6842105263157895,387
+1958,Health Professions,19,0.88,478
+1958,Immunology and Microbiology,7,0.75,100
+1958,Materials Science,10,0.5555555555555556,172
+1958,Mathematics,6,0.5,223
+1958,Medicine,113,0.8909952606635071,3206
+1958,Neuroscience,1,1.0,95
+1958,Nursing,4,0.4,74
+1958,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1958,Physics and Astronomy,23,0.7222222222222222,265
+1958,Psychology,12,0.6666666666666666,296
+1958,Social Sciences,70,0.8275862068965517,2253
+1958,Veterinary,2,1.0,25
+1959,Agricultural and Biological Sciences,35,0.9090909090909091,1233
+1959,Arts and Humanities,76,0.945054945054945,2547
+1959,"Biochemistry, Genetics and Molecular Biology",23,0.6285714285714286,737
+1959,"Business, Management and Accounting",11,0.5714285714285714,267
+1959,Chemical Engineering,8,0.7333333333333333,168
+1959,Chemistry,11,1.0,463
+1959,Computer Science,8,0.75,234
+1959,Decision Sciences,2,0.5,47
+1959,Earth and Planetary Sciences,7,0.8571428571428571,221
+1959,"Economics, Econometrics and Finance",8,0.75,329
+1959,Energy,3,0.4,71
+1959,Engineering,59,0.8641975308641975,1163
+1959,Environmental Science,12,0.5882352941176471,401
+1959,Health Professions,11,0.6428571428571429,491
+1959,Immunology and Microbiology,10,0.4166666666666667,109
+1959,Materials Science,14,0.391304347826087,182
+1959,Mathematics,9,0.7777777777777778,229
+1959,Medicine,106,0.9215686274509803,3402
+1959,Neuroscience,9,0.5454545454545454,101
+1959,Nursing,5,0.625,80
+1959,"Pharmacology, Toxicology and Pharmaceutics",4,0.2727272727272727,25
+1959,Physics and Astronomy,16,0.8333333333333334,286
+1959,Psychology,8,0.625,303
+1959,Social Sciences,79,0.75,2331
+1959,Veterinary,1,1.0,27
+1960,Agricultural and Biological Sciences,73,0.9607843137254902,1363
+1960,Arts and Humanities,85,0.8829787234042553,2641
+1960,"Biochemistry, Genetics and Molecular Biology",26,0.6521739130434783,777
+1960,"Business, Management and Accounting",8,0.875,275
+1960,Chemical Engineering,3,0.6,172
+1960,Chemistry,15,0.9047619047619048,490
+1960,Computer Science,17,0.9,256
+1960,Decision Sciences,5,0.7142857142857143,53
+1960,Dentistry,1,1.0,44
+1960,Earth and Planetary Sciences,7,0.5714285714285714,231
+1960,"Economics, Econometrics and Finance",8,0.9166666666666666,339
+1960,Energy,2,0.0,0
+1960,Engineering,60,0.9166666666666666,1266
+1960,Environmental Science,21,0.6285714285714286,438
+1960,Health Professions,18,0.7142857142857143,511
+1960,Immunology and Microbiology,2,1.0,113
+1960,Materials Science,15,0.6666666666666666,200
+1960,Mathematics,4,0.75,234
+1960,Medicine,113,0.8907103825136612,3576
+1960,Neuroscience,5,0.16666666666666666,102
+1960,Nursing,6,1.0,88
+1960,"Pharmacology, Toxicology and Pharmaceutics",2,0.0,0
+1960,Physics and Astronomy,16,0.75,305
+1960,Psychology,15,0.6666666666666666,322
+1960,Social Sciences,94,0.7815126050420168,2421
+1960,Veterinary,5,0.35294117647058826,33
+1961,Agricultural and Biological Sciences,29,1.0,1417
+1961,Arts and Humanities,72,0.8780487804878049,2729
+1961,"Biochemistry, Genetics and Molecular Biology",27,0.8,826
+1961,"Business, Management and Accounting",4,0.8333333333333334,284
+1961,Chemical Engineering,3,1.0,178
+1961,Chemistry,14,0.8333333333333334,513
+1961,Computer Science,5,0.6666666666666666,265
+1961,Decision Sciences,5,0.4,57
+1961,Earth and Planetary Sciences,8,0.7777777777777778,242
+1961,"Economics, Econometrics and Finance",18,0.9047619047619048,364
+1961,Energy,2,0.5,72
+1961,Engineering,54,0.8928571428571429,1360
+1961,Environmental Science,22,0.59375,457
+1961,Health Professions,14,0.8636363636363636,533
+1961,Immunology and Microbiology,6,0.6666666666666666,124
+1961,Materials Science,9,0.6153846153846154,209
+1961,Mathematics,3,0.3333333333333333,237
+1961,Medicine,129,0.9244604316546763,3829
+1961,Neuroscience,6,0.7692307692307693,112
+1961,Nursing,4,0.8333333333333334,93
+1961,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1961,Physics and Astronomy,25,0.782608695652174,342
+1961,Psychology,18,0.782608695652174,342
+1961,Social Sciences,104,0.8360655737704918,2520
+1962,Agricultural and Biological Sciences,39,0.9464285714285714,1479
+1962,Arts and Humanities,88,0.9433962264150944,2848
+1962,"Biochemistry, Genetics and Molecular Biology",26,0.75,885
+1962,"Business, Management and Accounting",13,0.9285714285714286,301
+1962,Chemical Engineering,2,1.0,183
+1962,Chemistry,18,0.9230769230769231,552
+1962,Computer Science,8,0.9,278
+1962,Decision Sciences,4,0.5,60
+1962,Earth and Planetary Sciences,7,0.8,252
+1962,"Economics, Econometrics and Finance",18,0.8947368421052632,399
+1962,Energy,2,0.5,78
+1962,Engineering,71,0.888,1489
+1962,Environmental Science,17,0.42424242424242425,474
+1962,Health Professions,20,0.8846153846153846,561
+1962,Immunology and Microbiology,3,0.6666666666666666,129
+1962,Materials Science,18,0.6666666666666666,232
+1962,Mathematics,6,0.42857142857142855,242
+1962,Medicine,126,0.8935185185185185,4034
+1962,Neuroscience,6,0.5454545454545454,118
+1962,Nursing,3,0.8333333333333334,98
+1962,"Pharmacology, Toxicology and Pharmaceutics",3,0.7142857142857143,30
+1962,Physics and Astronomy,30,0.7111111111111111,372
+1962,Psychology,17,0.6842105263157895,356
+1962,Social Sciences,94,0.7606837606837606,2614
+1962,Veterinary,1,0.0,0
+1963,Agricultural and Biological Sciences,33,0.9038461538461539,1536
+1963,Arts and Humanities,86,0.900990099009901,2961
+1963,"Biochemistry, Genetics and Molecular Biology",24,0.8235294117647058,942
+1963,"Business, Management and Accounting",10,0.9230769230769231,320
+1963,Chemical Engineering,7,0.9166666666666666,195
+1963,Chemistry,28,0.9622641509433962,624
+1963,Computer Science,15,0.65,294
+1963,Decision Sciences,2,0.0,0
+1963,Dentistry,1,1.0,48
+1963,Earth and Planetary Sciences,7,1.0,262
+1963,"Economics, Econometrics and Finance",15,0.8461538461538461,445
+1963,Energy,1,0.0,0
+1963,Engineering,68,0.918918918918919,1613
+1963,Environmental Science,16,0.5909090909090909,492
+1963,Health Professions,8,0.21739130434782608,572
+1963,Immunology and Microbiology,6,0.7272727272727273,137
+1963,Materials Science,26,0.4090909090909091,252
+1963,Mathematics,5,0.3333333333333333,245
+1963,Medicine,130,0.8685258964143426,4255
+1963,Neuroscience,5,0.75,125
+1963,Nursing,1,0.0,0
+1963,"Pharmacology, Toxicology and Pharmaceutics",2,0.5714285714285714,34
+1963,Physics and Astronomy,24,0.8,401
+1963,Psychology,16,0.6666666666666666,374
+1963,Social Sciences,110,0.796875,2717
+1963,Veterinary,2,0.0,0
+1964,Agricultural and Biological Sciences,48,0.9090909090909091,1660
+1964,Arts and Humanities,85,0.9029126213592233,3068
+1964,"Biochemistry, Genetics and Molecular Biology",42,0.6923076923076923,1025
+1964,"Business, Management and Accounting",5,0.3333333333333333,325
+1964,Chemical Engineering,2,1.0,199
+1964,Chemistry,21,0.8604651162790697,675
+1964,Computer Science,12,0.8333333333333334,321
+1964,Decision Sciences,3,0.6666666666666666,63
+1964,Dentistry,4,0.8,52
+1964,Earth and Planetary Sciences,11,0.5882352941176471,274
+1964,"Economics, Econometrics and Finance",10,0.6363636363636364,454
+1964,Energy,1,0.0,0
+1964,Engineering,75,0.8547008547008547,1740
+1964,Environmental Science,14,0.7368421052631579,508
+1964,Health Professions,16,0.7272727272727273,595
+1964,Immunology and Microbiology,9,0.5,150
+1964,Materials Science,20,0.43137254901960786,279
+1964,Mathematics,10,0.7,251
+1964,Medicine,185,0.9088145896656535,4577
+1964,Neuroscience,10,0.6190476190476191,139
+1964,Nursing,3,0.5,101
+1964,"Pharmacology, Toxicology and Pharmaceutics",2,0.0,0
+1964,Physics and Astronomy,16,0.8181818181818182,419
+1964,Psychology,18,0.7,387
+1964,Social Sciences,121,0.8188405797101449,2832
+1964,Veterinary,2,0.0,0
+1965,Agricultural and Biological Sciences,43,0.8923076923076924,1736
+1965,Arts and Humanities,99,0.9516129032258065,3182
+1965,"Biochemistry, Genetics and Molecular Biology",29,0.7419354838709677,1097
+1965,"Business, Management and Accounting",9,0.9090909090909091,338
+1965,Chemistry,14,0.9375,713
+1965,Computer Science,16,0.5555555555555556,348
+1965,Decision Sciences,9,0.7777777777777778,78
+1965,Dentistry,5,0.9,65
+1965,Earth and Planetary Sciences,13,0.7058823529411765,286
+1965,"Economics, Econometrics and Finance",12,0.5714285714285714,463
+1965,Energy,5,0.5714285714285714,83
+1965,Engineering,75,0.8842975206611571,1870
+1965,Environmental Science,17,0.8846153846153846,531
+1965,Health Professions,30,0.8536585365853658,636
+1965,Immunology and Microbiology,8,0.5454545454545454,160
+1965,Materials Science,13,0.6666666666666666,297
+1965,Mathematics,9,0.8461538461538461,264
+1965,Medicine,184,0.9137931034482759,4912
+1965,Neuroscience,6,0.6923076923076923,148
+1965,Nursing,2,0.5,102
+1965,"Pharmacology, Toxicology and Pharmaceutics",7,0.2777777777777778,39
+1965,Physics and Astronomy,26,0.55,442
+1965,Psychology,12,0.875,401
+1965,Social Sciences,118,0.8863636363636364,2940
+1965,Veterinary,3,0.125,36
+1966,Agricultural and Biological Sciences,40,0.9850746268656716,1798
+1966,Arts and Humanities,83,0.9433962264150944,3296
+1966,"Biochemistry, Genetics and Molecular Biology",34,0.8088235294117647,1178
+1966,"Business, Management and Accounting",11,0.8461538461538461,350
+1966,Chemical Engineering,1,0.0,0
+1966,Chemistry,17,0.7407407407407407,748
+1966,Computer Science,13,0.6666666666666666,363
+1966,Decision Sciences,5,0.6,81
+1966,Dentistry,2,0.5,68
+1966,Earth and Planetary Sciences,12,0.625,299
+1966,"Economics, Econometrics and Finance",22,0.7037037037037037,485
+1966,Energy,1,1.0,88
+1966,Engineering,62,0.8189655172413793,1991
+1966,Environmental Science,18,0.7222222222222222,558
+1966,Health Professions,23,0.84375,663
+1966,Immunology and Microbiology,6,0.3333333333333333,168
+1966,Materials Science,10,0.6666666666666666,321
+1966,Mathematics,10,1.0,278
+1966,Medicine,133,0.8745644599303136,5171
+1966,Neuroscience,9,0.26666666666666666,152
+1966,Nursing,4,0.8,106
+1966,"Pharmacology, Toxicology and Pharmaceutics",3,0.16666666666666666,40
+1966,Physics and Astronomy,28,0.6739130434782609,476
+1966,Psychology,7,0.8571428571428571,410
+1966,Social Sciences,114,0.7835820895522388,3051
+1966,Veterinary,4,0.5,43
+1967,Agricultural and Biological Sciences,40,0.9672131147540983,1870
+1967,Arts and Humanities,108,0.916030534351145,3427
+1967,"Biochemistry, Genetics and Molecular Biology",33,0.7540983606557377,1254
+1967,"Business, Management and Accounting",2,1.0,355
+1967,Chemical Engineering,1,1.0,208
+1967,Chemistry,24,0.8571428571428571,787
+1967,Computer Science,11,0.6923076923076923,383
+1967,Decision Sciences,3,0.6666666666666666,84
+1967,Dentistry,2,1.0,75
+1967,Earth and Planetary Sciences,12,0.7894736842105263,317
+1967,"Economics, Econometrics and Finance",16,0.8823529411764706,500
+1967,Engineering,65,0.8198198198198198,2105
+1967,Environmental Science,15,0.7368421052631579,576
+1967,Health Professions,20,0.8666666666666667,693
+1967,Immunology and Microbiology,3,1.0,175
+1967,Materials Science,11,0.5789473684210527,342
+1967,Mathematics,9,0.8888888888888888,289
+1967,Medicine,164,0.9002849002849003,5511
+1967,Neuroscience,9,0.14814814814814814,157
+1967,Nursing,7,0.16666666666666666,109
+1967,"Pharmacology, Toxicology and Pharmaceutics",5,0.375,43
+1967,Physics and Astronomy,23,0.6410256410256411,504
+1967,Psychology,10,0.8181818181818182,423
+1967,Social Sciences,131,0.8848684210526315,3313
+1967,Veterinary,4,1.0,53
+1968,Agricultural and Biological Sciences,44,0.9873417721518988,1972
+1968,Arts and Humanities,84,0.9705882352941176,3548
+1968,"Biochemistry, Genetics and Molecular Biology",31,0.7384615384615385,1324
+1968,"Business, Management and Accounting",5,0.16666666666666666,363
+1968,Chemical Engineering,4,0.7777777777777778,219
+1968,Chemistry,19,0.8043478260869565,836
+1968,Computer Science,21,0.8888888888888888,413
+1968,Decision Sciences,7,0.75,91
+1968,Dentistry,2,0.3333333333333333,78
+1968,Earth and Planetary Sciences,9,0.9285714285714286,335
+1968,"Economics, Econometrics and Finance",18,0.6410256410256411,530
+1968,Energy,2,0.6666666666666666,90
+1968,Engineering,63,0.9292035398230089,2234
+1968,Environmental Science,29,0.6097560975609756,604
+1968,Health Professions,26,0.9,737
+1968,Immunology and Microbiology,8,0.85,192
+1968,Materials Science,19,0.6829268292682927,372
+1968,Mathematics,14,0.8125,304
+1968,Medicine,151,0.887240356083086,5812
+1968,Neuroscience,5,0.8823529411764706,172
+1968,Nursing,3,0.5,118
+1968,"Pharmacology, Toxicology and Pharmaceutics",7,0.3076923076923077,50
+1968,Physics and Astronomy,25,0.6571428571428571,532
+1968,Psychology,18,0.5238095238095238,436
+1968,Social Sciences,129,0.7483443708609272,3424
+1968,Veterinary,3,0.6666666666666666,57
+1969,Agricultural and Biological Sciences,35,0.9555555555555556,2028
+1969,Arts and Humanities,96,0.9327731092436975,3683
+1969,"Biochemistry, Genetics and Molecular Biology",38,0.7528089887640449,1416
+1969,"Business, Management and Accounting",16,0.5263157894736842,374
+1969,Chemistry,16,0.8620689655172413,870
+1969,Computer Science,25,0.75,453
+1969,Decision Sciences,5,0.7142857142857143,96
+1969,Dentistry,2,0.5,87
+1969,Earth and Planetary Sciences,16,0.7619047619047619,356
+1969,"Economics, Econometrics and Finance",11,0.7333333333333333,544
+1969,Engineering,91,0.8333333333333334,2431
+1969,Environmental Science,20,0.7857142857142857,628
+1969,Health Professions,34,0.8870967741935484,804
+1969,Immunology and Microbiology,5,0.42857142857142855,199
+1969,Materials Science,28,0.34328358208955223,403
+1969,Mathematics,16,0.5714285714285714,317
+1969,Medicine,172,0.9030470914127424,6154
+1969,Neuroscience,8,0.5,179
+1969,Nursing,3,0.6,121
+1969,"Pharmacology, Toxicology and Pharmaceutics",5,0.9090909090909091,62
+1969,Physics and Astronomy,41,0.7058823529411765,587
+1969,Psychology,23,0.6363636363636364,459
+1969,Social Sciences,127,0.8545454545454545,3569
+1969,Veterinary,2,0.14285714285714285,58
+1970,Agricultural and Biological Sciences,109,0.9361702127659575,2255
+1970,Arts and Humanities,113,0.951048951048951,3840
+1970,"Biochemistry, Genetics and Molecular Biology",52,0.5968992248062015,1533
+1970,"Business, Management and Accounting",18,0.896551724137931,408
+1970,Chemical Engineering,2,1.0,229
+1970,Chemistry,98,0.921161825726141,1145
+1970,Computer Science,20,0.7666666666666667,492
+1970,Decision Sciences,5,1.0,112
+1970,Dentistry,3,0.6666666666666666,94
+1970,Earth and Planetary Sciences,18,0.696969696969697,393
+1970,"Economics, Econometrics and Finance",22,0.7391304347826086,567
+1970,Energy,5,0.5714285714285714,95
+1970,Engineering,110,0.8026315789473685,2653
+1970,Environmental Science,38,0.5774647887323944,677
+1970,Health Professions,28,0.7307692307692307,852
+1970,Immunology and Microbiology,5,0.9166666666666666,218
+1970,Materials Science,27,0.39622641509433965,432
+1970,Mathematics,13,0.5238095238095238,328
+1970,Medicine,151,0.8840579710144928,6473
+1970,Neuroscience,7,0.8666666666666667,192
+1970,Nursing,2,1.0,123
+1970,"Pharmacology, Toxicology and Pharmaceutics",10,0.15789473684210525,65
+1970,Physics and Astronomy,34,0.746268656716418,642
+1970,Psychology,24,0.5555555555555556,477
+1970,Social Sciences,188,0.8201754385964912,3756
+1970,Veterinary,4,0.5,67
+1971,Agricultural and Biological Sciences,54,0.898876404494382,2343
+1971,Arts and Humanities,102,0.9512195121951219,3974
+1971,"Biochemistry, Genetics and Molecular Biology",45,0.660377358490566,1649
+1971,"Business, Management and Accounting",11,0.8181818181818182,427
+1971,Chemical Engineering,5,0.5714285714285714,237
+1971,Chemistry,89,0.9120370370370371,1374
+1971,Computer Science,19,0.5238095238095238,512
+1971,Decision Sciences,9,0.6,122
+1971,Dentistry,2,1.0,100
+1971,Earth and Planetary Sciences,14,0.8695652173913043,420
+1971,"Economics, Econometrics and Finance",21,0.8571428571428571,588
+1971,Energy,3,0.5,101
+1971,Engineering,99,0.9211822660098522,2868
+1971,Environmental Science,22,0.7297297297297297,709
+1971,Health Professions,26,0.8723404255319149,908
+1971,Immunology and Microbiology,5,0.18181818181818182,224
+1971,Materials Science,30,0.4057971014492754,461
+1971,Mathematics,9,0.8333333333333334,337
+1971,Medicine,152,0.8955223880597015,6791
+1971,Neuroscience,4,0.2,193
+1971,Nursing,3,0.8,127
+1971,"Pharmacology, Toxicology and Pharmaceutics",9,0.15,72
+1971,Physics and Astronomy,44,0.8589743589743589,715
+1971,Psychology,14,0.7692307692307693,499
+1971,Social Sciences,149,0.7377049180327869,3895
+1971,Veterinary,1,0.0,0
+1972,"Biochemistry, Genetics and Molecular Biology",1,0.2,1650
+1973,Agricultural and Biological Sciences,42,0.9411764705882353,2428
+1973,Arts and Humanities,114,0.9097222222222222,4137
+1973,"Biochemistry, Genetics and Molecular Biology",47,0.66,1746
+1973,"Business, Management and Accounting",8,0.8,445
+1973,Chemical Engineering,4,0.75,246
+1973,Chemistry,70,0.903954802259887,1586
+1973,Computer Science,34,0.7674418604651163,552
+1973,Decision Sciences,4,0.8,127
+1973,Earth and Planetary Sciences,12,0.6666666666666666,446
+1973,"Economics, Econometrics and Finance",23,0.5,606
+1973,Energy,4,0.1111111111111111,102
+1973,Engineering,88,0.8795811518324608,3053
+1973,Environmental Science,26,0.75,744
+1973,Health Professions,33,0.6153846153846154,955
+1973,Immunology and Microbiology,9,0.29411764705882354,229
+1973,Materials Science,33,0.6794871794871795,517
+1973,Mathematics,8,0.6666666666666666,345
+1973,Medicine,149,0.9145299145299145,7129
+1973,Neuroscience,7,0.5454545454545454,199
+1973,Nursing,3,0.75,130
+1973,"Pharmacology, Toxicology and Pharmaceutics",7,0.375,78
+1973,Physics and Astronomy,52,0.8819444444444444,847
+1973,Psychology,27,0.5263157894736842,521
+1973,Social Sciences,194,0.7815126050420168,4093
+1973,Veterinary,1,1.0,68
+1974,Agricultural and Biological Sciences,52,0.9186046511627907,2513
+1974,Arts and Humanities,110,0.9558823529411765,4272
+1974,"Biochemistry, Genetics and Molecular Biology",36,0.6741573033707865,1836
+1974,"Business, Management and Accounting",12,0.9523809523809523,474
+1974,Chemical Engineering,8,0.6111111111111112,264
+1974,Chemistry,72,0.9740932642487047,1825
+1974,Computer Science,27,0.75,595
+1974,Decision Sciences,5,0.7142857142857143,134
+1974,Dentistry,3,0.5714285714285714,104
+1974,Earth and Planetary Sciences,15,0.47619047619047616,461
+1974,"Economics, Econometrics and Finance",21,0.76,630
+1974,Energy,4,1.0,109
+1974,Engineering,97,0.8134715025906736,3244
+1974,Environmental Science,23,0.7804878048780488,782
+1974,Health Professions,28,0.7209302325581395,1001
+1974,Immunology and Microbiology,4,0.2857142857142857,231
+1974,Materials Science,29,0.4857142857142857,565
+1974,Mathematics,16,0.9444444444444444,364
+1974,Medicine,123,0.8766666666666667,7427
+1974,Neuroscience,5,0.4166666666666667,207
+1974,Nursing,8,0.8181818181818182,148
+1974,"Pharmacology, Toxicology and Pharmaceutics",5,0.05555555555555555,79
+1974,Physics and Astronomy,39,0.625,900
+1974,Psychology,19,0.8095238095238095,536
+1974,Social Sciences,177,0.8226600985221675,4261
+1975,Agricultural and Biological Sciences,1,1.0,2516
+1975,"Business, Management and Accounting",1,1.0,475
+1975,Chemical Engineering,1,0.0,0
+1975,Computer Science,4,0.6666666666666666,600
+1975,Decision Sciences,1,0.0,0
+1975,Engineering,2,0.4,3247
+1975,Mathematics,1,1.0,366
+1976,Agricultural and Biological Sciences,37,0.9814814814814815,2605
+1976,Arts and Humanities,127,0.8654970760233918,4448
+1976,"Biochemistry, Genetics and Molecular Biology",44,0.7619047619047619,1963
+1976,"Business, Management and Accounting",20,0.85,503
+1976,Chemical Engineering,4,0.3333333333333333,277
+1976,Chemistry,53,0.8872180451127819,1979
+1976,Computer Science,34,0.7222222222222222,653
+1976,Decision Sciences,5,1.0,143
+1976,Dentistry,2,1.0,110
+1976,Earth and Planetary Sciences,21,0.5142857142857142,484
+1976,"Economics, Econometrics and Finance",28,0.59375,651
+1976,Energy,9,0.3333333333333333,119
+1976,Engineering,156,0.8729641693811075,3552
+1976,Environmental Science,33,0.5740740740740741,814
+1976,Health Professions,36,0.8032786885245902,1062
+1976,Immunology and Microbiology,8,0.5,246
+1976,Materials Science,26,0.5932203389830508,614
+1976,Mathematics,13,0.8235294117647058,384
+1976,Medicine,158,0.8848167539267016,7771
+1976,Neuroscience,9,0.9130434782608695,234
+1976,Nursing,2,0.0,0
+1976,"Pharmacology, Toxicology and Pharmaceutics",8,0.13636363636363635,82
+1976,Physics and Astronomy,58,0.8252427184466019,1004
+1976,Psychology,19,0.76,556
+1976,Social Sciences,171,0.7560975609756098,4439
+1977,Agricultural and Biological Sciences,58,0.8913043478260869,2701
+1977,Arts and Humanities,107,0.9047619047619048,4583
+1977,"Biochemistry, Genetics and Molecular Biology",41,0.7592592592592593,2080
+1977,"Business, Management and Accounting",14,0.7,524
+1977,Chemical Engineering,7,0.8461538461538461,295
+1977,Chemistry,65,0.9230769230769231,2190
+1977,Computer Science,34,0.8360655737704918,713
+1977,Decision Sciences,6,0.8333333333333334,148
+1977,Dentistry,2,0.5,111
+1977,Earth and Planetary Sciences,18,0.72,509
+1977,"Economics, Econometrics and Finance",26,0.7692307692307693,683
+1977,Energy,13,0.5714285714285714,134
+1977,Engineering,134,0.8390804597701149,3821
+1977,Environmental Science,29,0.68,849
+1977,Health Professions,37,0.7636363636363637,1110
+1977,Immunology and Microbiology,6,0.8333333333333334,264
+1977,Materials Science,27,0.48,667
+1977,Mathematics,13,0.875,402
+1977,Medicine,178,0.8680555555555556,8179
+1977,Neuroscience,13,0.5,254
+1977,Nursing,3,0.6666666666666666,154
+1977,"Pharmacology, Toxicology and Pharmaceutics",6,0.14285714285714285,84
+1977,Physics and Astronomy,43,0.6813186813186813,1079
+1977,Psychology,14,0.5625,569
+1977,Social Sciences,180,0.8523809523809524,4634
+1978,Agricultural and Biological Sciences,53,0.9279279279279279,2842
+1978,Arts and Humanities,137,0.8953488372093024,4760
+1978,"Biochemistry, Genetics and Molecular Biology",36,0.7777777777777778,2184
+1978,"Business, Management and Accounting",20,0.8787878787878788,559
+1978,Chemical Engineering,4,0.5555555555555556,303
+1978,Chemistry,67,0.9545454545454546,2401
+1978,Computer Science,23,0.65625,747
+1978,Decision Sciences,7,0.375,153
+1978,Earth and Planetary Sciences,24,0.627906976744186,538
+1978,"Economics, Econometrics and Finance",25,0.8181818181818182,713
+1978,Energy,5,1.0,156
+1978,Engineering,138,0.850187265917603,4100
+1978,Environmental Science,48,0.5952380952380952,900
+1978,Health Professions,44,0.6981132075471698,1157
+1978,Immunology and Microbiology,9,0.6,278
+1978,Materials Science,24,0.34328358208955223,698
+1978,Mathematics,11,0.8571428571428571,415
+1978,Medicine,153,0.9021164021164021,8524
+1978,Neuroscience,12,0.782608695652174,273
+1978,Nursing,9,0.2,157
+1978,"Pharmacology, Toxicology and Pharmaceutics",5,0.3,87
+1978,Physics and Astronomy,41,0.676056338028169,1136
+1978,Psychology,19,0.6666666666666666,593
+1978,Social Sciences,188,0.764,4840
+1978,Veterinary,1,0.0,0
+1979,Agricultural and Biological Sciences,43,0.9620253164556962,2944
+1979,Arts and Humanities,123,0.9370629370629371,4918
+1979,"Biochemistry, Genetics and Molecular Biology",45,0.7079646017699115,2322
+1979,"Business, Management and Accounting",19,0.875,597
+1979,Chemical Engineering,6,0.9166666666666666,316
+1979,Chemistry,84,0.8963963963963963,2652
+1979,Computer Science,32,0.625,794
+1979,Decision Sciences,17,0.84,178
+1979,Dentistry,3,0.8,124
+1979,Earth and Planetary Sciences,21,0.7272727272727273,580
+1979,"Economics, Econometrics and Finance",23,0.7666666666666667,742
+1979,Energy,7,0.3,158
+1979,Engineering,168,0.8735632183908046,4460
+1979,Environmental Science,40,0.7397260273972602,962
+1979,Health Professions,44,0.6944444444444444,1216
+1979,Immunology and Microbiology,7,0.84,323
+1979,Materials Science,24,0.5079365079365079,740
+1979,Mathematics,11,1.0,427
+1979,Medicine,173,0.8734439834024896,8955
+1979,Neuroscience,8,0.5882352941176471,283
+1979,Nursing,4,0.5,161
+1979,"Pharmacology, Toxicology and Pharmaceutics",10,0.2608695652173913,93
+1979,Physics and Astronomy,77,0.7894736842105263,1279
+1979,Psychology,32,0.813953488372093,634
+1979,Social Sciences,200,0.8210116731517509,5053
+1979,Veterinary,4,0.1,69
+1980,Agricultural and Biological Sciences,1,1.0,2945
+1980,"Business, Management and Accounting",2,1.0,600
+1980,Computer Science,3,1.0,799
+1980,Engineering,3,1.0,4463
+1980,Environmental Science,1,1.0,963
+1980,Mathematics,1,1.0,429
+1980,Medicine,1,1.0,8960
+1980,Physics and Astronomy,2,0.3333333333333333,1280
+1980,Psychology,2,0.6666666666666666,637
+1980,Social Sciences,2,0.75,5056
+1981,"Biochemistry, Genetics and Molecular Biology",2,0.6666666666666666,2324
+1981,Engineering,1,1.0,4473
+1981,Materials Science,1,0.0,0
+1981,Physics and Astronomy,2,0.4,1282
+1981,Psychology,1,1.0,638
+1981,Social Sciences,1,1.0,5057
+1982,Agricultural and Biological Sciences,63,0.9310344827586207,3099
+1982,Arts and Humanities,133,0.9625,5096
+1982,"Biochemistry, Genetics and Molecular Biology",46,0.7416666666666667,2483
+1982,"Business, Management and Accounting",23,0.7647058823529411,634
+1982,Chemical Engineering,5,0.26666666666666666,321
+1982,Chemistry,57,0.8838709677419355,2821
+1982,Computer Science,48,0.782051282051282,876
+1982,Decision Sciences,8,0.8,188
+1982,Dentistry,2,0.6666666666666666,126
+1982,Earth and Planetary Sciences,30,0.84,658
+1982,"Economics, Econometrics and Finance",22,0.75,770
+1982,Energy,14,0.8709677419354839,193
+1982,Engineering,155,0.8643533123028391,4801
+1982,Environmental Science,46,0.5172413793103449,1011
+1982,Health Professions,38,0.7741935483870968,1278
+1982,Immunology and Microbiology,11,0.7,346
+1982,Materials Science,39,0.7565217391304347,829
+1982,Mathematics,12,0.8125,443
+1982,Medicine,186,0.875219683655536,9446
+1982,Neuroscience,7,0.6666666666666666,293
+1982,Nursing,6,0.391304347826087,170
+1982,"Pharmacology, Toxicology and Pharmaceutics",8,0.3181818181818182,100
+1982,Physics and Astronomy,48,0.8222222222222222,1365
+1982,Psychology,16,0.7222222222222222,653
+1982,Social Sciences,204,0.8333333333333334,5275
+1982,Veterinary,1,0.0,0
+1983,Agricultural and Biological Sciences,57,0.9191919191919192,3233
+1983,Arts and Humanities,154,0.9375,5308
+1983,"Biochemistry, Genetics and Molecular Biology",43,0.7422680412371134,2600
+1983,"Business, Management and Accounting",21,0.6071428571428571,666
+1983,Chemical Engineering,7,0.7857142857142857,344
+1983,Chemistry,79,0.831858407079646,3042
+1983,Computer Science,44,0.8552631578947368,977
+1983,Decision Sciences,10,0.5833333333333334,198
+1983,Dentistry,2,0.0,0
+1983,Earth and Planetary Sciences,30,0.6511627906976745,717
+1983,"Economics, Econometrics and Finance",38,0.7291666666666666,809
+1983,Energy,14,0.7692307692307693,217
+1983,Engineering,166,0.8611111111111112,5182
+1983,Environmental Science,35,0.3728813559322034,1043
+1983,Health Professions,49,0.8,1351
+1983,Immunology and Microbiology,7,0.375,360
+1983,Materials Science,31,0.5142857142857142,875
+1983,Mathematics,14,0.625,457
+1983,Medicine,200,0.8808664259927798,9948
+1983,Neuroscience,13,0.5652173913043478,306
+1983,Nursing,6,0.4444444444444444,174
+1983,"Pharmacology, Toxicology and Pharmaceutics",9,0.058823529411764705,103
+1983,Physics and Astronomy,59,0.7547169811320755,1489
+1983,Psychology,30,0.6923076923076923,681
+1983,Social Sciences,247,0.8050314465408805,5554
+1983,Veterinary,6,0.625,77
+1984,Agricultural and Biological Sciences,67,0.9708029197080292,3415
+1984,Arts and Humanities,171,0.9556650246305419,5552
+1984,"Biochemistry, Genetics and Molecular Biology",47,0.6770186335403726,2752
+1984,"Business, Management and Accounting",23,0.9444444444444444,717
+1984,Chemical Engineering,4,1.0,381
+1984,Chemistry,80,0.859375,3305
+1984,Computer Science,44,0.7931034482758621,1062
+1984,Decision Sciences,11,0.9,217
+1984,Dentistry,2,0.3333333333333333,134
+1984,Earth and Planetary Sciences,31,0.7213114754098361,773
+1984,"Economics, Econometrics and Finance",38,0.8245614035087719,863
+1984,Energy,9,0.5238095238095238,241
+1984,Engineering,152,0.8471760797342193,5487
+1984,Environmental Science,48,0.6590909090909091,1112
+1984,Health Professions,38,0.7454545454545455,1413
+1984,Immunology and Microbiology,11,0.72,394
+1984,Materials Science,28,0.7164179104477612,923
+1984,Mathematics,17,0.6666666666666666,473
+1984,Medicine,193,0.8407534246575342,10462
+1984,Neuroscience,16,0.7105263157894737,334
+1984,Nursing,6,0.5,183
+1984,"Pharmacology, Toxicology and Pharmaceutics",10,0.4857142857142857,125
+1984,Physics and Astronomy,64,0.6323529411764706,1583
+1984,Psychology,35,0.5365853658536586,703
+1984,Social Sciences,260,0.7545454545454545,5808
+1984,Veterinary,3,0.5,80
+1985,Agricultural and Biological Sciences,69,0.9416058394160584,3611
+1985,Arts and Humanities,166,0.9052132701421801,5799
+1985,"Biochemistry, Genetics and Molecular Biology",50,0.7230769230769231,2901
+1985,"Business, Management and Accounting",31,0.94,775
+1985,Chemical Engineering,2,1.0,399
+1985,Chemistry,78,0.9485981308411215,3559
+1985,Computer Science,48,0.8172043010752689,1173
+1985,Decision Sciences,7,0.42857142857142855,227
+1985,Dentistry,4,1.0,149
+1985,Earth and Planetary Sciences,26,0.5614035087719298,837
+1985,"Economics, Econometrics and Finance",33,0.7636363636363637,911
+1985,Energy,11,0.5652173913043478,255
+1985,Engineering,173,0.7863247863247863,5828
+1985,Environmental Science,58,0.64,1196
+1985,Health Professions,38,0.7662337662337663,1487
+1985,Immunology and Microbiology,12,0.7435897435897436,424
+1985,Materials Science,33,0.4166666666666667,971
+1985,Mathematics,11,0.5555555555555556,485
+1985,Medicine,196,0.8970358814352574,11051
+1985,Neuroscience,18,0.6206896551724138,371
+1985,Nursing,5,0.2,186
+1985,"Pharmacology, Toxicology and Pharmaceutics",5,0.0,0
+1985,Physics and Astronomy,71,0.6766467065868264,1701
+1985,Psychology,34,0.7,745
+1985,Social Sciences,259,0.7897897897897898,6084
+1986,Agricultural and Biological Sciences,87,0.9562841530054644,3825
+1986,Arts and Humanities,181,0.9191919191919192,6041
+1986,"Biochemistry, Genetics and Molecular Biology",57,0.8045977011494253,3086
+1986,"Business, Management and Accounting",31,0.7297297297297297,821
+1986,Chemical Engineering,6,0.5714285714285714,406
+1986,Chemistry,76,0.9310344827586207,3849
+1986,Computer Science,64,0.8367346938775511,1277
+1986,Decision Sciences,7,0.4,234
+1986,Dentistry,5,0.5384615384615384,163
+1986,Earth and Planetary Sciences,22,0.8478260869565217,902
+1986,"Economics, Econometrics and Finance",38,0.6842105263157895,964
+1986,Energy,6,0.875,265
+1986,Engineering,194,0.8492822966507177,6265
+1986,Environmental Science,50,0.691358024691358,1260
+1986,Health Professions,59,0.7419354838709677,1574
+1986,Immunology and Microbiology,14,0.7230769230769231,469
+1986,Materials Science,44,0.5660377358490566,1037
+1986,Mathematics,14,0.9166666666666666,516
+1986,Medicine,236,0.8916323731138546,11758
+1986,Neuroscience,13,0.5142857142857142,392
+1986,Nursing,9,0.3888888888888889,193
+1986,"Pharmacology, Toxicology and Pharmaceutics",8,0.2,132
+1986,Physics and Astronomy,94,0.6807511737089202,1846
+1986,Psychology,34,0.627906976744186,782
+1986,Social Sciences,282,0.7777777777777778,6376
+1986,Veterinary,1,0.0,0
+1987,Agricultural and Biological Sciences,69,0.9852941176470589,4000
+1987,Arts and Humanities,184,0.9393939393939394,6291
+1987,"Biochemistry, Genetics and Molecular Biology",47,0.8507462686567164,3269
+1987,"Business, Management and Accounting",32,0.8333333333333334,861
+1987,Chemical Engineering,3,1.0,412
+1987,Chemistry,50,0.9315068493150684,4010
+1987,Computer Science,51,0.8877551020408163,1415
+1987,Decision Sciences,12,0.9285714285714286,261
+1987,Dentistry,3,0.75,174
+1987,Earth and Planetary Sciences,24,0.543859649122807,962
+1987,"Economics, Econometrics and Finance",46,0.5932203389830508,1014
+1987,Energy,5,0.42857142857142855,273
+1987,Engineering,197,0.8585131894484412,6704
+1987,Environmental Science,49,0.6049382716049383,1318
+1987,Health Professions,45,0.7236842105263158,1663
+1987,Immunology and Microbiology,13,0.631578947368421,497
+1987,Materials Science,30,0.6625,1098
+1987,Mathematics,14,0.8421052631578947,533
+1987,Medicine,242,0.8571428571428571,12496
+1987,Neuroscience,20,0.24444444444444444,409
+1987,Nursing,9,0.5,203
+1987,"Pharmacology, Toxicology and Pharmaceutics",10,0.24242424242424243,143
+1987,Physics and Astronomy,98,0.6533333333333333,1996
+1987,Psychology,36,0.7,825
+1987,Social Sciences,296,0.7404371584699454,6662
+1988,Agricultural and Biological Sciences,74,0.9290322580645162,4185
+1988,Arts and Humanities,185,0.9118942731277533,6537
+1988,"Biochemistry, Genetics and Molecular Biology",57,0.7205882352941176,3407
+1988,"Business, Management and Accounting",36,0.7291666666666666,914
+1988,Chemical Engineering,7,0.4444444444444444,428
+1988,Chemistry,43,0.9448818897637795,4176
+1988,Computer Science,63,0.8468468468468469,1549
+1988,Decision Sciences,10,0.6428571428571429,282
+1988,Dentistry,5,1.0,201
+1988,Earth and Planetary Sciences,35,0.8032786885245902,1027
+1988,"Economics, Econometrics and Finance",48,0.835820895522388,1075
+1988,Energy,8,0.7619047619047619,296
+1988,Engineering,219,0.8201284796573876,7174
+1988,Environmental Science,40,0.6447368421052632,1390
+1988,Health Professions,32,0.7450980392156863,1715
+1988,Immunology and Microbiology,11,0.6470588235294118,519
+1988,Materials Science,42,0.44660194174757284,1152
+1988,Mathematics,15,0.8461538461538461,558
+1988,Medicine,228,0.8966613672496025,13094
+1988,Neuroscience,11,0.8571428571428571,434
+1988,Nursing,5,0.6,205
+1988,"Pharmacology, Toxicology and Pharmaceutics",7,0.0,0
+1988,Physics and Astronomy,80,0.69,2149
+1988,Psychology,27,0.5428571428571428,847
+1988,Social Sciences,306,0.7684729064039408,6977
+1989,Agricultural and Biological Sciences,90,0.9787234042553191,4410
+1989,Arts and Humanities,193,0.919831223628692,6790
+1989,"Biochemistry, Genetics and Molecular Biology",52,0.6380368098159509,3594
+1989,"Business, Management and Accounting",36,0.8113207547169812,985
+1989,Chemical Engineering,1,1.0,432
+1989,Chemistry,48,0.8125,4359
+1989,Computer Science,60,0.7699115044247787,1659
+1989,Decision Sciences,9,1.0,301
+1989,Dentistry,4,0.0,0
+1989,Earth and Planetary Sciences,45,0.6867469879518072,1100
+1989,"Economics, Econometrics and Finance",54,0.6538461538461539,1141
+1989,Energy,8,0.5714285714285714,311
+1989,Engineering,222,0.848421052631579,7681
+1989,Environmental Science,57,0.6129032258064516,1459
+1989,Health Professions,50,0.7538461538461538,1780
+1989,Immunology and Microbiology,11,0.7058823529411765,542
+1989,Materials Science,38,0.37168141592920356,1209
+1989,Mathematics,15,0.8181818181818182,581
+1989,Medicine,275,0.9168539325842696,13963
+1989,Neuroscience,18,0.48,472
+1989,Nursing,10,0.65,218
+1989,"Pharmacology, Toxicology and Pharmaceutics",7,0.3684210526315789,154
+1989,Physics and Astronomy,77,0.6871794871794872,2288
+1989,Psychology,36,0.5344827586206896,879
+1989,Social Sciences,320,0.8103896103896104,7317
+1989,Veterinary,2,0.0,0
+1990,Agricultural and Biological Sciences,164,0.9805013927576601,4848
+1990,Arts and Humanities,213,0.9621212121212122,7084
+1990,"Biochemistry, Genetics and Molecular Biology",86,0.755868544600939,3820
+1990,"Business, Management and Accounting",55,0.6875,1060
+1990,Chemical Engineering,2,1.0,451
+1990,Chemistry,47,0.8489208633093526,4518
+1990,Computer Science,74,0.8410596026490066,1819
+1990,Decision Sciences,13,0.7222222222222222,322
+1990,Dentistry,3,0.5,206
+1990,Earth and Planetary Sciences,34,0.7735849056603774,1150
+1990,"Economics, Econometrics and Finance",56,0.7272727272727273,1212
+1990,Energy,9,0.6470588235294118,326
+1990,Engineering,228,0.854251012145749,8198
+1990,Environmental Science,79,0.7,1545
+1990,Health Professions,49,0.8656716417910447,1851
+1990,Immunology and Microbiology,16,0.48,580
+1990,Materials Science,38,0.514018691588785,1272
+1990,Mathematics,18,0.7894736842105263,598
+1990,Medicine,306,0.8866749688667497,14676
+1990,Neuroscience,17,0.5777777777777777,500
+1990,Nursing,10,0.7619047619047619,234
+1990,"Pharmacology, Toxicology and Pharmaceutics",6,0.25,157
+1990,Physics and Astronomy,84,0.7738693467336684,2452
+1990,Psychology,40,0.5789473684210527,916
+1990,Social Sciences,328,0.7583732057416268,7638
+1990,Veterinary,4,0.6666666666666666,90
+1991,Agricultural and Biological Sciences,91,0.9431818181818182,5077
+1991,Arts and Humanities,226,0.9316546762589928,7405
+1991,"Biochemistry, Genetics and Molecular Biology",62,0.6928571428571428,4004
+1991,"Business, Management and Accounting",49,0.7887323943661971,1140
+1991,Chemical Engineering,3,0.625,466
+1991,Chemistry,51,0.8260869565217391,4690
+1991,Computer Science,90,0.7602339181286549,1985
+1991,Decision Sciences,5,0.75,332
+1991,Dentistry,7,0.6666666666666666,219
+1991,Earth and Planetary Sciences,33,0.8307692307692308,1236
+1991,"Economics, Econometrics and Finance",57,0.7866666666666666,1282
+1991,Energy,8,0.6923076923076923,335
+1991,Engineering,199,0.8380281690140845,8655
+1991,Environmental Science,64,0.7117117117117117,1636
+1991,Health Professions,68,0.7567567567567568,1947
+1991,Immunology and Microbiology,12,0.6923076923076923,613
+1991,Materials Science,40,0.5384615384615384,1327
+1991,Mathematics,21,0.7560975609756098,638
+1991,Medicine,309,0.8771084337349397,15387
+1991,Neuroscience,13,0.52,516
+1991,Nursing,16,0.4074074074074074,246
+1991,"Pharmacology, Toxicology and Pharmaceutics",6,0.0,0
+1991,Physics and Astronomy,119,0.7033639143730887,2685
+1991,Psychology,44,0.6714285714285714,968
+1991,Social Sciences,297,0.7903225806451613,7947
+1992,Agricultural and Biological Sciences,96,0.9315789473684211,5294
+1992,Arts and Humanities,215,0.8841698841698842,7678
+1992,"Biochemistry, Genetics and Molecular Biology",53,0.75,4179
+1992,"Business, Management and Accounting",52,0.796875,1222
+1992,Chemical Engineering,3,0.7142857142857143,479
+1992,Chemistry,50,0.9014084507042254,4857
+1992,Computer Science,82,0.9027777777777778,2151
+1992,Decision Sciences,12,0.8235294117647058,353
+1992,Dentistry,5,0.36363636363636365,228
+1992,Earth and Planetary Sciences,36,0.7088607594936709,1300
+1992,"Economics, Econometrics and Finance",65,0.7978723404255319,1368
+1992,Energy,7,0.5,346
+1992,Engineering,261,0.8304278922345484,9281
+1992,Environmental Science,70,0.7153284671532847,1751
+1992,Health Professions,50,0.7375,2017
+1992,Immunology and Microbiology,5,0.8461538461538461,626
+1992,Materials Science,37,0.5370370370370371,1399
+1992,Mathematics,15,0.65,653
+1992,Medicine,263,0.87701317715959,16012
+1992,Neuroscience,19,0.46808510638297873,538
+1992,Nursing,4,0.5,248
+1992,"Pharmacology, Toxicology and Pharmaceutics",11,0.16666666666666666,172
+1992,Physics and Astronomy,96,0.7890625,2890
+1992,Psychology,48,0.6527777777777778,1018
+1992,Social Sciences,369,0.8134171907756813,8352
+1993,Agricultural and Biological Sciences,98,0.9288888888888889,5550
+1993,Arts and Humanities,242,0.935251798561151,7996
+1993,"Biochemistry, Genetics and Molecular Biology",72,0.7657657657657657,4430
+1993,"Business, Management and Accounting",58,0.6666666666666666,1298
+1993,Chemical Engineering,9,0.72,515
+1993,Chemistry,51,0.8785714285714286,5031
+1993,Computer Science,79,0.8831168831168831,2341
+1993,Decision Sciences,11,0.47368421052631576,367
+1993,Dentistry,1,0.0,0
+1993,Earth and Planetary Sciences,44,0.6625,1385
+1993,"Economics, Econometrics and Finance",63,0.6588235294117647,1447
+1993,Energy,15,0.5652173913043478,365
+1993,Engineering,272,0.853195164075993,9858
+1993,Environmental Science,74,0.7007874015748031,1845
+1993,Health Professions,71,0.75,2110
+1993,Immunology and Microbiology,13,0.6153846153846154,649
+1993,Materials Science,43,0.5213675213675214,1482
+1993,Mathematics,16,0.95,675
+1993,Medicine,254,0.8573426573426574,16605
+1993,Neuroscience,4,0.25,540
+1993,Nursing,9,0.9090909090909091,268
+1993,"Pharmacology, Toxicology and Pharmaceutics",4,0.125,173
+1993,Physics and Astronomy,96,0.7886792452830189,3097
+1993,Psychology,41,0.6271186440677966,1057
+1993,Social Sciences,411,0.794,8768
+1993,Veterinary,3,1.0,94
+1994,Agricultural and Biological Sciences,120,0.9631147540983607,5829
+1994,Arts and Humanities,261,0.9347181008902077,8368
+1994,"Biochemistry, Genetics and Molecular Biology",60,0.8074534161490683,4632
+1994,"Business, Management and Accounting",54,0.8289473684210527,1393
+1994,Chemical Engineering,9,0.6071428571428571,546
+1994,Chemistry,52,0.9452054794520548,5224
+1994,Computer Science,68,0.7933884297520661,2480
+1994,Decision Sciences,14,0.5652173913043478,384
+1994,Dentistry,3,0.42857142857142855,238
+1994,Earth and Planetary Sciences,46,0.78125,1480
+1994,"Economics, Econometrics and Finance",67,0.7294117647058823,1528
+1994,Energy,8,0.6666666666666666,380
+1994,Engineering,267,0.8687196110210696,10507
+1994,Environmental Science,79,0.6329113924050633,1952
+1994,Health Professions,69,0.7211538461538461,2196
+1994,Immunology and Microbiology,13,0.6,678
+1994,Materials Science,34,0.4915254237288136,1565
+1994,Mathematics,20,0.6153846153846154,695
+1994,Medicine,294,0.8934324659231723,17329
+1994,Neuroscience,22,0.42592592592592593,563
+1994,Nursing,14,0.5833333333333334,282
+1994,"Pharmacology, Toxicology and Pharmaceutics",9,0.1,175
+1994,Physics and Astronomy,96,0.6812227074235808,3259
+1994,Psychology,39,0.6122448979591837,1090
+1994,Social Sciences,441,0.7957371225577264,9213
+1994,Veterinary,2,0.8,98
+1995,Agricultural and Biological Sciences,7,1.0,5848
+1995,Arts and Humanities,17,0.9090909090909091,8392
+1995,"Biochemistry, Genetics and Molecular Biology",10,0.8529411764705882,4680
+1995,"Business, Management and Accounting",4,1.0,1397
+1995,Chemical Engineering,1,0.5,547
+1995,Chemistry,4,1.0,5237
+1995,Computer Science,10,0.7894736842105263,2503
+1995,Earth and Planetary Sciences,7,0.9375,1495
+1995,"Economics, Econometrics and Finance",4,1.0,1538
+1995,Energy,2,0.0,0
+1995,Engineering,25,0.8591549295774648,10581
+1995,Environmental Science,1,0.0,0
+1995,Health Professions,6,1.0,2203
+1995,Immunology and Microbiology,4,0.1,679
+1995,Materials Science,8,0.6666666666666666,1586
+1995,Medicine,41,0.8163265306122449,17456
+1995,Neuroscience,2,1.0,569
+1995,Nursing,1,0.0,0
+1995,Physics and Astronomy,14,0.9615384615384616,3291
+1995,Psychology,3,1.0,1097
+1995,Social Sciences,22,0.7586206896551724,9236
+1996,Decision Sciences,1,0.0,0
+1996,Engineering,6,0.8461538461538461,10595
+1996,Materials Science,2,0.0,0
+1996,Social Sciences,1,1.0,9238
+1997,Agricultural and Biological Sciences,134,0.9096774193548387,6228
+1997,Arts and Humanities,310,0.9129287598944591,8809
+1997,"Biochemistry, Genetics and Molecular Biology",71,0.6523809523809524,4911
+1997,"Business, Management and Accounting",70,0.8163265306122449,1502
+1997,Chemical Engineering,5,0.47058823529411764,573
+1997,Chemistry,51,0.9085365853658537,5452
+1997,Computer Science,117,0.8538812785388128,2769
+1997,Decision Sciences,15,0.6086956521739131,405
+1997,Dentistry,6,0.8,254
+1997,Earth and Planetary Sciences,38,0.7333333333333333,1584
+1997,"Economics, Econometrics and Finance",72,0.8421052631578947,1682
+1997,Energy,13,0.7307692307692307,413
+1997,Engineering,307,0.8514285714285714,11320
+1997,Environmental Science,98,0.6261682242990654,2099
+1997,Health Professions,68,0.711864406779661,2325
+1997,Immunology and Microbiology,18,0.66,715
+1997,Materials Science,53,0.47530864197530864,1695
+1997,Mathematics,17,0.34615384615384615,706
+1997,Medicine,348,0.8839103869653768,18356
+1997,Neuroscience,16,0.47058823529411764,590
+1997,Nursing,10,0.4583333333333333,293
+1997,"Pharmacology, Toxicology and Pharmaceutics",10,0.07692307692307693,177
+1997,Physics and Astronomy,127,0.6446540880503144,3517
+1997,Psychology,55,0.6777777777777778,1167
+1997,Social Sciences,526,0.7915407854984894,9812
+1997,Veterinary,4,0.07142857142857142,99
+1998,Agricultural and Biological Sciences,19,0.9245283018867925,6302
+1998,Arts and Humanities,18,0.9523809523809523,8830
+1998,"Biochemistry, Genetics and Molecular Biology",13,0.6785714285714286,4960
+1998,"Business, Management and Accounting",4,0.375,1509
+1998,Chemical Engineering,1,0.8,577
+1998,Chemistry,4,0.9375,5475
+1998,Computer Science,14,0.972972972972973,2820
+1998,Decision Sciences,5,0.42857142857142855,410
+1998,Dentistry,2,1.0,260
+1998,Earth and Planetary Sciences,9,0.3448275862068966,1606
+1998,"Economics, Econometrics and Finance",9,1.0,1705
+1998,Engineering,44,0.9038461538461539,11487
+1998,Environmental Science,19,0.46,2122
+1998,Health Professions,10,0.3125,2330
+1998,Immunology and Microbiology,2,0.5,718
+1998,Materials Science,12,0.46153846153846156,1719
+1998,Mathematics,2,0.4,708
+1998,Medicine,49,0.9910714285714286,18604
+1998,Neuroscience,1,1.0,594
+1998,Nursing,3,0.5,295
+1998,"Pharmacology, Toxicology and Pharmaceutics",1,0.0,0
+1998,Physics and Astronomy,22,0.8333333333333334,3594
+1998,Social Sciences,44,0.8985507246376812,9875
+1999,Agricultural and Biological Sciences,168,0.9287598944591029,6784
+1999,Arts and Humanities,363,0.9133489461358314,9289
+1999,"Biochemistry, Genetics and Molecular Biology",90,0.7521008403361344,5209
+1999,"Business, Management and Accounting",110,0.8933333333333333,1683
+1999,Chemical Engineering,6,0.7142857142857143,598
+1999,Chemistry,55,0.7681159420289855,5630
+1999,Computer Science,134,0.8688524590163934,3110
+1999,Decision Sciences,22,0.7428571428571429,442
+1999,Dentistry,6,1.0,278
+1999,Earth and Planetary Sciences,63,0.6285714285714286,1736
+1999,"Economics, Econometrics and Finance",101,0.7548387096774194,1844
+1999,Energy,14,0.6538461538461539,448
+1999,Engineering,363,0.8514007308160779,12365
+1999,Environmental Science,110,0.6794258373205742,2295
+1999,Health Professions,87,0.7222222222222222,2487
+1999,Immunology and Microbiology,11,0.5434782608695652,741
+1999,Materials Science,58,0.5664335664335665,1813
+1999,Mathematics,29,0.7659574468085106,741
+1999,Medicine,427,0.8430127041742287,19553
+1999,Neuroscience,18,0.36363636363636365,617
+1999,Nursing,12,0.5925925925925926,311
+1999,"Pharmacology, Toxicology and Pharmaceutics",6,0.09523809523809523,186
+1999,Physics and Astronomy,115,0.7395209580838323,3854
+1999,Psychology,51,0.5846153846153846,1225
+1999,Social Sciences,662,0.8091954022988506,10611
+1999,Veterinary,5,0.8,106
+2000,Agricultural and Biological Sciences,265,0.9298831385642737,7457
+2000,Arts and Humanities,410,0.9334637964774951,9843
+2000,"Biochemistry, Genetics and Molecular Biology",134,0.7473404255319149,5668
+2000,"Business, Management and Accounting",145,0.805,1904
+2000,Chemical Engineering,6,1.0,619
+2000,Chemistry,78,0.8645833333333334,5824
+2000,Computer Science,187,0.7935943060498221,3426
+2000,Decision Sciences,22,0.7837837837837838,479
+2000,Dentistry,7,0.45454545454545453,289
+2000,Earth and Planetary Sciences,72,0.8333333333333334,1912
+2000,"Economics, Econometrics and Finance",116,0.7662337662337663,1996
+2000,Energy,31,0.375,479
+2000,Engineering,591,0.8690476190476191,13602
+2000,Environmental Science,171,0.6307692307692307,2524
+2000,Health Professions,101,0.8076923076923077,2656
+2000,Immunology and Microbiology,24,0.5393258426966292,806
+2000,Materials Science,89,0.5294117647058824,1941
+2000,Mathematics,36,0.7291666666666666,776
+2000,Medicine,533,0.8652766639935846,20735
+2000,Neuroscience,34,0.3793103448275862,664
+2000,Nursing,15,0.42857142857142855,327
+2000,"Pharmacology, Toxicology and Pharmaceutics",7,0.11764705882352941,191
+2000,Physics and Astronomy,133,0.7346437346437347,4165
+2000,Psychology,63,0.6842105263157895,1293
+2000,Social Sciences,736,0.7911065149948294,11436
+2000,Veterinary,6,0.6666666666666666,114
+2001,Agricultural and Biological Sciences,200,0.9251870324189526,7927
+2001,Arts and Humanities,435,0.9136960600375235,10412
+2001,"Biochemistry, Genetics and Molecular Biology",158,0.8103448275862069,6122
+2001,"Business, Management and Accounting",173,0.771551724137931,2161
+2001,Chemical Engineering,9,0.5,643
+2001,Chemistry,66,0.8670520231213873,6020
+2001,Computer Science,312,0.8101761252446184,4002
+2001,Decision Sciences,28,0.6739130434782609,525
+2001,Dentistry,17,0.7777777777777778,315
+2001,Earth and Planetary Sciences,107,0.7887323943661971,2138
+2001,"Economics, Econometrics and Finance",153,0.6716417910447762,2181
+2001,Energy,23,0.7096774193548387,515
+2001,Engineering,700,0.8381924198250729,15006
+2001,Environmental Science,158,0.5406360424028268,2711
+2001,Health Professions,110,0.7252747252747253,2837
+2001,Immunology and Microbiology,21,0.6756756756756757,838
+2001,Materials Science,111,0.5390946502057613,2099
+2001,Mathematics,34,0.6666666666666666,815
+2001,Medicine,556,0.8796433878157504,22001
+2001,Neuroscience,33,0.5588235294117647,706
+2001,Nursing,15,0.5384615384615384,352
+2001,"Pharmacology, Toxicology and Pharmaceutics",21,0.3673469387755102,210
+2001,Physics and Astronomy,169,0.7140115163147792,4564
+2001,Psychology,113,0.5974842767295597,1405
+2001,Social Sciences,849,0.7836583101207056,12363
+2001,Veterinary,5,0.45454545454545453,119
+2002,Agricultural and Biological Sciences,245,0.9664694280078896,8549
+2002,Arts and Humanities,491,0.9205526770293609,11070
+2002,"Biochemistry, Genetics and Molecular Biology",170,0.7777777777777778,6607
+2002,"Business, Management and Accounting",162,0.8271028037383178,2415
+2002,Chemical Engineering,17,0.6666666666666666,684
+2002,Chemistry,68,0.8728323699421965,6230
+2002,Computer Science,371,0.8092691622103387,4615
+2002,Decision Sciences,39,0.8,593
+2002,Dentistry,9,1.0,338
+2002,Earth and Planetary Sciences,88,0.8189300411522634,2384
+2002,"Economics, Econometrics and Finance",183,0.7862903225806451,2407
+2002,Energy,29,0.625,542
+2002,Engineering,818,0.8382541720154044,16563
+2002,Environmental Science,212,0.6717557251908397,3004
+2002,Health Professions,130,0.6934673366834171,3045
+2002,Immunology and Microbiology,28,0.25,867
+2002,Materials Science,106,0.5658914728682171,2273
+2002,Mathematics,43,0.8392857142857143,873
+2002,Medicine,681,0.87569573283859,23495
+2002,Neuroscience,36,0.3473684210526316,743
+2002,Nursing,18,0.3684210526315789,374
+2002,"Pharmacology, Toxicology and Pharmaceutics",19,0.4878048780487805,230
+2002,Physics and Astronomy,169,0.6985981308411215,4902
+2002,Psychology,110,0.5986842105263158,1500
+2002,Social Sciences,960,0.7644110275689223,13343
+2002,Veterinary,6,0.0,0
+2003,Agricultural and Biological Sciences,246,0.951304347826087,9266
+2003,Arts and Humanities,445,0.917910447761194,11658
+2003,"Biochemistry, Genetics and Molecular Biology",186,0.7608695652173914,7159
+2003,"Business, Management and Accounting",205,0.8815331010452961,2779
+2003,Chemical Engineering,19,0.72,727
+2003,Chemistry,91,0.7522522522522522,6492
+2003,Computer Science,375,0.7617504051863857,5279
+2003,Decision Sciences,47,0.7831325301204819,677
+2003,Dentistry,10,0.9583333333333334,367
+2003,Earth and Planetary Sciences,128,0.85,2710
+2003,"Economics, Econometrics and Finance",206,0.7142857142857143,2661
+2003,Energy,39,0.5142857142857142,599
+2003,Engineering,902,0.8530884808013356,18398
+2003,Environmental Science,223,0.631336405529954,3327
+2003,Health Professions,149,0.7714285714285715,3268
+2003,Immunology and Microbiology,40,0.5619834710743802,958
+2003,Materials Science,110,0.5454545454545454,2451
+2003,Mathematics,35,0.6851851851851852,921
+2003,Medicine,766,0.863431151241535,25076
+2003,Neuroscience,42,0.4666666666666667,796
+2003,Nursing,20,0.28888888888888886,387
+2003,"Pharmacology, Toxicology and Pharmaceutics",21,0.5,247
+2003,Physics and Astronomy,171,0.7,5192
+2003,Psychology,98,0.5899280575539568,1601
+2003,Social Sciences,1061,0.7581602373887241,14381
+2003,Veterinary,5,0.08333333333333333,120
+2004,Agricultural and Biological Sciences,250,0.9548736462093863,9957
+2004,Arts and Humanities,515,0.8952536824877251,12335
+2004,"Biochemistry, Genetics and Molecular Biology",217,0.7425742574257426,7815
+2004,"Business, Management and Accounting",230,0.8073394495412844,3144
+2004,Chemical Engineering,13,0.7419354838709677,767
+2004,Chemistry,93,0.8048780487804879,6749
+2004,Computer Science,405,0.8198347107438017,5974
+2004,Decision Sciences,46,0.6571428571428571,744
+2004,Dentistry,15,0.8571428571428571,415
+2004,Earth and Planetary Sciences,104,0.7154150197628458,2965
+2004,"Economics, Econometrics and Finance",189,0.7137546468401487,2896
+2004,Energy,37,0.5362318840579711,652
+2004,Engineering,987,0.845568243610658,20305
+2004,Environmental Science,241,0.6883910386965377,3718
+2004,Health Professions,165,0.7568627450980392,3529
+2004,Immunology and Microbiology,42,0.7115384615384616,1046
+2004,Materials Science,122,0.476056338028169,2662
+2004,Mathematics,42,0.6805555555555556,974
+2004,Medicine,884,0.867324069923801,27107
+2004,Neuroscience,63,0.5911949685534591,898
+2004,Nursing,26,0.5094339622641509,413
+2004,"Pharmacology, Toxicology and Pharmaceutics",22,0.4375,262
+2004,Physics and Astronomy,182,0.6737704918032786,5620
+2004,Psychology,131,0.5824742268041238,1717
+2004,Social Sciences,1177,0.8099730458221024,15625
+2004,Veterinary,3,0.16666666666666666,121
+2005,Agricultural and Biological Sciences,300,0.9304733727810651,10796
+2005,Arts and Humanities,554,0.9135618479880775,13080
+2005,"Biochemistry, Genetics and Molecular Biology",232,0.7929936305732485,8586
+2005,"Business, Management and Accounting",237,0.8333333333333334,3509
+2005,Chemical Engineering,14,0.6956521739130435,825
+2005,Chemistry,102,0.8553719008264463,7039
+2005,Computer Science,408,0.8120411160058737,6736
+2005,Decision Sciences,52,0.7307692307692307,833
+2005,Dentistry,19,0.8292682926829268,466
+2005,Earth and Planetary Sciences,95,0.7061611374407583,3160
+2005,"Economics, Econometrics and Finance",195,0.6628787878787878,3122
+2005,Energy,48,0.5542168674698795,718
+2005,Engineering,1067,0.8732943469785575,22435
+2005,Environmental Science,264,0.6191369606003753,4083
+2005,Health Professions,178,0.8366666666666667,3860
+2005,Immunology and Microbiology,43,0.45652173913043476,1115
+2005,Materials Science,141,0.5485564304461942,2910
+2005,Mathematics,41,0.6075949367088608,1029
+2005,Medicine,981,0.8525669153137341,29088
+2005,Neuroscience,61,0.5096774193548387,982
+2005,Nursing,31,0.5538461538461539,452
+2005,"Pharmacology, Toxicology and Pharmaceutics",22,0.23529411764705882,277
+2005,Physics and Astronomy,197,0.7029360967184801,6037
+2005,Psychology,134,0.6211453744493393,1885
+2005,Social Sciences,1333,0.7738663484486874,16971
+2005,Veterinary,6,0.14285714285714285,122
+2006,Agricultural and Biological Sciences,321,0.9205673758865248,11697
+2006,Arts and Humanities,662,0.918546365914787,13954
+2006,"Biochemistry, Genetics and Molecular Biology",309,0.718192627824019,9433
+2006,"Business, Management and Accounting",314,0.8271028037383178,3999
+2006,Chemical Engineering,17,0.5106382978723404,866
+2006,Chemistry,91,0.7974137931034483,7321
+2006,Computer Science,487,0.8124293785310734,7661
+2006,Decision Sciences,58,0.7032967032967034,914
+2006,Dentistry,18,0.625,502
+2006,Earth and Planetary Sciences,131,0.7463126843657817,3518
+2006,"Economics, Econometrics and Finance",247,0.6880466472303207,3420
+2006,Energy,41,0.7407407407407407,789
+2006,Engineering,1107,0.8435131520285332,24658
+2006,Environmental Science,311,0.6536661466458659,4570
+2006,Health Professions,192,0.7410714285714286,4194
+2006,Immunology and Microbiology,53,0.26605504587155965,1178
+2006,Materials Science,134,0.5282051282051282,3173
+2006,Mathematics,40,0.7121212121212122,1088
+2006,Medicine,1186,0.8768592182635766,31714
+2006,Neuroscience,68,0.3716216216216216,1039
+2006,Nursing,22,0.19672131147540983,466
+2006,"Pharmacology, Toxicology and Pharmaceutics",18,0.1702127659574468,292
+2006,Physics and Astronomy,241,0.6271409749670619,6514
+2006,Psychology,163,0.6791666666666667,2072
+2006,Social Sciences,1329,0.7639563106796117,18280
+2006,Veterinary,5,0.38461538461538464,128
+2007,Agricultural and Biological Sciences,370,0.910427807486631,12632
+2007,Arts and Humanities,669,0.9187096774193548,14864
+2007,"Biochemistry, Genetics and Molecular Biology",241,0.7503974562798092,10205
+2007,"Business, Management and Accounting",299,0.7651331719128329,4454
+2007,Chemical Engineering,15,0.575,911
+2007,Chemistry,100,0.8031746031746032,7639
+2007,Computer Science,509,0.8090395480225989,8602
+2007,Decision Sciences,43,0.7432432432432432,998
+2007,Dentistry,12,0.6206896551724138,535
+2007,Earth and Planetary Sciences,126,0.7234726688102894,3878
+2007,"Economics, Econometrics and Finance",240,0.667741935483871,3710
+2007,Energy,49,0.7350427350427351,905
+2007,Engineering,1186,0.8427276310603075,27071
+2007,Environmental Science,347,0.5692729766803841,5017
+2007,Health Professions,205,0.6875,4521
+2007,Immunology and Microbiology,55,0.4714285714285714,1258
+2007,Materials Science,114,0.5366666666666666,3366
+2007,Mathematics,44,0.6486486486486487,1137
+2007,Medicine,1160,0.8626336898395722,34335
+2007,Neuroscience,67,0.5914634146341463,1174
+2007,Nursing,34,0.4588235294117647,507
+2007,"Pharmacology, Toxicology and Pharmaceutics",38,0.5384615384615384,326
+2007,Physics and Astronomy,195,0.7213793103448276,6993
+2007,Psychology,152,0.5652173913043478,2221
+2007,Social Sciences,1505,0.7742605085625325,19833
+2007,Veterinary,10,0.21951219512195122,137
+2008,Agricultural and Biological Sciences,355,0.9283196239717979,13653
+2008,Arts and Humanities,732,0.9078947368421053,15764
+2008,"Biochemistry, Genetics and Molecular Biology",266,0.8011869436201781,10994
+2008,"Business, Management and Accounting",334,0.8141025641025641,4975
+2008,Chemical Engineering,15,0.34210526315789475,954
+2008,Chemistry,98,0.7790262172284644,7934
+2008,Computer Science,512,0.8187203791469194,9572
+2008,Decision Sciences,52,0.5747126436781609,1082
+2008,Dentistry,20,0.8648648648648649,589
+2008,Earth and Planetary Sciences,111,0.7507788161993769,4224
+2008,"Economics, Econometrics and Finance",236,0.73125,4022
+2008,Energy,63,0.5730337078651685,978
+2008,Engineering,1184,0.8281956432387998,29304
+2008,Environmental Science,338,0.6652421652421653,5559
+2008,Health Professions,242,0.7294117647058823,4945
+2008,Immunology and Microbiology,63,0.48760330578512395,1328
+2008,Materials Science,119,0.6518771331058021,3624
+2008,Mathematics,52,0.6296296296296297,1196
+2008,Medicine,1247,0.8689384010484927,36989
+2008,Neuroscience,71,0.5133333333333333,1264
+2008,Nursing,33,0.19753086419753085,524
+2008,"Pharmacology, Toxicology and Pharmaceutics",39,0.43661971830985913,366
+2008,Physics and Astronomy,222,0.7217043941411452,7525
+2008,Psychology,166,0.5795918367346938,2385
+2008,Social Sciences,1636,0.7586520947176685,21550
+2008,Veterinary,14,0.65625,158
+2009,Agricultural and Biological Sciences,475,0.9443099273607748,15074
+2009,Arts and Humanities,795,0.9192422731804586,16860
+2009,"Biochemistry, Genetics and Molecular Biology",322,0.7796610169491526,12017
+2009,"Business, Management and Accounting",361,0.8427184466019417,5551
+2009,Chemical Engineering,14,0.7142857142857143,1016
+2009,Chemistry,117,0.7848101265822784,8261
+2009,Computer Science,568,0.8433367243133265,10657
+2009,Decision Sciences,73,0.6829268292682927,1219
+2009,Dentistry,25,0.8166666666666667,659
+2009,Earth and Planetary Sciences,185,0.7074569789674953,4682
+2009,"Economics, Econometrics and Finance",337,0.7693877551020408,4482
+2009,Energy,72,0.6033057851239669,1086
+2009,Engineering,1381,0.8695652173913043,31980
+2009,Environmental Science,416,0.663895486935867,6237
+2009,Health Professions,260,0.6903073286052009,5383
+2009,Immunology and Microbiology,49,0.427536231884058,1408
+2009,Materials Science,145,0.5686746987951807,3919
+2009,Mathematics,60,0.6190476190476191,1256
+2009,Medicine,1367,0.8635207685786945,40064
+2009,Neuroscience,62,0.5408805031446541,1361
+2009,Nursing,35,0.6129032258064516,562
+2009,"Pharmacology, Toxicology and Pharmaceutics",48,0.3826086956521739,411
+2009,Physics and Astronomy,194,0.692436974789916,7928
+2009,Psychology,221,0.5764705882352941,2612
+2009,Social Sciences,1749,0.7770700636942676,23480
+2009,Veterinary,11,0.1724137931034483,164
+2010,Agricultural and Biological Sciences,468,0.9412288512911843,16477
+2010,Arts and Humanities,829,0.872255489021956,17963
+2010,"Biochemistry, Genetics and Molecular Biology",329,0.756152125279642,13000
+2010,"Business, Management and Accounting",346,0.842,6206
+2010,Chemical Engineering,15,0.75,1078
+2010,Chemistry,126,0.8240469208211144,8633
+2010,Computer Science,619,0.7973358705994291,11807
+2010,Decision Sciences,95,0.5465116279069767,1338
+2010,Dentistry,30,0.9166666666666666,751
+2010,Earth and Planetary Sciences,180,0.7393075356415478,5215
+2010,"Economics, Econometrics and Finance",322,0.7130801687763713,4947
+2010,Energy,67,0.4647887323943662,1169
+2010,Engineering,1374,0.8504639543183441,34655
+2010,Environmental Science,446,0.6050156739811913,6893
+2010,Health Professions,294,0.7019748653500898,5876
+2010,Immunology and Microbiology,65,0.41262135922330095,1513
+2010,Materials Science,177,0.5268389662027833,4215
+2010,Mathematics,53,0.6436781609195402,1311
+2010,Medicine,1397,0.8510512289013917,42993
+2010,Neuroscience,51,0.6153846153846154,1439
+2010,Nursing,46,0.36607142857142855,615
+2010,"Pharmacology, Toxicology and Pharmaceutics",44,0.4177215189873418,445
+2010,Physics and Astronomy,256,0.7518518518518519,8483
+2010,Psychology,209,0.5864197530864198,2840
+2010,Social Sciences,1929,0.7571157495256167,25554
+2010,Veterinary,9,0.32,180
+2011,Agricultural and Biological Sciences,422,0.898840885142255,17689
+2011,Arts and Humanities,820,0.895748987854251,19024
+2011,"Biochemistry, Genetics and Molecular Biology",309,0.775,14044
+2011,"Business, Management and Accounting",377,0.8624338624338624,6898
+2011,Chemical Engineering,20,0.5084745762711864,1143
+2011,Chemistry,112,0.7514792899408284,8965
+2011,Computer Science,617,0.8085714285714286,13001
+2011,Decision Sciences,81,0.5741935483870968,1481
+2011,Dentistry,27,0.7457627118644068,818
+2011,Earth and Planetary Sciences,181,0.7194656488549618,5685
+2011,"Economics, Econometrics and Finance",324,0.7264957264957265,5395
+2011,Energy,67,0.4482758620689655,1251
+2011,Engineering,1515,0.866787221217601,37772
+2011,Environmental Science,407,0.6666666666666666,7517
+2011,Health Professions,288,0.7,6374
+2011,Immunology and Microbiology,71,0.51010101010101,1635
+2011,Materials Science,182,0.541038525963149,4571
+2011,Mathematics,73,0.6754385964912281,1403
+2011,Medicine,1506,0.8546810699588477,46410
+2011,Neuroscience,97,0.4724137931034483,1582
+2011,Nursing,42,0.3728813559322034,660
+2011,"Pharmacology, Toxicology and Pharmaceutics",54,0.664,531
+2011,Physics and Astronomy,236,0.7138964577656676,8969
+2011,Psychology,237,0.5036674816625917,3083
+2011,Social Sciences,2031,0.7801521187975371,27789
+2011,Veterinary,11,0.17073170731707318,187
+2012,Agricultural and Biological Sciences,461,0.9018932874354562,18998
+2012,Arts and Humanities,834,0.8922330097087379,20172
+2012,"Biochemistry, Genetics and Molecular Biology",313,0.7594059405940594,15203
+2012,"Business, Management and Accounting",421,0.8380165289256198,7655
+2012,Chemical Engineering,19,0.5737704918032787,1198
+2012,Chemistry,109,0.8212121212121212,9287
+2012,Computer Science,614,0.8081671415004749,14216
+2012,Decision Sciences,98,0.6170212765957447,1650
+2012,Dentistry,41,0.87,950
+2012,Earth and Planetary Sciences,221,0.7738461538461539,6290
+2012,"Economics, Econometrics and Finance",358,0.7105263157894737,5889
+2012,Energy,64,0.4825174825174825,1352
+2012,Engineering,1378,0.844599072233267,40558
+2012,Environmental Science,470,0.6834600760456274,8325
+2012,Health Professions,304,0.6136363636363636,6939
+2012,Immunology and Microbiology,67,0.3375796178343949,1735
+2012,Materials Science,150,0.521551724137931,4859
+2012,Mathematics,67,0.6893939393939394,1505
+2012,Medicine,1496,0.8475452196382429,49759
+2012,Neuroscience,65,0.6296296296296297,1722
+2012,Nursing,38,0.45121951219512196,706
+2012,"Pharmacology, Toxicology and Pharmaceutics",53,0.5802469135802469,577
+2012,Physics and Astronomy,235,0.6754385964912281,9440
+2012,Psychology,261,0.5187637969094923,3343
+2012,Social Sciences,2175,0.7724252491694352,30239
+2012,Veterinary,6,0.22727272727272727,192
+2013,Agricultural and Biological Sciences,490,0.9324104234527687,20497
+2013,Arts and Humanities,822,0.8987090367428004,21295
+2013,"Biochemistry, Genetics and Molecular Biology",312,0.7554112554112554,16146
+2013,"Business, Management and Accounting",452,0.8306332842415317,8433
+2013,Chemical Engineering,24,0.7540983606557377,1290
+2013,Chemistry,129,0.762532981530343,9706
+2013,Computer Science,599,0.804424778761062,15462
+2013,Decision Sciences,81,0.7225433526011561,1807
+2013,Dentistry,28,0.78125,1048
+2013,Earth and Planetary Sciences,178,0.7584905660377359,6780
+2013,"Economics, Econometrics and Finance",356,0.7186932849364791,6400
+2013,Energy,66,0.5739644970414202,1475
+2013,Engineering,1308,0.855377421509686,43452
+2013,Environmental Science,472,0.6508704061895552,9137
+2013,Health Professions,324,0.7480680061823802,7613
+2013,Immunology and Microbiology,60,0.39622641509433965,1818
+2013,Materials Science,180,0.5,5168
+2013,Mathematics,59,0.6981132075471698,1584
+2013,Medicine,1487,0.8670756646216768,53314
+2013,Neuroscience,79,0.3989071038251366,1814
+2013,Nursing,46,0.49137931034482757,763
+2013,"Pharmacology, Toxicology and Pharmaceutics",43,0.3333333333333333,619
+2013,Physics and Astronomy,258,0.6706915477497256,9971
+2013,Psychology,289,0.5637065637065637,3683
+2013,Social Sciences,2306,0.7689463955637708,32886
+2013,Veterinary,12,0.3023255813953488,205
+2014,Agricultural and Biological Sciences,533,0.9477715877437326,22323
+2014,Arts and Humanities,904,0.8913624220837043,22559
+2014,"Biochemistry, Genetics and Molecular Biology",300,0.7821466524973433,17130
+2014,"Business, Management and Accounting",514,0.8094674556213017,9432
+2014,Chemical Engineering,22,0.5151515151515151,1367
+2014,Chemistry,126,0.7839335180055401,10087
+2014,Computer Science,647,0.7939244663382594,16763
+2014,Decision Sciences,97,0.6116071428571429,2002
+2014,Dentistry,31,0.8192771084337349,1138
+2014,Earth and Planetary Sciences,150,0.883668903803132,7316
+2014,"Economics, Econometrics and Finance",401,0.7319422150882825,6934
+2014,Energy,62,0.49264705882352944,1574
+2014,Engineering,1129,0.8371396480718832,45977
+2014,Environmental Science,536,0.6173254835996635,9961
+2014,Health Professions,362,0.6907894736842105,8326
+2014,Immunology and Microbiology,63,0.5574468085106383,1968
+2014,Materials Science,156,0.5276190476190477,5489
+2014,Mathematics,79,0.7552447552447552,1703
+2014,Medicine,1448,0.8578512396694215,57034
+2014,Neuroscience,62,0.4931506849315068,1904
+2014,Nursing,50,0.3049645390070922,810
+2014,"Pharmacology, Toxicology and Pharmaceutics",34,0.4444444444444444,655
+2014,Physics and Astronomy,279,0.6975446428571429,10478
+2014,Psychology,331,0.5896147403685092,4068
+2014,Social Sciences,2387,0.7777777777777778,35593
+2014,Veterinary,13,0.3076923076923077,221
+2015,Agricultural and Biological Sciences,526,0.9387442572741195,23928
+2015,Arts and Humanities,945,0.8894601542416453,23853
+2015,"Biochemistry, Genetics and Molecular Biology",325,0.7245349867139061,18184
+2015,"Business, Management and Accounting",436,0.8169209431345353,10325
+2015,Chemical Engineering,23,0.39436619718309857,1439
+2015,Chemistry,102,0.79182156133829,10418
+2015,Computer Science,610,0.7982905982905983,18049
+2015,Decision Sciences,124,0.5868725868725869,2184
+2015,Dentistry,23,0.7857142857142857,1208
+2015,Earth and Planetary Sciences,182,0.7706766917293233,7814
+2015,"Economics, Econometrics and Finance",371,0.7133333333333334,7480
+2015,Energy,64,0.6417910447761194,1689
+2015,Engineering,1115,0.8275862068965517,48677
+2015,Environmental Science,463,0.6395563770794824,10747
+2015,Health Professions,378,0.7220172201722017,9118
+2015,Immunology and Microbiology,61,0.4263157894736842,2062
+2015,Materials Science,158,0.5557768924302788,5794
+2015,Mathematics,67,0.5384615384615384,1791
+2015,Medicine,1384,0.8561840843720039,60766
+2015,Neuroscience,60,0.45604395604395603,2015
+2015,Nursing,51,0.4304635761589404,873
+2015,"Pharmacology, Toxicology and Pharmaceutics",33,0.4418604651162791,694
+2015,Physics and Astronomy,249,0.660857908847185,10957
+2015,Psychology,297,0.5248091603053435,4379
+2015,Social Sciences,2346,0.7803724504877327,38440
+2015,Veterinary,11,0.391304347826087,230
+2016,Agricultural and Biological Sciences,481,0.9085979860573199,25475
+2016,Arts and Humanities,889,0.8984861976847729,25070
+2016,"Biochemistry, Genetics and Molecular Biology",256,0.7553083923154702,19188
+2016,"Business, Management and Accounting",432,0.8577348066298343,11200
+2016,Chemical Engineering,18,0.6349206349206349,1503
+2016,Chemistry,91,0.761437908496732,10750
+2016,Computer Science,576,0.7851373182552503,19398
+2016,Decision Sciences,99,0.6615384615384615,2352
+2016,Dentistry,31,0.8666666666666667,1309
+2016,Earth and Planetary Sciences,182,0.78839590443686,8411
+2016,"Economics, Econometrics and Finance",326,0.6890909090909091,7988
+2016,Energy,60,0.6433566433566433,1816
+2016,Engineering,941,0.8423626787057938,51306
+2016,Environmental Science,426,0.6375779162956366,11532
+2016,Health Professions,333,0.6529680365296804,9785
+2016,Immunology and Microbiology,46,0.544,2153
+2016,Materials Science,156,0.5873544093178037,6171
+2016,Mathematics,60,0.6333333333333333,1863
+2016,Medicine,1252,0.8699019101703666,64299
+2016,Neuroscience,61,0.5271739130434783,2116
+2016,Nursing,39,0.35772357723577236,921
+2016,"Pharmacology, Toxicology and Pharmaceutics",24,0.3181818181818182,717
+2016,Physics and Astronomy,230,0.621550591327201,11417
+2016,Psychology,285,0.6390532544378699,4749
+2016,Social Sciences,2409,0.7646393210749647,41241
+2016,Veterinary,9,0.21428571428571427,236
+2017,Agricultural and Biological Sciences,452,0.9549050632911392,26979
+2017,Arts and Humanities,897,0.8825591586327782,26289
+2017,"Biochemistry, Genetics and Molecular Biology",238,0.7702539298669892,20016
+2017,"Business, Management and Accounting",464,0.8391248391248392,12108
+2017,Chemical Engineering,17,0.49333333333333335,1570
+2017,Chemistry,81,0.8640350877192983,11047
+2017,Computer Science,537,0.7859103385178408,20551
+2017,Decision Sciences,119,0.6666666666666666,2585
+2017,Dentistry,26,0.88,1400
+2017,Earth and Planetary Sciences,166,0.8939393939393939,8952
+2017,"Economics, Econometrics and Finance",328,0.7335766423357665,8493
+2017,Energy,48,0.71,1914
+2017,Engineering,840,0.8348134991119005,53502
+2017,Environmental Science,420,0.6686390532544378,12310
+2017,Health Professions,335,0.6908517350157729,10447
+2017,Immunology and Microbiology,49,0.6444444444444445,2281
+2017,Materials Science,133,0.5894039735099338,6443
+2017,Mathematics,60,0.6792452830188679,1939
+2017,Medicine,1154,0.8456471935853379,67358
+2017,Neuroscience,65,0.7039473684210527,2244
+2017,Nursing,41,0.41228070175438597,969
+2017,"Pharmacology, Toxicology and Pharmaceutics",27,0.2247191011235955,737
+2017,Physics and Astronomy,238,0.6987179487179487,11864
+2017,Psychology,279,0.596,5079
+2017,Social Sciences,2238,0.7936797326040718,44042
+2017,Veterinary,9,0.23529411764705882,240
+2018,"Business, Management and Accounting",1,1.0,12109
+2018,Earth and Planetary Sciences,1,1.0,8954
+2018,Mathematics,1,1.0,1940
+2018,Medicine,1,1.0,67360
+2018,Physics and Astronomy,1,0.0,0
+2018,Social Sciences,1,1.0,44043
+2019,Agricultural and Biological Sciences,434,0.9411296738265712,28453
+2019,Arts and Humanities,930,0.9094754653130288,27589
+2019,"Biochemistry, Genetics and Molecular Biology",211,0.7338028169014085,20704
+2019,"Business, Management and Accounting",421,0.8328981723237598,13043
+2019,Chemical Engineering,14,0.8857142857142857,1636
+2019,Chemistry,93,0.7429718875502008,11294
+2019,Computer Science,592,0.7921597633136095,22102
+2019,Decision Sciences,104,0.6322314049586777,2812
+2019,Dentistry,30,0.5897435897435898,1477
+2019,Earth and Planetary Sciences,201,0.8371757925072046,9687
+2019,"Economics, Econometrics and Finance",315,0.6751968503937008,8950
+2019,Energy,58,0.5503875968992248,2027
+2019,Engineering,927,0.7895833333333333,56151
+2019,Environmental Science,416,0.70018281535649,13191
+2019,Health Professions,323,0.717948717948718,11105
+2019,Immunology and Microbiology,36,0.4473684210526316,2332
+2019,Materials Science,134,0.5901639344262295,6729
+2019,Mathematics,67,0.591304347826087,2029
+2019,Medicine,1275,0.8719339013684483,70893
+2019,Neuroscience,62,0.5950920245398773,2357
+2019,Nursing,40,0.4144144144144144,1015
+2019,"Pharmacology, Toxicology and Pharmaceutics",18,0.5178571428571429,766
+2019,Physics and Astronomy,232,0.7134767836919592,12482
+2019,Psychology,274,0.6058091286307054,5411
+2019,Social Sciences,2429,0.7851851851851852,47181
+2019,Veterinary,15,0.391304347826087,264
+2020,Agricultural and Biological Sciences,791,0.9358059914407989,31021
+2020,Arts and Humanities,1584,0.9035294117647059,29939
+2020,"Biochemistry, Genetics and Molecular Biology",378,0.7887049659201558,21852
+2020,"Business, Management and Accounting",900,0.8359423919849718,14983
+2020,Chemical Engineering,16,0.7804878048780488,1717
+2020,Chemistry,127,0.8057324840764332,11651
+2020,Computer Science,1170,0.8102253032928943,24618
+2020,Decision Sciences,195,0.6615384615384615,3196
+2020,Dentistry,57,0.6556291390728477,1631
+2020,Earth and Planetary Sciences,199,0.779320987654321,10349
+2020,"Economics, Econometrics and Finance",660,0.74408014571949,10054
+2020,Energy,97,0.7684729064039408,2269
+2020,Engineering,1536,0.8149986934935981,59644
+2020,Environmental Science,776,0.676341730558598,14626
+2020,Health Professions,771,0.7069306930693069,12549
+2020,Immunology and Microbiology,55,0.535483870967742,2453
+2020,Materials Science,198,0.5699300699300699,7086
+2020,Mathematics,133,0.5568627450980392,2190
+2020,Medicine,2075,0.8615153035624686,76241
+2020,Neuroscience,96,0.5523809523809524,2503
+2020,Nursing,60,0.3586206896551724,1072
+2020,"Pharmacology, Toxicology and Pharmaceutics",27,0.28169014084507044,791
+2020,Physics and Astronomy,285,0.6309226932668329,13011
+2020,Psychology,595,0.5559666975023126,6088
+2020,Social Sciences,5134,0.8001974577317043,53965
+2020,Veterinary,16,0.625,283
+2021,Social Sciences,1,1.0,0
+2022,Chemistry,1,0.0,0
+2022,Psychology,1,0.0,0
+2022,Social Sciences,1,1.0,53969
+2023,"Economics, Econometrics and Finance",1,1.0,10055
+2024,Computer Science,1,0.0,0
+2025,Engineering,1,1.0,59646
