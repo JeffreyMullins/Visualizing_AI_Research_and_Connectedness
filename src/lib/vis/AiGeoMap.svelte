@@ -74,6 +74,10 @@
           .filter(Boolean)
       : [];
 
+  // unified label for the current metric
+  const metricLabel = () =>
+    metric === "unique" ? "Unique researchers" : "Total authorships";
+
   onMount(async () => {
     rows = await loadWorks();
     years = yearsFrom(rows);
@@ -243,9 +247,7 @@
             .html(
               `<div style="font-weight:800">${nm}</div>
                <div style="font-size:13px;color:#64748b">
-                 Cumulative ${
-                   metric === "unique" ? "unique authors" : "authorships"
-                 } to ${year}: <b>${d3.format(",")(v)}</b>
+                 Cumulative ${metricLabel()} to ${year}: <b>${d3.format(",")(v)}</b>
                </div>`,
             );
         })
@@ -390,11 +392,7 @@
       .attr("y", -6)
       .style("font-size", "12px")
       .style("font-weight", 700)
-      .text(
-        `Cumulative ${
-          metric === "unique" ? "unique authors" : "authorships"
-        } to ${year}`,
-      );
+      .text(`Cumulative ${metricLabel()} to ${year}`);
   }
 
   function drawSidePanel() {
@@ -490,12 +488,18 @@
   <div class="group">
     <span
       class="pill {metric === 'unique' ? 'active' : ''}"
-      on:click={() => onMetric("unique")}>Unique</span
+      on:click={() => onMetric("unique")}
+      title="Counts distinct people who have authored at least one AI paper—each person is counted once, no matter how many papers they wrote."
     >
+      Unique Researchers
+    </span>
     <span
       class="pill {metric === 'authorships' ? 'active' : ''}"
-      on:click={() => onMetric("authorships")}>Authorships</span
+      on:click={() => onMetric("authorships")}
+      title="Counts every author–paper combination on AI papers—people are counted multiple times if they appear on multiple papers."
     >
+      Total Authorships
+    </span>
   </div>
 
   <div class="group">
@@ -569,6 +573,7 @@
     border-radius: 999px;
     cursor: pointer;
     user-select: none;
+    background: #fff;
   }
   .pill.active {
     background: #111;
