@@ -28,7 +28,7 @@
   let galaxyWrap: HTMLDivElement;
   let tooltipEl: HTMLDivElement;
 
-  // svg
+  // svg handles
   let barsSvg: any, barsG: any, barsAxisX: any, barsAxisY: any;
   let galaxySvg: any, galaxyG: any;
 
@@ -43,6 +43,9 @@
     colorScale ? (colorScale(f) as string) : "#555";
 
   const topOptions: number[] = Array.from({ length: 20 }, (_, i) => i + 1);
+
+  // layout constants
+  const barsMargin = { top: 36, right: 28, bottom: 40, left: 210 };
 
   onMount(async () => {
     rows = await loadWorks();
@@ -78,12 +81,10 @@
       const aid = r.authorId;
 
       for (const f of fields) {
-        const u =
-          byFU.get(f) ?? (byFU.set(f, new Map()), byFU.get(f)!);
+        const u = byFU.get(f) ?? (byFU.set(f, new Map()), byFU.get(f)!);
         (u.get(y) ?? u.set(y, new Set()).get(y)!).add(aid);
 
-        const a =
-          byFA.get(f) ?? (byFA.set(f, new Map()), byFA.get(f)!);
+        const a = byFA.get(f) ?? (byFA.set(f, new Map()), byFA.get(f)!);
         a.set(y, (a.get(y) ?? 0) + 1);
       }
     }
@@ -102,10 +103,12 @@
     allFields = Array.from(
       new Set<string>([...seriesUnique.keys(), ...seriesAuth.keys()]),
     ).sort();
+
     const palette = d3.quantize(
       d3.interpolateRainbow,
       Math.max(12, allFields.length),
     );
+
     colorScale = d3
       .scaleOrdinal<string, string>()
       .domain(allFields)
@@ -126,10 +129,7 @@
     return Array.from(currentSeries().entries())
       .map(([f, s]) => ({
         field: f,
-        value: s.reduce(
-          (acc, [yr, v]) => acc + (yr <= y ? v || 0 : 0),
-          0,
-        ),
+        value: s.reduce((acc, [yr, v]) => acc + (yr <= y ? v || 0 : 0), 0),
       }))
       .filter((d) => d.value > 0)
       .sort((a, b) => b.value - a.value)
@@ -164,8 +164,9 @@
   // ---------- Bars ----------
   function initBars(reinit = false) {
     if (!barsWrap) return;
-    const W = barsWrap.clientWidth || 720,
-      H = 560;
+    const W = barsWrap.clientWidth || 720;
+    const H = 560;
+
     if (!barsSvg || reinit) {
       barsWrap.innerHTML = "";
       barsSvg = d3
@@ -173,16 +174,26 @@
         .append("svg")
         .attr("width", W)
         .attr("height", H);
-      barsG = barsSvg.append("g").attr("transform", "translate(210,36)");
+
+      barsG = barsSvg
+        .append("g")
+        .attr("transform", `translate(${barsMargin.left},${barsMargin.top})`);
+
       barsAxisY = barsG.append("g").attr("class", "ax-y");
       barsAxisX = barsG.append("g").attr("class", "ax-x");
+
+      // Title is now left-aligned and has a hover legend
       barsSvg
         .append("text")
         .attr("class", "title")
-        .attr("x", 210)
-        .attr("y", 26)
+        .attr("x", 12)
+        .attr("y", barsMargin.top - 12)
         .attr("font-weight", 700)
-        .style("font-size", "18px");
+        .style("font-size", "18px")
+        .attr(
+          "title",
+          "Horizontal bars: cumulative AI-related activity per field from 1970 up to the selected year.",
+        );
     } else {
       barsSvg.attr("width", W).attr("height", H);
     }
@@ -190,11 +201,14 @@
 
   function updateBars() {
     if (!barsSvg) return;
-    const W = barsWrap.clientWidth || 720,
-      H = 560;
-    const margin = { top: 36, right: 28, bottom: 40, left: 210 };
-    const iw = W - margin.left - margin.right,
-      ih = H - margin.top - margin.bottom;
+    const W = barsWrap.clientWidth || 720;
+    const H = 560;
+
+    barsSvg.attr("width", W).attr("height", H);
+
+    const margin = barsMargin;
+    const iw = W - margin.left - margin.right;
+    const ih = H - margin.top - margin.bottom;
 
     const data = topFieldsCumTo(year, topN);
 
@@ -211,10 +225,12 @@
 
     barsSvg
       .select(".title")
+      .attr("x", 12)
+      .attr("y", margin.top - 12)
       .text(
         `Top ${topN} fields — ${
-          metric === "unique" ? "Unique authors" : "Authorships"
-        } (cumulative up to ${year})`,
+          metric === "unique" ? "Unique researchers" : "Total authorships"
+        } (cumulative to ${year})`,
       );
 
     barsAxisY
@@ -236,7 +252,7 @@
       .style("font-size", "13px");
 
     const rowsSel = barsG
-      .selectAll("g.row")
+      .selectAll<SVGGElement, any>("g.row")
       .data(data, (d: any) => d.field);
 
     const enter = rowsSel
@@ -251,6 +267,7 @@
         updateGalaxy();
       });
 
+    // bars
     enter
       .append("rect")
       .attr("height", y.bandwidth())
@@ -261,30 +278,52 @@
       .duration(duration)
       .attr("width", (d: any) => x(d.value));
 
+    // numeric labels — inside bar when wide, outside when narrow
+    const labelThreshold = 70; // px
+
     enter
       .append("text")
       .attr("class", "val")
       .style("font-size", "14px")
-      .attr("x", (d: any) => x(d.value) + 10)
       .attr("y", y.bandwidth() / 2 + 5)
+      .attr("text-anchor", (d: any) =>
+        x(d.value) > labelThreshold ? "end" : "start",
+      )
+      .attr("x", (d: any) =>
+        x(d.value) > labelThreshold ? x(d.value) - 8 : x(d.value) + 8,
+      )
+      .attr("fill", (d: any) =>
+        x(d.value) > labelThreshold ? "#ffffff" : "#111827",
+      )
       .text((d: any) => Math.round(d.value).toLocaleString());
 
     const merge = enter.merge(rowsSel as any);
+
     merge
       .transition()
       .duration(duration)
       .attr("transform", (d: any) => `translate(0,${y(d.field)!})`);
+
     merge
-      .select("rect")
+      .select<SVGRectElement>("rect")
       .transition()
       .duration(duration)
       .attr("height", y.bandwidth())
       .attr("width", (d: any) => x(d.value));
+
     merge
-      .select("text.val")
+      .select<SVGTextElement>("text.val")
       .transition()
       .duration(duration)
-      .attr("x", (d: any) => x(d.value) + 10)
+      .attr("x", (d: any) =>
+        x(d.value) > labelThreshold ? x(d.value) - 8 : x(d.value) + 8,
+      )
+      .attr("text-anchor", (d: any) =>
+        x(d.value) > labelThreshold ? "end" : "start",
+      )
+      .attr("fill", (d: any) =>
+        x(d.value) > labelThreshold ? "#ffffff" : "#111827",
+      )
       .text((d: any) => Math.round(d.value).toLocaleString());
 
     rowsSel.exit().transition().duration(250).style("opacity", 0).remove();
@@ -293,8 +332,9 @@
   // ---------- Galaxy ----------
   function initGalaxy(reinit = false) {
     if (!galaxyWrap) return;
-    const W = galaxyWrap.clientWidth || 720,
-      H = 560;
+    const W = galaxyWrap.clientWidth || 720;
+    const H = 560;
+
     if (!galaxySvg || reinit) {
       galaxyWrap.innerHTML = "";
       galaxySvg = d3
@@ -302,27 +342,35 @@
         .append("svg")
         .attr("width", W)
         .attr("height", H);
-      galaxyG = galaxySvg
-        .append("g")
-        .attr("transform", "translate(20,20)");
+
+      galaxyG = galaxySvg.append("g").attr("transform", "translate(20,20)");
+
       const defs = galaxySvg.append("defs");
       const glow = defs.append("filter").attr("id", "glow");
-      glow.append("feGaussianBlur")
+      glow
+        .append("feGaussianBlur")
         .attr("stdDeviation", "4")
         .attr("result", "blur");
-      glow.append("feMerge")
+      glow
+        .append("feMerge")
         .selectAll("feMergeNode")
         .data(["blur", "SourceGraphic"])
         .enter()
         .append("feMergeNode")
         .attr("in", (d) => d);
+
+      // Galaxy title with hover legend
       galaxySvg
         .append("text")
         .attr("class", "title")
         .attr("x", 16)
         .attr("y", 26)
         .attr("font-weight", 700)
-        .style("font-size", "18px");
+        .style("font-size", "18px")
+        .attr(
+          "title",
+          "Bubbles: AI-related activity in the selected year; bubble area encodes volume and color encodes field.",
+        );
     } else {
       galaxySvg.attr("width", W).attr("height", H);
     }
@@ -335,14 +383,17 @@
       .join("")
       .slice(0, 4)
       .toUpperCase();
+
   const safeId = (s: string) => s.replace(/[^a-zA-Z0-9_-]/g, "_");
 
   function updateGalaxy() {
     if (!galaxySvg) return;
-    const W = galaxyWrap.clientWidth || 720,
-      H = 560;
-    const innerW = W - 40,
-      innerH = H - 40;
+    const W = galaxyWrap.clientWidth || 720;
+    const H = 560;
+    galaxySvg.attr("width", W).attr("height", H);
+
+    const innerW = W - 40;
+    const innerH = H - 40;
 
     const items = topFieldsAtYear(year, topN);
     if (selectedField && !items.find((d) => d.field === selectedField)) {
@@ -354,7 +405,7 @@
       .select(".title")
       .text(
         `Galaxy — ${
-          metric === "unique" ? "Unique authors" : "Authorships"
+          metric === "unique" ? "Unique researchers" : "Total authorships"
         } in ${year} (Top ${topN})`,
       );
 
@@ -366,11 +417,12 @@
         })),
       } as any)
       .sum((d: any) => d.value);
+
     const pack = d3.pack().size([innerW, innerH]).padding(6);
     const nodes = pack(root).leaves() as any[];
 
     const sel = galaxyG
-      .selectAll("g.node")
+      .selectAll<SVGGElement, any>("g.node")
       .data(nodes, (d: any) => d.data.name);
 
     const enter = sel
@@ -382,7 +434,7 @@
       .on("mousemove", (ev: any, d: any) => {
         const field = d.data.name;
         const val = Math.round(valueFor(field, year)).toLocaleString();
-        showSpark(field, ev.pageX, ev.pageY, val, fieldColor(field));
+        showSpark(field, ev.clientX, ev.clientY, val, fieldColor(field));
       })
       .on("mouseleave", () => d3.select(tooltipEl).style("opacity", 0))
       .on("click", (_ev: any, d: any) => {
@@ -429,14 +481,18 @@
         const node = d3.select(nodesEls[i]);
         const d: any = node.datum() as any;
         node.select("clipPath circle").attr("r", d.r);
-        const lbl = node.select("text.label");
+
+        const lbl = node.select<SVGTextElement>("text.label");
         const max = d.r * 1.8;
-        if (d.r < 18) lbl.text(acronym(d.data.name));
-        else {
+
+        if (d.r < 18) {
+          lbl.text(acronym(d.data.name));
+        } else {
           lbl.text(d.data.name);
           let t = d.data.name;
           while (
-            lbl.node().getComputedTextLength() > max &&
+            lbl.node() &&
+            lbl.node()!.getComputedTextLength() > max &&
             t.length > 3
           ) {
             t = t.slice(0, t.length - 1);
@@ -454,7 +510,7 @@
   function highlight() {
     const hasSel = !!selectedField;
     galaxyG
-      .selectAll("g.node")
+      .selectAll<SVGGElement, any>("g.node")
       .select("circle")
       .attr("filter", (d: any) =>
         hasSel && d.data.name === selectedField ? "url(#glow)" : null,
@@ -473,6 +529,7 @@
   function drawAuthorPanel() {
     d3.select(galaxyWrap).selectAll(".author-panel").remove();
     if (!selectedField || !topAuthors.length) return;
+
     const panel = d3
       .select(galaxyWrap)
       .append("div")
@@ -487,11 +544,13 @@
       .style("width", "300px")
       .style("box-shadow", "0 10px 24px rgba(0,0,0,.08)")
       .style("font-size", "14px");
+
     panel
       .append("div")
       .style("font-weight", "700")
       .style("margin-bottom", "8px")
       .text(`Top authors — ${selectedField} (${year})`);
+
     topAuthors.forEach((a, i) => {
       panel
         .append("div")
@@ -503,37 +562,53 @@
 
   function showSpark(
     field: string,
-    pageX: number,
-    pageY: number,
+    clientX: number,
+    clientY: number,
     labelValue: string,
     color: string,
   ) {
     const el = d3.select(tooltipEl);
-    el.style("opacity", 1)
-      .style("left", `${pageX + 12}px`)
-      .style("top", `${pageY + 12}px`);
+    const tooltipWidth = 260;
+    const tooltipHeight = 110;
+
+    const vw = window.innerWidth || document.documentElement.clientWidth;
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+
+    let left = clientX + 12;
+    if (left + tooltipWidth > vw - 4) left = vw - tooltipWidth - 4;
+
+    let top = clientY + 12;
+    if (top + tooltipHeight > vh - 4) top = vh - tooltipHeight - 4;
+
+    el.style("opacity", 1).style("left", `${left}px`).style("top", `${top}px`);
+
     el.html(`
       <div style="font-weight:700;margin-bottom:4px">${field}</div>
       <div style="font-size:13px;color:#4b5563;margin-bottom:4px">
-        ${metric === "unique" ? "Unique authors" : "Authorships"}:
+        ${metric === "unique" ? "Unique researchers" : "Total authorships"}:
         <b>${labelValue}</b>
       </div>
       <svg width="240" height="70"></svg>
     `);
-    const svg = el.select("svg");
+
+    const svg = el.select<SVGSVGElement>("svg");
     const data = currentSeries().get(field) ?? [];
+
     const x = d3
       .scaleLinear()
       .domain(d3.extent(data, (d) => d[0]) as [number, number])
       .range([8, 232]);
+
     const y = d3
       .scaleLinear()
       .domain([0, d3.max(data, (d) => d[1]) || 1])
       .range([60, 10]);
+
     const line = d3
       .line<[number, number]>()
       .x((d) => x(d[0]))
       .y((d) => y(d[1]));
+
     svg
       .append("path")
       .datum(data)
@@ -541,6 +616,7 @@
       .attr("stroke", color)
       .attr("stroke-width", 2)
       .attr("d", line as any);
+
     svg
       .append("line")
       .attr("x1", x(year))
@@ -553,13 +629,15 @@
 
   function togglePlay() {
     playing = !playing;
-    if (playing)
+    if (playing) {
       timer = setInterval(() => {
         year = year >= yearMax ? yearMin : year + 1;
         selectedField = null;
         updateAll();
       }, duration);
-    else clearInterval(timer);
+    } else {
+      clearInterval(timer);
+    }
   }
 
   function updateAll() {
@@ -568,7 +646,9 @@
   }
 </script>
 
-<h2>How many researchers are conducting AI research over time and across fields?</h2>
+<h2>
+  How many researchers are conducting AI research over time and across fields?
+</h2>
 
 <div class="toolbar">
   <span><b>Top:</b></span>
@@ -587,19 +667,21 @@
 
   <span
     class="pill {metric === 'unique' ? 'active' : ''}"
+    title="Counts distinct people who have authored at least one AI paper—each person is counted once, no matter how many papers they wrote."
     on:click={() => {
       metric = "unique";
       selectedField = null;
       updateAll();
-    }}>Unique</span
+    }}>Unique Researchers</span
   >
   <span
     class="pill {metric === 'authorships' ? 'active' : ''}"
+    title="Counts every author–paper combination on AI papers—people are counted multiple times if they appear on multiple papers."
     on:click={() => {
       metric = "authorships";
       selectedField = null;
       updateAll();
-    }}>Authorships</span
+    }}>Total Authorships</span
   >
 </div>
 
@@ -634,16 +716,19 @@
   :root {
     --text: #0f172a;
   }
+
   .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
   }
+
   @media (max-width: 1100px) {
     .two-col {
       grid-template-columns: 1fr;
     }
   }
+
   .panel {
     padding: 12px;
     border: 1px solid #e5e7eb;
@@ -652,7 +737,9 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     position: relative;
     min-height: 560px;
+    overflow: hidden;
   }
+
   .toolbar {
     display: flex;
     gap: 10px;
@@ -661,6 +748,7 @@
     margin-bottom: 8px;
     font-size: 14px;
   }
+
   .pill {
     padding: 6px 12px;
     border: 1px solid #ddd;
@@ -668,13 +756,15 @@
     cursor: pointer;
     user-select: none;
   }
+
   .pill.active {
     background: #111;
     color: #fff;
     border-color: #111;
   }
+
   .tooltip {
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     opacity: 0;
     background: rgba(255, 255, 255, 0.96);
@@ -683,10 +773,18 @@
     padding: 10px 12px;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
     font-size: 13px;
+    z-index: 20;
   }
+
   svg text {
     fill: var(--text);
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-      Helvetica, Arial;
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      Helvetica,
+      Arial;
   }
 </style>

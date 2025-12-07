@@ -30,16 +30,6 @@
   let sel1 = "";
   let sel2 = "";
 
-  // hover state
-  type HoverRow = {
-    name: string;
-    value: number;
-    color: string;
-    isTotal?: boolean;
-  };
-  let hoverYear: number | null = null;
-  let hoverValues: HoverRow[] = [];
-
   // -------------------- DOM / D3 REFS --------------------
   let wrap: HTMLDivElement;
   let mainSvg: SVGSVGElement;
@@ -64,7 +54,6 @@
 
   // -------------------- LIFECYCLE --------------------
   onMount(async () => {
-    // onMount never runs during SSR, but guard anyway for safety
     if (!browser) return;
 
     rows = await loadWorks();
@@ -86,10 +75,7 @@
 
     redrawBoth();
 
-    // guard window usage with browser flag
-    if (browser) {
-      window.addEventListener("resize", handleResize);
-    }
+    window.addEventListener("resize", handleResize);
   });
 
   onDestroy(() => {
@@ -159,7 +145,6 @@
       }
     }
 
-    // build series arrays (0-filled where no value)
     for (const f of byFA.keys()) {
       seriesUnique.set(
         f,
@@ -229,6 +214,11 @@
     redrawMain();
   }
 
+  function valueForYear(series: [number, number][], y: number): number {
+    const found = series.find(([yr]) => yr === y);
+    return found ? found[1] : 0;
+  }
+
   // -------------------- MAIN CHART --------------------
   function drawMainChart() {
     const svg = d3.select(mainSvg);
@@ -257,6 +247,15 @@
       isTotal?: boolean;
     }[] = [];
 
+    if (showTotal) {
+      lines.push({
+        name: "Total",
+        data: slice(totalSeries()),
+        color: "#111827",
+        isTotal: true,
+      });
+    }
+
     if (sel1 && map.get(sel1)) {
       lines.push({
         name: sel1,
@@ -271,15 +270,6 @@
         data: slice(map.get(sel2)!),
         color: fieldColor(sel2),
         dashed: true,
-      });
-    }
-
-    if (showTotal) {
-      lines.push({
-        name: "Total",
-        data: slice(totalSeries()),
-        color: "#111827",
-        isTotal: true,
       });
     }
 
@@ -329,7 +319,6 @@
       .y(([, v]) => yScale(v))
       .curve(d3.curveMonotoneX);
 
-    // helper to draw + animate one line
     function drawAnimatedLine(
       data: [number, number][],
       color: string,
@@ -347,7 +336,6 @@
         .attr("stroke-dasharray", dashed ? "4 3" : null)
         .attr("d", lineGen);
 
-      // line-draw animation from left to right
       const node = path.node() as SVGPathElement | null;
       if (!node) return;
       const len = node.getTotalLength();
@@ -372,9 +360,23 @@
       .attr("y", 18)
       .attr("text-anchor", "middle")
       .attr("font-size", 10)
-      .text(metric === "unique" ? "Unique authors" : "Authorships");
+      .text(metric === "unique" ? "Unique researchers" : "Total authorships");
 
-    // cursor line for hover
+    // shadow filter for note
+    const defs = svg.append("defs");
+    const shadow = defs
+      .append("filter")
+      .attr("id", "hoverNoteShadow")
+      .attr("height", "150%");
+    shadow
+      .append("feDropShadow")
+      .attr("dx", "0")
+      .attr("dy", "2")
+      .attr("stdDeviation", "3")
+      .attr("flood-color", "#0f172a")
+      .attr("flood-opacity", "0.16");
+
+    // vertical cursor line
     svg
       .append("line")
       .attr("class", "cursor-line")
@@ -384,6 +386,30 @@
       .attr("stroke-width", 1.2)
       .attr("stroke-dasharray", "3,3")
       .style("opacity", 0);
+
+    // hover note group
+    const noteGroup = svg
+      .append("g")
+      .attr("class", "hover-note")
+      .attr("filter", "url(#hoverNoteShadow)")
+      .style("opacity", 0);
+
+    const noteBg = noteGroup
+      .append("rect")
+      .attr("rx", 12)
+      .attr("ry", 12)
+      .attr("fill", "#ffffff")
+      .attr("stroke", "#e5e7eb")
+      .attr("stroke-width", 1);
+
+    const yearText = noteGroup
+      .append("text")
+      .attr("class", "hn-year")
+      .attr("font-size", 13)
+      .attr("font-weight", 600)
+      .attr("fill", "#111827");
+
+    const rowsGroup = noteGroup.append("g").attr("class", "hn-rows");
 
     // pointer overlay
     svg
@@ -431,7 +457,6 @@
       .y1(([, v]) => yMiniScale(v))
       .curve(d3.curveMonotoneX);
 
-    // light background
     svg
       .append("rect")
       .attr("x", marginMini.left)
@@ -440,7 +465,6 @@
       .attr("height", h - marginMini.top - marginMini.bottom)
       .attr("fill", "#e5e7eb");
 
-    // area of total series
     svg
       .append("path")
       .datum(data)
@@ -462,14 +486,12 @@
       .attr("class", "brush")
       .call(brush as any);
 
-    // initial selection: full range
     const initialSel: [number, number] = [
       xMiniScale(rangeStart),
       xMiniScale(rangeEnd),
     ];
     gBrush.call((brush as any).move, initialSel);
 
-    // style the brush selection rectangle
     gBrush
       .selectAll<SVGRectElement, unknown>(".selection")
       .attr("fill", "rgba(59,130,246,0.45)")
@@ -517,48 +539,109 @@
     }
 
     const xPos = x(bestYear);
+
+    // vertical line
     svg
       .select<SVGLineElement>(".cursor-line")
       .attr("x1", xPos)
       .attr("x2", xPos)
       .style("opacity", 1);
 
-    hoverYear = bestYear;
+    const map = currentSeriesMap();
 
-    const idx = years.indexOf(bestYear);
-    if (idx === -1) {
-      hoverValues = [];
-      return;
+    // Build rows for note
+    const rows: { label: string; value: number; color: string }[] = [];
+
+    if (showTotal) {
+      rows.push({
+        label: "Total",
+        value: valueForYear(totalSeries(), bestYear),
+        color: "#111827",
+      });
     }
 
-    const map = currentSeriesMap();
-    const vals: HoverRow[] = [];
-
     if (sel1 && map.get(sel1)) {
-      const v = map.get(sel1)![idx]?.[1] ?? 0;
-      vals.push({ name: sel1, value: v, color: fieldColor(sel1) });
+      rows.push({
+        label: sel1,
+        value: valueForYear(map.get(sel1)!, bestYear),
+        color: fieldColor(sel1),
+      });
     }
 
     if (sel2 && map.get(sel2)) {
-      const v = map.get(sel2)![idx]?.[1] ?? 0;
-      vals.push({ name: sel2, value: v, color: fieldColor(sel2) });
+      rows.push({
+        label: sel2,
+        value: valueForYear(map.get(sel2)!, bestYear),
+        color: fieldColor(sel2),
+      });
     }
 
-    if (showTotal) {
-      const v = totalSeries()[idx]?.[1] ?? 0;
-      vals.push({ name: "Total", value: v, color: "#111827", isTotal: true });
-    }
+    const noteGroup = svg.select<SVGGElement>(".hover-note");
+    const noteBg = noteGroup.select<SVGRectElement>("rect");
+    const yearText = noteGroup.select<SVGTextElement>("text.hn-year");
+    const rowsGroup = noteGroup.select<SVGGElement>("g.hn-rows");
 
-    // sort so larger values are on top in tooltip
-    vals.sort((a, b) => b.value - a.value);
-    hoverValues = vals;
+    yearText.text(String(bestYear)).attr("x", 16).attr("y", 18);
+
+    rowsGroup.selectAll("*").remove();
+
+    const lineHeight = 18;
+    rows.forEach((r, i) => {
+      const g = rowsGroup
+        .append("g")
+        .attr("transform", `translate(16,${30 + i * lineHeight})`);
+
+      g.append("circle")
+        .attr("r", 4)
+        .attr("cx", 0)
+        .attr("cy", -6)
+        .attr("fill", r.color);
+
+      g.append("text")
+        .attr("x", 10)
+        .attr("y", 0)
+        .attr("font-size", 12)
+        .attr("fill", "#111827")
+        .text(`${r.label}: ${fmt(r.value)}`);
+    });
+
+    // compute background size
+    const yearBox = yearText.node()!.getBBox();
+    const rowsBox = rowsGroup.node()!.getBBox();
+    const paddingX = 14;
+    const paddingY = 10;
+
+    const bgWidth = Math.max(
+      yearBox.width + paddingX * 2,
+      rowsBox.width + paddingX * 2,
+    );
+    const bgHeight = rows.length
+      ? rowsBox.y + rowsBox.height - yearBox.y + paddingY * 1.4
+      : yearBox.height + paddingY * 2;
+
+    noteBg
+      .attr("width", bgWidth)
+      .attr("height", bgHeight)
+      .attr("x", 0)
+      .attr("y", 0);
+
+    // position note
+    let noteX = xPos + 10;
+    const maxX = width - margin.right - bgWidth - 4;
+    if (noteX > maxX) noteX = maxX;
+    if (noteX < margin.left) noteX = margin.left;
+
+    const noteY = margin.top + 4;
+
+    noteGroup
+      .attr("transform", `translate(${noteX},${noteY})`)
+      .style("opacity", 1);
   }
 
   function handleLeave() {
     const svg = d3.select(mainSvg);
     svg.select(".cursor-line").style("opacity", 0);
-    hoverYear = null;
-    hoverValues = [];
+    svg.select(".hover-note").style("opacity", 0);
   }
 </script>
 
@@ -572,20 +655,22 @@
   <div class="ft-controls-row">
     <div class="metric-group">
       <span class="label">Metric</span>
-      <div class="pill-toggle">
+      <div class="metric-pills">
         <button
           type="button"
-          class:selected={metric === "unique"}
+          class:active={metric === "unique"}
+          title="Counts distinct people who have authored at least one AI paper—each person is counted once, no matter how many papers they wrote."
           on:click={() => setMetric("unique")}
         >
-          Unique
+          Unique Researchers
         </button>
         <button
           type="button"
-          class:selected={metric === "authorships"}
+          class:active={metric === "authorships"}
+          title="Counts every author–paper combination on AI papers—people are counted multiple times if they appear on multiple papers."
           on:click={() => setMetric("authorships")}
         >
-          Authorships
+          Total Authorships
         </button>
       </div>
     </div>
@@ -617,23 +702,6 @@
       <input type="checkbox" checked={showTotal} on:change={onToggleTotal} />
       <span>Show Total</span>
     </label>
-
-    <div
-      class="hover-card {hoverYear === null || !hoverValues.length
-        ? 'hidden'
-        : ''}"
-    >
-      {#if hoverYear !== null}
-        <div class="hover-year">{hoverYear}</div>
-        {#each hoverValues as v}
-          <div class="hover-row">
-            <span class="dot" style={`background:${v.color}`}></span>
-            <span class="name">{v.name}</span>
-            <span class="value">{fmt(v.value)}</span>
-          </div>
-        {/each}
-      {/if}
-    </div>
   </div>
 
   <div class="ft-chart-card" bind:this={wrap}>
@@ -677,7 +745,7 @@
   .metric-group {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.55rem;
   }
 
   .label {
@@ -685,26 +753,40 @@
     color: #4b5563;
   }
 
-  .pill-toggle {
+  .metric-pills {
     display: inline-flex;
-    padding: 0.1rem;
+    gap: 0.4rem;
+    padding: 0.12rem;
     border-radius: 999px;
-    background: #f3f4f6;
+    background: #e5e7eb;
   }
 
-  .pill-toggle button {
-    border: none;
-    background: transparent;
-    padding: 0.25rem 0.7rem;
+  .metric-pills button {
+    border: 1px solid transparent;
+    background: #f9fafb;
+    padding: 0.32rem 0.95rem;
     border-radius: 999px;
     font-size: 0.8rem;
+    font-weight: 500;
     cursor: pointer;
-    color: #4b5563;
+    color: #111827;
+    transition:
+      background 0.15s ease,
+      color 0.15s ease,
+      box-shadow 0.15s ease,
+      transform 0.1s ease;
+    white-space: nowrap;
   }
 
-  .pill-toggle button.selected {
+  .metric-pills button:hover {
+    transform: translateY(-0.5px);
+    box-shadow: 0 3px 6px rgba(15, 23, 42, 0.16);
+  }
+
+  .metric-pills button.active {
     background: #111827;
     color: #f9fafb;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.35);
   }
 
   .select-group {
@@ -732,52 +814,6 @@
 
   .toggle-total input {
     accent-color: #111827;
-  }
-
-  .hover-card {
-    position: absolute;
-    right: 0.2rem;
-    top: 0.05rem;
-    background: #ffffff;
-    border-radius: 0.75rem;
-    padding: 0.4rem 0.7rem;
-    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-    min-width: 120px;
-  }
-
-  .hover-card.hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .hover-year {
-    font-weight: 600;
-    font-size: 0.85rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .hover-row {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.78rem;
-    line-height: 1.3;
-  }
-
-  .hover-row .name {
-    flex: 1;
-  }
-
-  .hover-row .value {
-    font-variant-numeric: tabular-nums;
-    font-weight: 500;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    display: inline-block;
   }
 
   .ft-chart-card {
