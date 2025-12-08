@@ -26,10 +26,10 @@ import pandas as pd
 # ---------------------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent  # this is .../static
 
-AUTHORS_FILE = BASE_DIR / "authors_sampled.csv"
-WORKS_FILE = BASE_DIR / "works_sampled.csv"
+AUTHORS_FILE = BASE_DIR / "authors_sampled_large.csv"
+WORKS_FILE = BASE_DIR / "works_sampled_large.csv"
 TOPICS_FILE = BASE_DIR / "author_publication_topics_sankey.csv"
-OUTPUT_FILE = BASE_DIR / "authors_mingyang.csv"
+OUTPUT_FILE = BASE_DIR / "authors_mingyang_large.csv"
 
 
 def build_authors_mingyang() -> pd.DataFrame:
