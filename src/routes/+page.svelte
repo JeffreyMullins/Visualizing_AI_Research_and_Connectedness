@@ -2,14 +2,19 @@
   import * as d3 from "d3";
   import { onMount } from "svelte";
   import type { TTopic } from "../../types";
+  import type { Tsankey_authors } from "../../types";
+  import type { Tbubble_chart } from "../../types";
   import Bar_topics from "$lib/Bar_topics.svelte";
   import FieldsGalaxy from "$lib/vis/FieldsGalaxy.svelte";
   import FieldTrends from "$lib/vis/FieldTrends.svelte";
   import AiGeoMap from "$lib/vis/AiGeoMap.svelte";
   import CoauthorNetwork from "$lib/vis/CoauthorNetwork.svelte";
-
+  import Sankey from "$lib/Sankey.svelte";
+  import Bubble_chart from "$lib/Bubble_chart.svelte";
   // --- Topic data ---
   let topics: TTopic[] = [];
+  let author_sankey: Tsankey_authors[] = [];
+  let bubble_chart_data: Tbubble_chart[] = [];
   let uniqueTopics = 0;
 
   async function loadCsv() {
@@ -34,6 +39,40 @@
     } catch (error) {
       console.error("Error loading CSV:", error);
     }
+
+    try {
+      const csvUrl = "./author_publication_sankey.csv";
+      author_sankey = await d3.csv(csvUrl, (row) => {
+        return {
+          first_publication_topic: String(row.first_publication_topic),
+          publication_order: Number(row.publication_order),
+          topic_order: Number(row.topic_order),
+          author_count: Number(row.author_count),
+
+        };
+      });
+      console.log("Loaded CSV Data:", author_sankey);
+    } catch (error) {
+      console.error("Error loading CSV:", error);
+    }
+
+    try {
+      const csvUrl = "./data_for_bubble_chart_large.csv";
+      bubble_chart_data = await d3.csv(csvUrl, (row) => {
+        return {
+          pub_year: Number(row.pub_year),
+          topic_field_display_name: String(row.topic_field_display_name),
+          num_publications: Number(row.num_publications),
+          cross_collaboration_metric: Number(row.cross_collaboration_metric),
+          authors: Number(row.authors),
+
+        };
+      });
+      console.log("Loaded CSV Data:", bubble_chart_data);
+    } catch (error) {
+      console.error("Error loading CSV:", error);
+    }
+
   }
 
   onMount(loadCsv);
@@ -218,6 +257,37 @@
         <Bar_topics {topics} />
       </div>
     </section>
+
+
+    <!-- Jeff: sankey diagram -->
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Topic Distribution</h2>
+        <p>
+          Eachasdfhklas;dfaklsdfja;s lkdfajlk sdfj;al sdfkla;jsdlfkajsd f;lka.
+        </p>
+      </div>
+
+      <div class="panel-body">
+        <Sankey {author_sankey} />
+      </div>
+    </section>
+
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Topic Distribution</h2>
+        <p>
+          Eachasdfhklas;dfaklsdfja;s lkdfajlk sdfj;al sdfkla;jsdlfkajsd f;lka.
+        </p>
+      </div>
+
+      <div class="panel-body">
+        <Bubble_chart {bubble_chart_data} />
+      </div>
+    </section>
+
+
 
     <!-- Wenwen: Network -->
     <section class="panel">

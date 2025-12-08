@@ -56,3 +56,24 @@ export type Tworks_with_author = {
     topic_field_display_name: string;
     pub_year: number;
 }
+
+export type Tsankey_authors = {
+    first_publication_topic: string;
+    publication_order: number;
+    topic_order: number;
+    author_count: number;
+}
+
+export type Tbubble_chart = {
+    pub_year: number;
+    topic_field_display_name: string;
+    num_publications: number;
+    cross_collaboration_metric: number;
+    authors: number;
+}
+
+export type Tbar_chart_pubs = {
+    pub_year: number;
+    topic_field_display_name: string;
+    id: number;
+}
