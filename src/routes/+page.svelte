@@ -8,6 +8,7 @@
   import AiGeoMap from "$lib/vis/AiGeoMap.svelte";
   import CoauthorNetwork from "$lib/vis/CoauthorNetwork.svelte";
   import AiFieldNetwork from "$lib/vis/AiFieldNetwork.svelte";
+  import AiSocialNetwork from "$lib/vis/AiSocialNetwork.svelte";
 
   // --- Topic data ---
   let topics: TTopic[] = [];
@@ -98,13 +99,16 @@
       </div>
     </section>
 
-    <!-- Wenwen: Network -->
-    <section class="panel">
-      <h2>AI Collaboration Network (All Subfield)</h2>
-      <AiFieldNetwork {topics} />
-    </section>
+  <!-- Wenwen: Network -->
+  <section class="panel">
+    <h2>AI Collaboration Network (All Subfield)</h2>
+    <AiFieldNetwork {topics} />
+  </section>
 
-    
+  <section class="panel">
+    <h2>AI Collaboration Network (AI X Social Sciences)</h2>
+    <AiSocialNetwork {topics} />
+  </section>
 
   <!-- Mingyang: Author -->
   <section class="panel">
