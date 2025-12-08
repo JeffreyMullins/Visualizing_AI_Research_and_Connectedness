@@ -8,7 +8,9 @@
   import AiGeoMap from "$lib/vis/AiGeoMap.svelte";
   import CoauthorNetwork from "$lib/vis/CoauthorNetwork.svelte";
   import AiFieldNetwork from "$lib/vis/AiFieldNetwork.svelte";
-
+  import WordCloud from "$lib/vis/WordCloud.svelte";
+  import StackedArea from "$lib/vis/StackedArea.svelte";
+  
   // --- Topic data ---
   let topics: TTopic[] = [];
   let uniqueTopics = 0;
@@ -123,12 +125,43 @@
     <CoauthorNetwork />
   </section>
 
+
+
+  <!-- Jikai: Wordcloud & Stack area -->
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Topic Word Cloud</h2>
+      <p>
+        A word cloud visualization representing the most prominent topics (Top 30 each year) in AI research.
+      </p>
+    <div class="panel-body">
+      <WordCloud/>
+    </div>
+  </section>  
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Stacked Area Chart of Topics Over Time</h2>
+      <p>
+        This stacked area chart illustrates the distribution of AI research topics over the years, grouped by domain or field.
+      </p>  
+    <div class="panel-body">
+      <StackedArea
+        topicsFilePath="/topics_sampled.csv"
+        worksFilePath="/works_sampled.csv"
+        width={1200}
+        height={300}
+      />
+    </div>
+  </section>
+
   <footer class="footer">
     <p>
       Built with Svelte, D3.js, and CSV/JSON data on AI-related scientific
       publications.
     </p>
   </footer>
+  
 </main>
 
 <style>
@@ -279,3 +312,7 @@
     margin-top: 8px;
   }
 </style>
+
+<!-- 
+LLMs including ChatGPT, and so on have been used for help with doing this task.
+-->
