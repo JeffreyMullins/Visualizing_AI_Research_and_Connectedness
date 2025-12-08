@@ -175,7 +175,32 @@
       </div>
     </div>
   </header>
+<section class="panel">
+      <h1>About The Data</h1>
 
+          <div class="panel-content">
+
+      <div class="panel-header">
+        <p>
+          This interactive visualization dashboard derrives it's data from OpenAlex, a free API that holds over 240 Million academic publications. 
+          OpenAlex automaticall tracks a massive set of information about each publication including auuthors, topics of study, citation, and more.<br>
+          For more details on the source data please visit https://openalex.org/ or click the image at the bottom of this section.<br>
+          <br>
+          Because this dataset is so large, and we are limited by browser performance, we have sampled a subset of the data to use for this page.
+          Different samples have been taken for different sections of this report based on the needs of each visualization.<br>
+          <br>
+
+          Again, a huge thanks to OpenAlex for providing such a rich and accessible dataset for academic research!
+          
+        </p>
+      </div>
+      <div class="panel-image">
+      <a href="https://openalex.org/">
+        <img src="src\lib\assets\open_alex_logo.webp" alt="OpenAlex Logo"  width=200 />
+      </a>
+    </div>
+    </div>  
+    </section>
   
   <!-- <Bar_topics
   topics={yearRange
