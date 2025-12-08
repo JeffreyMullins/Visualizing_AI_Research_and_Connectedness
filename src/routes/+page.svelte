@@ -7,6 +7,7 @@
   import FieldTrends from "$lib/vis/FieldTrends.svelte";
   import AiGeoMap from "$lib/vis/AiGeoMap.svelte";
   import CoauthorNetwork from "$lib/vis/CoauthorNetwork.svelte";
+  import AiFieldNetwork from "$lib/vis/AiFieldNetwork.svelte";
 
   // --- Topic data ---
   let topics: TTopic[] = [];
@@ -39,132 +40,10 @@
   onMount(loadCsv);
 
   // --- Network Data & Visualization ---
-  let networkContainer: HTMLDivElement;
+
   let fieldCount = 0;
 
-  onMount(async () => {
-    const nodes: any[] = await d3.json("/field_nodes.json");
-    const links: any[] = await d3.json("/field_links.json");
-    if (!nodes || !links) return;
-
-    const width = networkContainer?.clientWidth || 1200;
-    const height = 600;
-
-    const uniqueFields = [...new Set(nodes.map((d: any) => d.id))];
-    fieldCount = uniqueFields.length;
-
-    const colorScale = d3
-      .scaleSequential()
-      .domain([0, uniqueFields.length])
-      .interpolator(d3.interpolateRainbow);
-
-    const sizeScale = d3
-      .scaleSqrt()
-      .domain(d3.extent(nodes, (d: any) => d.count) as [number, number])
-      .range([6, 28]);
-
-    const linkWidthScale = d3
-      .scaleLinear()
-      .domain(d3.extent(links, (d: any) => d.count) as [number, number])
-      .range([1, 6]);
-
-    const svg = d3
-      .select(networkContainer)
-      .append("svg")
-      .attr("viewBox", `0 0 ${width} ${height}`)
-      .attr("width", "100%")
-      .attr("height", "100%");
-
-    // Legend
-    const legend = svg
-      .append("g")
-      .attr("transform", `translate(${width - 260}, 20)`);
-
-    uniqueFields.forEach((field, i) => {
-      const g = legend.append("g").attr("transform", `translate(0, ${i * 24})`);
-
-      g.append("circle").attr("r", 7).attr("fill", colorScale(i));
-
-      g.append("text")
-        .attr("x", 16)
-        .attr("y", 5)
-        .text(field)
-        .attr("font-size", "12px");
-    });
-
-    const simulation = d3
-      .forceSimulation(nodes)
-      .force(
-        "link",
-        d3
-          .forceLink(links)
-          .id((d: any) => d.id)
-          .distance(140),
-      )
-      .force("charge", d3.forceManyBody().strength(-260))
-      .force("center", d3.forceCenter(width / 2, height / 2));
-
-    const link = svg
-      .append("g")
-      .attr("stroke", "#d4d4d8")
-      .attr("stroke-opacity", 0.8)
-      .selectAll("line")
-      .data(links)
-      .enter()
-      .append("line")
-      .attr("stroke-width", (d: any) => linkWidthScale(d.count));
-
-    const node = svg
-      .append("g")
-      .selectAll("circle")
-      .data(nodes)
-      .enter()
-      .append("circle")
-      .attr("r", (d: any) => sizeScale(d.count))
-      .attr("fill", (d: any) => colorScale(uniqueFields.indexOf(d.id)))
-      .call(
-        d3
-          .drag()
-          .on("start", (event, d: any) => {
-            if (!event.active) simulation.alphaTarget(0.3).restart();
-            d.fx = d.x;
-            d.fy = d.y;
-          })
-          .on("drag", (event, d: any) => {
-            d.fx = event.x;
-            d.fy = event.y;
-          })
-          .on("end", (event, d: any) => {
-            if (!event.active) simulation.alphaTarget(0);
-            d.fx = null;
-            d.fy = null;
-          }),
-      );
-
-    const label = svg
-      .append("g")
-      .selectAll("text")
-      .data(nodes)
-      .enter()
-      .append("text")
-      .text((d: any) => d.id)
-      .attr("font-size", "11px")
-      .attr("fill", "#374151")
-      .attr("dx", 8)
-      .attr("dy", 4);
-
-    simulation.on("tick", () => {
-      link
-        .attr("x1", (d: any) => d.source.x)
-        .attr("y1", (d: any) => d.source.y)
-        .attr("x2", (d: any) => d.target.x)
-        .attr("y2", (d: any) => d.target.y);
-
-      node.attr("cx", (d: any) => d.x).attr("cy", (d: any) => d.y);
-
-      label.attr("x", (d: any) => d.x).attr("y", (d: any) => d.y);
-    });
-  });
+  
 </script>
 
 <main class="page">
@@ -221,24 +100,12 @@
 
     <!-- Wenwen: Network -->
     <section class="panel">
-      <div class="panel-header">
-        <h2>Field Co-occurrence Network</h2>
-        <p>
-          Nodes show academic fields; links connect fields that co-occur in the
-          same works. Larger nodes and thicker links represent stronger research
-          activity and collaboration.
-        </p>
-      </div>
-
-      <div class="panel-body">
-        <div bind:this={networkContainer} class="network-container"></div>
-        <p class="panel-footnote">
-          Tip: drag nodes to explore clusters; the layout will re-balance
-          automatically.
-        </p>
-      </div>
+      <h2>AI Collaboration Network (All Subfield)</h2>
+      <AiFieldNetwork {topics} />
     </section>
-  </section>
+
+    
+
   <!-- Mingyang: Author -->
   <section class="panel">
     <FieldsGalaxy />
