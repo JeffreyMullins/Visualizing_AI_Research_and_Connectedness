@@ -1,57 +1,17 @@
 <script lang="ts">
-  import type { TMovie } from "../types";
   import * as d3 from "d3";
-  // define the props of the line component
-  type Props = {
-    movies: TMovie[];
-    progress?: number;
+  type TProps = {
+    data: Array<{ x: Date; y: number }>;
+    yearRange: [Date, Date] | undefined;
     width?: number;
     height?: number;
   };
-  // progress is 100 by default unless specified
-  let { movies, progress = 100, width = 1850, height = 400 }: Props = $props();
-
-  let selectedGenre: string = $state("");
-  // let selectedGenre: string = $state();
-
-  // processing the data; $derived is used to create a reactive variable that updates whenever the dependent variables change
-  const yearRange = $derived(d3.extent(movies.map((d) => d.year)));
-
-  function getUpYear(yearRange: [undefined, undefined] | [Date, Date]) {
-    if (!yearRange[0]) return new Date();
-    const timeScale = d3.scaleTime().domain(yearRange).range([0, 100]);
-    return timeScale.invert(progress);
-  }
-  const upYear: Date = $derived(getUpYear(yearRange!));
-
-  function getGenreNums(movies: TMovie[], upYear: Date) {
-    let res: { [genre: string]: { [year: number]: number } } = {};
-    movies
-    .filter(movie => movie.year <= upYear)
-    .forEach(movie => {
-      movie.genres.forEach(genre => {
-        // Initialize genre object if missing
-        if (!res[genre]) res[genre] = {};
-        const year = movie.year.getFullYear();
-        // Initialize count if missing
-        if (!res[genre][year]) res[genre][year] = 0;
-        res[genre][year] += 1;
-      });
-    });
-
-    // movies
-    //   .filter((movie) => movie.year <= upYear)
-    //   .forEach((movie) => {
-    //     movie.genres.forEach((genre: string) => {
-    //       res[genre][movie.year.getFullYear()] = (res[genre][movie.year.getFullYear()] || 0) + 1;
-    //     });
-    //   });
-    return res;
-  }
-
-  const genreNums = $derived(getGenreNums(movies, upYear));
-  let genrenumssize = $derived(Object.keys(genreNums).length);
-  // drawing the line chart
+  let {
+    data = [],
+    yearRange = $bindable(),
+    height = 150,
+    width = 600,
+  }: TProps = $props();
 
   const margin = {
     top: 15,
@@ -68,181 +28,102 @@
   };
 
   const xScale = $derived(
-    // tip: use d3.scaleBand() to create a band scale for the x-axis
     d3
-      .scaleLinear()
-      .range([usableArea.left,usableArea.right])
-      // try to get a list of all unique years from genreNums
-      .domain([
-          Math.min(...Object.values(genreNums).flatMap(obj => Object.keys(obj).map(Number))),
-          Math.max(...Object.values(genreNums).flatMap(obj => Object.keys(obj).map(Number)))
-      ] 
-    )
+      .scaleTime()
+      .domain(d3.extent(data.map((d) => d.x)) as [Date, Date])
+      .range([usableArea.left, usableArea.right])
   );
-
-  let minyear = $derived(
-    Math.min(...Object.values(genreNums).flatMap(obj => Object.keys(obj).map(Number)))
-  );
-
-  let maxyear = $derived(
-    Math.max(...Object.values(genreNums).flatMap(obj => Object.keys(obj).map(Number)))
-  );
-  
 
   const yScale = $derived(
-    // tip: use d3.scaleLinear() to create a linear scale for the y-axis
     d3
       .scaleLinear()
+      .domain(d3.extent(data.map((d) => d.y)) as [number, number])
       .range([usableArea.bottom, usableArea.top])
-      .domain([0, getMaxGenreCount(genreNums) || 0])
-    );
-    
-  function getMaxGenreCount(genreNums: { [genre: string]: { [year: number]: number } }) {
-    let maxCount = 0;
-    for (const genre in genreNums) {
-      for (const year in genreNums[genre]) {
-        if (genreNums[genre][year] > maxCount){
-          maxCount = genreNums[genre][year];
-        }
-      }
-    }
-    return maxCount || 0;
-  }
+  );
 
-  function makeGenreArrays(genreNums: { [genre: string]: { [year: number]: number } }) {
-    let res: {[genre: string]: number[][]} = {};
-    for (const genre in genreNums) {
-      const yearMap = genreNums[genre];
+  // tip2: this line generator will create a svg path from the data
+  const lineGenerator = d3
+      .line()
+      .x((d) => xScale(d.x)) // Map x-coordinate
+      .y((d) => yScale(d.y)) // Map y-coordinate
+      .curve(d3.curveBasis);
 
-    // Convert yearMap to array of [year, count] pairs
-    const yearData = Object.entries(yearMap)
-      .map(([year, count]) => [Number(year), count]) // Ensure year is a number
-      .sort((a, b) => a[0] - b[0]); // Optional: sort by year
-
-    res[genre] = yearData;
-    }
-    return res;
-  }
-
-  let genrearray = $derived(makeGenreArrays(genreNums));
-
-  
-
+  const path = $derived(lineGenerator(data));
 
   let xAxis: any = $state(),
-    yAxis: any = $state();
+    yAxis: any = $state(),
+    brushElement: any = $state();
 
   function updateAxis() {
-    d3.select(xAxis)
-      .call(d3.axisBottom(xScale))
-      .selectAll("text")
-      .attr("transform", "rotate(45)")
-      .style("text-anchor", "start");
+    if (!xScale || !yScale) {
+      return;
+    }
+    d3.select(xAxis).call(d3.axisBottom(xScale));
 
-    // tip:
-    // similar to the x-axis, create a y-axis using d3.axisLeft() and bind it to the yAxis variable
-    d3.select(yAxis)
-      .call(d3.axisLeft(yScale))
-      .selectAll("text")
-      .attr("transform", "rotate(45)")
-      .style("text-anchor", "start");
+    d3.select(yAxis).call(d3.axisLeft(yScale));
+  }
+
+  function handleBrush(event: any) {
+    // tip3: this function will be called at Brush end, and we will use it to update the yearRange
+    const selection = event.selection;
+    if (selection) {
+        const [start, end] = selection; // Convert from pixel values to Date
+        yearRange = [xScale.invert(start), xScale.invert(end)];
+    } else {
+        yearRange = undefined
+    }
+  }
+
+  function setupBrush() {
+    const brush = d3
+      .brushX()
+      .extent([
+        [usableArea.left, usableArea.top],
+        [usableArea.right, usableArea.bottom],
+      ])
+      .on("brush end", handleBrush);
+
+    d3.select(brushElement).call(brush);
   }
 
   // the $effect function is used to run a function whenever the reactive variables change, also known as a side effect
   $effect(() => {
-   
+    setupBrush();
     updateAxis();
-  
   });
-
-const colorScale = $derived(
-  d3.scaleOrdinal(d3.schemeCategory10)
-    .domain(Object.keys(genreNums))
-);
-
-const genres = $derived(Object.keys(genreNums));
-
-const topGenresByYear = $derived(() => {
-  const yearToCounts: { [year: number]: { genre: string; count: number }[] } = {};
-
-  // Build a structure where each year maps to all genre counts for that year
-  for (const [genre, yearCounts] of Object.entries(genrearray)) {
-    for (const [year, count] of yearCounts) {
-      if (!yearToCounts[year]) {
-        yearToCounts[year] = [];
-      }
-      yearToCounts[year].push({ genre, count });
-    }
-  }
-
-  // For each year, pick the top 3 genres by count
-  const top3ByYear: { [year: number]: Set<string> } = {};
-  for (const [yearStr, genreCounts] of Object.entries(yearToCounts)) {
-    const year = Number(yearStr);
-    const top3 = genreCounts
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 3)
-      .map(entry => entry.genre);
-    top3ByYear[year] = new Set(top3);
-  }
-
-  return top3ByYear;
-});
 </script>
 
-<h3>
-  The Popularity of Genres By Year {yearRange[0]?.getFullYear()} - {yearRange[1]?.getFullYear()} 
-</h3>
-
-<div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 12px;">
-  {#each genres as genre}
-    <div style="display: flex; align-items: center;">
-      <svg width="14" height="14" style="margin-right: 6px;">
-        <rect width="14" height="14" fill={colorScale(genre)} />
-      </svg>
-      <span style="font-size: 14px;">{genre}</span>
-    </div>
-  {/each}
-</div>
-
-{#if movies.length > 0}
-  <svg {width} {height}>
-    <g class="lines">
-      {#each Object.entries(genrearray) as [genre, yearCnt]}
-        {#each yearCnt as [year, cnt], i}
-        <g class={genre}>
-
-            {#if i != yearCnt.length - 1}
-              <line
-                x1={xScale(year)}
-                x2={xScale(yearCnt[i+1][0])}
-                y1={yScale(cnt)}
-                y2={yScale(yearCnt[i+1][1])}
-                stroke={colorScale(genre)}
-                stroke-width={topGenresByYear()?.[year]?.has(genre) ? 4 : 1.5}
-                role="button"
-                tabindex="0"
-                
-              />
-            {/if}
-              
-            
-        
-          </g>
-          {/each}
-      {/each}
+<svg {width} {height} class="line">
+  <!-- tip2: add the line here, the circles can help validate your curve -->
+  <path d={path} fill='transparent' stroke='black' stroke-width="1" />
+  <g class="points">
+        {#each data as point (point.x)}
+            <circle
+                cx={xScale ? xScale(point.x) : usableArea.left}
+                cy={yScale ? yScale(point.y) : usableArea.bottom}
+                r=1
+                fill="black"
+                stroke="black"
+                stroke-width="1"
+            />
+        {/each}
     </g>
+  <g transform="translate(0, {usableArea.bottom})" bind:this={xAxis} />
+  <g transform="translate({usableArea.left}, 0)" bind:this={yAxis} />
 
-    <g transform="translate(0, {usableArea.bottom})" bind:this={xAxis} />
-    <g transform="translate({usableArea.left}, 0)" bind:this={yAxis} />
-  </svg>
-{/if}
+  <!-- tip3: add the brush here. -->
+  <g class="brush" bind:this={brushElement} />
 
-<style>
-  .line {
-    transition:
-      y 0.1s ease,
-      height 0.1s ease,
-      width 0.1s ease; /* Smooth transition for height */
-  }
-</style>
+  <text x={width / 2} y={height - 5} text-anchor="middle">
+    Number of Publications by Year:
+  </text>
+  {#if yearRange}
+    <text x={width / 2} y={height - 20} text-anchor="middle">
+      {yearRange[0].getFullYear()} - {yearRange[1].getFullYear()}
+    </text>
+  {:else}
+    <text x={width / 2} y={height - 20} text-anchor="middle">
+      Brush to select a range
+    </text>
+  {/if}
+</svg>

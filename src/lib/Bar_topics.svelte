@@ -1,15 +1,14 @@
 <script lang="ts">
-  import type { TTopic } from "../types";
+  import type { Tbar_chart_pubs } from "../types";
   import * as d3 from "d3";
   // define the props of the Bar component
-  type Props = {
-    topics: TTopic[];
-    progress?: number;
-    width?: number;
-    height?: number;
-  };
+ type Props = {
+    topics: Tbar_chart_pubs[];
+    width: number;
+    height: number;
+};
   // progress is 100 by default unless specified
-  let { topics, progress = 100, width = 1000, height = 400 }: Props = $props();
+  let { topics, width = 1000, height = 400 }: Props = $props();
 
   let selectedGenre: string = $state("");
   // let selectedGenre: string = $state();
@@ -17,7 +16,7 @@
 
   
   
-  function getTopicNums(topics: TTopic[]) {
+  function getTopicNums(topics: Tbar_chart_pubs[]) {
     let res: { [topic_field_display_name: string]: number } = {};
     topics
       .forEach((topic) => {

@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Tbubble_chart } from "../types";
   import * as d3 from "d3";
+  import { onMount } from "svelte";
   
   // define the props of the line component
   type Props = {
@@ -11,8 +12,9 @@
   };
   
   let { bubble_chart_data, width = 1100, height: height_ = 500 }: Props = $props();
-  let body_height = height_ + 300;
-  
+  console.log("Bubble chart data length:", bubble_chart_data.length);
+
+  let body_height = height_ + 10;
   let svgElement: SVGSVGElement;
   let selectedYear = $state<number | null>(null);
   let years = $state<number[]>([]);
@@ -20,7 +22,7 @@
   let animationInterval: number | null = null;
   
   const margin = { top: 20, right: 150, bottom: 60, left: 80 };
-
+  
   // Get unique years from data
   $effect(() => {
     if (bubble_chart_data.length > 0) {
@@ -265,11 +267,17 @@
       stopAnimation();
     };
   });
+
+
+  onMount(async () => {
+    console.log("Bubble chart data length:", bubble_chart_data.length);
+  });
+
 </script>
 
 <div class="bubble-chart-container">
   <h3>
-    The Landscape of Publication and Fields Over Time
+    The World of Academic Publication Across Different Fields
   </h3>
   
   {#if years.length > 0 && selectedYear !== null}
