@@ -2,6 +2,9 @@
   import * as d3 from "d3";
   import { onMount } from "svelte";
   import type { TTopic } from "../../types";
+  import type { Tsankey_authors } from "../../types";
+  import type { Tbubble_chart } from "../../types";
+  import type { Tbar_chart_pubs } from "../../types";
   import Bar_topics from "$lib/Bar_topics.svelte";
   import FieldsGalaxy from "$lib/vis/FieldsGalaxy.svelte";
   import FieldTrends from "$lib/vis/FieldTrends.svelte";
@@ -10,12 +13,64 @@
   import AiFieldNetwork from "$lib/vis/AiFieldNetwork.svelte";
   import WordCloud from "$lib/vis/WordCloud.svelte";
   import StackedArea from "$lib/vis/StackedArea.svelte";
-  
-  // --- Topic data ---
+  import Stacked_Bar from "$lib/Stacked_Bar.svelte";
+  import Bubble_chart from "$lib/Bubble_chart.svelte";
+  import Line from "$lib/Line.svelte";
+    import Bar from "$lib/Bar.svelte";
+
+    // --- Topic data ---
+  let topics_bar: Tbar_chart_pubs[] = [];
   let topics: TTopic[] = [];
+  let author_data: Tsankey_authors[] = [];
+  let bubble_chart_data: Tbubble_chart[] = [];
   let uniqueTopics = 0;
 
+    let yearRange: [Date, Date] | undefined = $state();
+
+    function getYearCountArray(topics_bar: Tbar_chart_pubs[]) {
+        let yearCount: { [pub_year: number]: number } = {};
+        const allYears = [...new Set(topics_bar.map((d) => d.pub_year))];
+        
+        for (let pub_year of allYears) {
+            yearCount[pub_year] = topics_bar
+                .filter((d) => d.pub_year === pub_year)
+                .reduce((sum, d) => sum + d.id, 0);
+        }
+
+        // Convert the map to an array of { year, count } objects
+        const yearCountArray = Object.entries(yearCount).map(
+            ([pub_year, count]) => ({
+                x: new Date(pub_year),
+                y: count as number,
+            }),
+        );
+
+        // Sort the array by year in ascending order
+        yearCountArray.sort((a, b) => (a.x < b.x ? -1 : 1));
+        return yearCountArray;
+    }
+    let yearCountArray = $derived(getYearCountArray(topics_bar));
+    console.log("yearCountArray2:", topics_bar);
+
+
+
+
   async function loadCsv() {
+    try {
+      const csvUrl = "./topic_field_publications_per_year.csv";
+      topics_bar = await d3.csv(csvUrl, (row) => {
+        return {
+          pub_year: Number(row.pub_year),
+          topic_field_display_name: String(row.topic_field_display_name),
+          id: Number(row.id),
+         
+        };
+      });
+
+      console.log("Loaded topics_bar Data:", topics_bar);
+    } catch (error) {
+      console.error("Error loading CSV:", error);
+    }
     try {
       const csvUrl = "./topics.csv";
       topics = await d3.csv(csvUrl, (row) => {
@@ -33,14 +88,51 @@
       });
 
       uniqueTopics = new Set(topics.map((d) => d.topic_display_name)).size;
-      console.log("Loaded CSV Data:", topics);
+      console.log("Loaded topics Data:", topics);
     } catch (error) {
       console.error("Error loading CSV:", error);
     }
+  
+    try {
+      const csvUrl = "./author_publication_sankey.csv";
+      author_data = await d3.csv(csvUrl, (row) => {
+        return {
+          first_publication_topic: String(row.first_publication_topic),
+          publication_order: Number(row.publication_order),
+          topic_order: Number(row.topic_order),
+          author_count: Number(row.author_count),
+
+        };
+      });
+      console.log("Loaded author_data Data:", author_data);
+    } catch (error) {
+      console.error("Error loading CSV:", error);
+    }
+
+    try {
+      const csvUrl = "./data_for_bubble_chart_large.csv";
+      bubble_chart_data = await d3.csv(csvUrl, (row) => {
+        return {
+          pub_year: Number(row.pub_year),
+          topic_field_display_name: String(row.topic_field_display_name),
+          num_publications: Number(row.num_publications),
+          cross_collaboration_metric: Number(row.cross_collaboration_metric),
+          authors: Number(row.authors),
+
+        };
+      });
+      console.log("Loaded bubble_chart_data Data:", bubble_chart_data);
+    } catch (error) {
+      console.error("Error loading CSV:", error);
+    }
+
   }
 
-  onMount(loadCsv);
 
+
+
+  onMount(loadCsv);
+  
   // --- Network Data & Visualization ---
 
   let fieldCount = 0;
@@ -83,20 +175,80 @@
       </div>
     </div>
   </header>
+<section class="panel">
+      <h1>About The Data</h1>
 
-  <section class="layout-grid">
-    <!-- Jeff: Bar chart -->
+          <div class="panel-content">
+
+      <div class="panel-header">
+        <p>
+          This interactive visualization dashboard derrives it's data from OpenAlex, a free API that holds over 240 Million academic publications. 
+          OpenAlex automaticall tracks a massive set of information about each publication including auuthors, topics of study, citation, and more.<br>
+          For more details on the source data please visit https://openalex.org/ or click the image at the bottom of this section.<br>
+          <br>
+          Because this dataset is so large, and we are limited by browser performance, we have sampled a subset of the data to use for this page.
+          Different samples have been taken for different sections of this report based on the needs of each visualization.<br>
+          <br>
+
+          Again, a huge thanks to OpenAlex for providing such a rich and accessible dataset for academic research!
+          
+        </p>
+      </div>
+      <div class="panel-image">
+      <a href="https://openalex.org/">
+        <img src="src\lib\assets\open_alex_logo.webp" alt="OpenAlex Logo"  width=200 />
+      </a>
+    </div>
+    </div>  
+    </section>
+  
+  <!-- <Bar_topics
+  topics={yearRange
+  ? topics.filter(
+    (d) => d.year <= yearRange[1] && d.year >= yearRange[0],
+    )
+    : topics}
+    />
+    <br /> -->
+    
+    <!-- <Line data={yearCountArray} bind:yearRange />
+    
+    </div>
+    </section> -->
+    
+    <section class="panel">
+      <h1>Publications by Topic</h1>
+      <div class="panel-header">
+        <h2>Topic Distribution</h2>
+        <p>
+          The bubble chart below visualizes the number of publications published each year across different research topics.<br>
+          The X Axis shows the total number of publications in a given year for each topic.<br>
+          The Y Axis is a collaberation index that measure the percent of authors who's primary field of study is the same as the field they are publishing in.<br>
+          The size of each bubble represents the number of unique authors who have ever published in that topic.<br>
+          <br>
+          Click the play button to animate through the years.
+        </p>
+      </div>
+
+      <div class="panel-body">
+        <Bubble_chart {bubble_chart_data} />
+      </div>
+    </section>
+
+    <!-- Jeff: 100% stacked bar chart -->
     <section class="panel">
       <div class="panel-header">
         <h2>Topic Distribution</h2>
         <p>
-          Each bar represents how many publications are associated with a given
-          topic. Taller bars indicate areas where AI-related research is
-          especially active.
+          This 100% stacked bar chart illustrates how authors in various feels branch out to publish in different topics over their carreers.<br>
+          Each column represents a sequential publication for an author. If an author doesn't have enough publications to fill all columns, they are excluded from the chart.<br>
+          The colors indicate the topics of the publications, allowing us to see patterns in how authors do or don't diversify their research interests over time. <br>
+          This visualization will not tell you what topics authors move to in after thier first publication, but rather how "loyal" they are to their initial topic.
         </p>
       </div>
-      <div class="panel-body chart-body">
-        <Bar_topics {topics} />
+
+      <div class="panel-body">
+        <Stacked_Bar {author_data} />
       </div>
     </section>
 

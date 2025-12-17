@@ -1,4 +1,4 @@
-// src/lib/vis/worksData.ts
+	// src/lib/vis/worksData.ts
 import { csvParse } from "d3-dsv";
 
 export type WorkRow = {
@@ -9,7 +9,7 @@ export type WorkRow = {
 	year: number;      // pub_year
 };
 
-const CSV_URL = "/authors_mingyang_15p.csv";
+const CSV_URL = "/authors_mingyang.csv";
 
 let cache: WorkRow[] | null = null;
 
