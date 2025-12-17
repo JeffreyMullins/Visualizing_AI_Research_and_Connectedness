@@ -270,6 +270,22 @@
 
 
   onMount(async () => {
+    try {
+      const csvUrl = "./data_for_bubble_chart_large.csv";
+      bubble_chart_data = await d3.csv(csvUrl, (row) => {
+        return {
+          pub_year: Number(row.pub_year),
+          topic_field_display_name: String(row.topic_field_display_name),
+          num_publications: Number(row.num_publications),
+          cross_collaboration_metric: Number(row.cross_collaboration_metric),
+          authors: Number(row.authors),
+
+        };
+      });
+      console.log("Loaded bubble_chart_data Data:", bubble_chart_data);
+    } catch (error) {
+      console.error("Error loading CSV:", error);
+    }
     console.log("Bubble chart data length:", bubble_chart_data.length);
   });
 
