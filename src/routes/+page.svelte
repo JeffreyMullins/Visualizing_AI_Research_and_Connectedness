@@ -324,7 +324,7 @@
 
 
 
-  <!-- Jikai: Wordcloud & Stack area -->
+  <!-- Jikai: Wordcloud-->
   <section class="panel">
     <div class="panel-header">
       <h2>Topic Word Cloud</h2>
@@ -336,7 +336,7 @@
     </div>
   </section>  
 
-  <section class="panel">
+  <!-- <section class="panel">
     <div class="panel-header">
       <h2>Stacked Area Chart of Topics Over Time</h2>
       <p>
@@ -350,7 +350,7 @@
         height={300}
       />
     </div>
-  </section>
+  </section>-->
 
   <footer class="footer">
     <p>

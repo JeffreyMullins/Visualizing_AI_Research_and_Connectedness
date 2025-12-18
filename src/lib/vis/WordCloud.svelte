@@ -46,8 +46,8 @@
   // Load CSV files and match work_id to retrieve pub_year
   async function loadData() {
     const [topicsRaw, worksRaw] = await Promise.all([
-      d3.csv("./topics_sampled.csv"),
-      d3.csv("./works_sampled.csv")
+      d3.csv("./topics_sampled_medium.csv"),
+      d3.csv("./works_sampled_medium.csv")
     ]);
 
     // work id to publication year
