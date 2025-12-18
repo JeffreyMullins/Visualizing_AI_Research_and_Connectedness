@@ -4,7 +4,7 @@
 
   // --- DATA FILE ------------------------------------------------------------
   // CSV columns: work_id, author_id, countries, topic_field_display_name, pub_year
-  const CSV_WORKS = "./authors_mingyang.csv";
+  const CSV_WORKS = "./authors_mingyang_medium.csv";
 
   // --- CONSTANTS ------------------------------------------------------------
   const FIELD_COLORS = [
