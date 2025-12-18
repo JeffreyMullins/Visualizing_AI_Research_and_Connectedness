@@ -60,7 +60,7 @@
   }
 
   onMount(async () => {
-    topicsRaw = await d3.csv("/topics_sampled.csv");
+    topicsRaw = await d3.csv("./topics_sampled.csv");
 
     const aiIDs = new Set(topicsRaw.filter(isAI).map(d => d.work_id));
 

@@ -282,11 +282,12 @@
 
         };
       });
+      console.log("bubble chart csv url: ", csvUrl);
       console.log("Loaded bubble_chart_data Data:", bubble_chart_data);
     } catch (error) {
       console.error("Error loading CSV:", error);
     }
-    console.log("Bubble chart data length:", bubble_chart_data.length);
+    
   });
 
 </script>

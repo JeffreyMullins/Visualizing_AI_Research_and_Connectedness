@@ -8,7 +8,7 @@
     type WorkRow,
   } from "$lib/vis/worksData";
 
-  const WORLD_LOCAL = "/world.geojson";
+  const WORLD_LOCAL = "./world.geojson";
   const WORLD_REMOTE =
     "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson";
 
