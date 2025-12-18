@@ -217,11 +217,10 @@
     </section> -->
     
     <section class="panel">
-      <h1>Publications by Topic</h1>
       <div class="panel-header">
-        <h2>Topic Distribution</h2>
+        <h2> Academic Fields of Study At a Glance</h2>
         <p>
-          The bubble chart below visualizes the number of publications published each year across different research topics.<br>
+          The bubble chart below visualizes the number of publications published each year across different research topics. It provides a great high level view of what topics are popular to study, publish under, and how likely those topics are to collaberate with others.<br>
           The X Axis shows the total number of publications in a given year for each topic.<br>
           The Y Axis is a collaberation index that is the percent of authors who published in that field, who's primary field of study NOT the same as the field they are publishing in.<br>
           The size of each bubble represents the number of unique authors who have ever published in that topic.<br>
@@ -238,7 +237,7 @@
     <!-- Jeff: 100% stacked bar chart -->
     <section class="panel">
       <div class="panel-header">
-        <h2>Topic Distribution</h2>
+        <h2>Publication Topics Over an Author's Career</h2>
         <p>
           This 100% stacked bar chart illustrates how authors in various fields branch out to publish in different topics over their careers.<br>
           Each column represents a sequential publication for an author. If an author doesn't have enough publications to fill all columns, they are excluded from the chart.<br>
@@ -257,7 +256,7 @@
     <!-- Wenwen: Network -->
     <section class="panel">
       <div class="panel-header">
-        <h2>AI Collaboration Network (All Subfield)</h2>
+        <h2>AI Research: Collaboration Network (All Subfield)</h2>
         <p>
           NOT DONE YET<br>
           ADD MORE TEXT <br>
@@ -271,7 +270,7 @@
   <!-- Mingyang: Author -->
   <section class="panel">
     <div class="panel-header">
-      <h2>Exploring Publication Counts Across Fields of Study</h2>
+      <h2>AI Research: Exploring Publication Counts Across Fields of Study</h2>
         <p>
           Different fields of study have always had wildly different popularities, in this visualization we can see that over time there have beed a few fields with 
           far more authors than others. One clear observation is, staring in the 1900s the Arts and Humanities lead was taken by Medicine, and still today Medicine is the 
