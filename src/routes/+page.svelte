@@ -295,7 +295,7 @@
 
   <section class="panel">
     <div class="panel-header">
-      <h2>AI Research: Exponential expansion and growth in the 2000s</h2>
+      <h2>AI Researcher: Exponential expansion and growth in the 2000s</h2>
       <p>
         AI Reasearch has been around longer than many people think. Many people
         label Alan Turing's 1950 paper "Computing Machinery and Intelligence" as
@@ -317,7 +317,7 @@
 
   <section class="panel">
     <div class="panel-header">
-      <h2>AI Research Around the World</h2>
+      <h2>AI Researcher Around the World</h2>
       <p>
         The potential power of AI systems has driven many countries to invest in
         AI research in recent years. Most notibly, China and the US have been
@@ -331,7 +331,7 @@
 
   <section class="panel">
     <div class="panel-header">
-      <h2>Panel TITLE</h2>
+      <h2>AI Researcher Collaboration Network</h2>
       <p>
         As AI continues to gain prominence, an increasing number of researchers
         are embarking on AI-related studies. Some of these researchers are
@@ -357,7 +357,7 @@
       <h2>Topic Word Cloud</h2>
       <p>
         A word cloud visualization representing the most prominent topics (Top
-        30 each year) in AI research.
+        30 each year) in AI research.<br />
       </p>
       <div class="panel-body">
         <WordCloud />
