@@ -196,7 +196,7 @@
       </div>
       <div class="panel-image">
       <a href="https://openalex.org/">
-        <img src="./src/lib/assets/open_alex_logo.webp" alt="OpenAlex Logo"  width=200 />
+        <img src="./open_alex_logo.webp" alt="OpenAlex Logo"  width=200 />
       </a>
     </div>
     </div>  
