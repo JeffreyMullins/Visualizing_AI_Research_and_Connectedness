@@ -3,8 +3,8 @@
   import * as d3 from "d3";
 
   // CSV paths
-  export let topicsFilePath = "/topics_sampled.csv";
-  export let worksFilePath = "/works_sampled.csv";
+  export let topicsFilePath = "./topics_sampled.csv";
+  export let worksFilePath = "./works_sampled.csv";
 
   // Chart size
   export let width = 1500;

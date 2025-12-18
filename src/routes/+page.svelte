@@ -93,21 +93,21 @@
       console.error("Error loading CSV:", error);
     }
   
-    try {
-      const csvUrl = "./author_publication_sankey.csv";
-      author_data = await d3.csv(csvUrl, (row) => {
-        return {
-          first_publication_topic: String(row.first_publication_topic),
-          publication_order: Number(row.publication_order),
-          topic_order: Number(row.topic_order),
-          author_count: Number(row.author_count),
+    // try {
+    //   const csvUrl = "./author_publication_sankey.csv";
+    //   author_data = await d3.csv(csvUrl, (row) => {
+    //     return {
+    //       first_publication_topic: String(row.first_publication_topic),
+    //       publication_order: Number(row.publication_order),
+    //       topic_order: Number(row.topic_order),
+    //       author_count: Number(row.author_count),
 
-        };
-      });
-      console.log("Loaded author_data Data:", author_data);
-    } catch (error) {
-      console.error("Error loading CSV:", error);
-    }
+    //     };
+    //   });
+    //   console.log("Loaded author_data Data:", author_data);
+    // } catch (error) {
+    //   console.error("Error loading CSV:", error);
+    // }
 
     // try {
     //   const csvUrl = "./data_for_bubble_chart_large.csv";
@@ -196,7 +196,7 @@
       </div>
       <div class="panel-image">
       <a href="https://openalex.org/">
-        <img src="src\lib\assets\open_alex_logo.webp" alt="OpenAlex Logo"  width=200 />
+        <img src=".\src\lib\assets\open_alex_logo.webp" alt="OpenAlex Logo"  width=200 />
       </a>
     </div>
     </div>  
