@@ -9,7 +9,7 @@ export type WorkRow = {
 	year: number;      // pub_year
 };
 
-const CSV_URL = "/authors_mingyang.csv";
+const CSV_URL = "./authors_mingyang.csv";
 
 let cache: WorkRow[] | null = null;
 

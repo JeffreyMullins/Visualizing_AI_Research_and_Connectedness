@@ -11,7 +11,7 @@
     height?: number;
   };
   
-  let { bubble_chart_data, width = 1100, height: height_ = 500 }: Props = $props();
+  let { bubble_chart_data = [], width = 1100, height: height_ = 500 }: Props = $props();
   console.log("Bubble chart data length:", bubble_chart_data.length);
 
   let body_height = height_ + 10;

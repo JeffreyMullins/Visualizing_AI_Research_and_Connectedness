@@ -11,7 +11,7 @@
     height?: number;
   };
   
-  let { author_data, width = 1150, height = 500 }: Props = $props();
+  let { author_data=[], width = 1150, height = 500 }: Props = $props();
     console.log("Author data length:", author_data.length);
 
   const parsedData = $derived(author_data.filter(d => d.publication_order <= 50));
@@ -20,23 +20,23 @@
   let svgElement = $state<SVGSVGElement>();
   let selectedTopic = $state<string>("");
 
-    onMount(async () => {
-    try {
-      const csvUrl = "./author_publication_sankey.csv";
-      author_data = await d3.csv(csvUrl, (row) => {
-        return {
-          first_publication_topic: String(row.first_publication_topic),
-          publication_order: Number(row.publication_order),
-          topic_order: Number(row.topic_order),
-          author_count: Number(row.author_count),
+    // onMount(async () => {
+    // try {
+    //   const csvUrl = "./author_publication_sankey.csv";
+    //   author_data = await d3.csv(csvUrl, (row) => {
+    //     return {
+    //       first_publication_topic: String(row.first_publication_topic),
+    //       publication_order: Number(row.publication_order),
+    //       topic_order: Number(row.topic_order),
+    //       author_count: Number(row.author_count),
 
-        };
-      });
-      console.log("Loaded author_data Data:", author_data);
-    } catch (error) {
-      console.error("Error loading CSV:", error);
-    }
-    });
+    //     };
+    //   });
+    //   console.log("Loaded author_data Data:", author_data);
+    // } catch (error) {
+    //   console.error("Error loading CSV:", error);
+    // }
+    // });
   
   // Get unique topics for dropdown
   const uniqueTopics = Array.from(new Set(parsedData.map(d => d.first_publication_topic))).sort();
