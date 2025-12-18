@@ -92,7 +92,7 @@
     } catch (error) {
       console.error("Error loading CSV:", error);
     }
-  
+   console.log("uniques:", fieldCount);
     // try {
     //   const csvUrl = "./author_publication_sankey.csv";
     //   author_data = await d3.csv(csvUrl, (row) => {
@@ -158,19 +158,19 @@
       <div class="metric">
         <span class="metric-label">Publications</span>
         <span class="metric-value">
-          {topics.length === 0 ? "…" : topics.length.toLocaleString()}
+          {"11,254"}
         </span>
       </div>
       <div class="metric">
         <span class="metric-label">Topics</span>
         <span class="metric-value">
-          {topics.length === 0 ? "…" : uniqueTopics}
+          {"754"}
         </span>
       </div>
       <div class="metric">
-        <span class="metric-label">Fields in network</span>
+        <span class="metric-label">Fields of Study</span>
         <span class="metric-value">
-          {fieldCount === 0 ? "…" : fieldCount}
+          {"26"}
         </span>
       </div>
     </div>
