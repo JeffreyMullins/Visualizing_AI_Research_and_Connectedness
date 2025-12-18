@@ -3,4 +3,8 @@ static/authors_mingyang_large.csv filter=lfs diff=lfs merge=lfs -text
 static/authors_mingyang_1_3.csv filter=lfs diff=lfs merge=lfs -text
 static/authors_mingyang_15p.csv filter=lfs diff=lfs merge=lfs -text
 *_medium.csv filter=lfs diff=lfs merge=lfs -text
+<<<<<<< HEAD
 
+=======
+static/*.csv filter=lfs diff=lfs merge=lfs -text
+>>>>>>> c46a801686a4b0d1de9a35b450c73a0ab9ae548e
