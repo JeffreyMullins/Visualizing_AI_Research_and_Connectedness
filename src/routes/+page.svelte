@@ -158,7 +158,7 @@
       <div class="metric">
         <span class="metric-label">Publications</span>
         <span class="metric-value">
-          {"11,254"}
+          {"200,000+"}
         </span>
       </div>
       <div class="metric">
@@ -223,7 +223,7 @@
         <p>
           The bubble chart below visualizes the number of publications published each year across different research topics.<br>
           The X Axis shows the total number of publications in a given year for each topic.<br>
-          The Y Axis is a collaberation index that measure the percent of authors who's primary field of study is the same as the field they are publishing in.<br>
+          The Y Axis is a collaberation index that is the percent of authors who published in that field, who's primary field of study NOT the same as the field they are publishing in.<br>
           The size of each bubble represents the number of unique authors who have ever published in that topic.<br>
           <br>
           Click the play button to animate through the years.
@@ -240,10 +240,12 @@
       <div class="panel-header">
         <h2>Topic Distribution</h2>
         <p>
-          This 100% stacked bar chart illustrates how authors in various feels branch out to publish in different topics over their carreers.<br>
+          This 100% stacked bar chart illustrates how authors in various fields branch out to publish in different topics over their careers.<br>
           Each column represents a sequential publication for an author. If an author doesn't have enough publications to fill all columns, they are excluded from the chart.<br>
           The colors indicate the topics of the publications, allowing us to see patterns in how authors do or don't diversify their research interests over time. <br>
-          This visualization will not tell you what topics authors move to in after thier first publication, but rather how "loyal" they are to their initial topic.
+          <br>
+          This visualization will not tell you what topics authors move to in after their first publication, but rather how "loyal" they are to their initial topic.<br>
+          Try selecting different fields to see how common it is for authors to branch out an participate in other fields of study.
         </p>
       </div>
 
@@ -254,7 +256,13 @@
 
     <!-- Wenwen: Network -->
     <section class="panel">
-      <h2>AI Collaboration Network (All Subfield)</h2>
+      <div class="panel-header">
+        <h2>AI Collaboration Network (All Subfield)</h2>
+        <p>
+          NOT DONE YET<br>
+          ADD MORE TEXT <br>
+        </p>
+      </div>
       <AiFieldNetwork {topics} />
     </section>
 
@@ -262,18 +270,55 @@
 
   <!-- Mingyang: Author -->
   <section class="panel">
+    <div class="panel-header">
+      <h2>Exploring Publication Counts Across Fields of Study</h2>
+        <p>
+          Different fields of study have always had wildly different popularities, in this visualization we can see that over time there have beed a few fields with 
+          far more authors than others. One clear observation is, staring in the 1900s the Arts and Humanities lead was taken by Medicine, and still today Medicine is the 
+          top field in terms of authors and volume of publications <br>
+          <br>
+          Use the Year Slider at the bottom of the chart to explore compare author counts across fields of study in different years.<br>
+        </p>
+    </div>
     <FieldsGalaxy />
   </section>
 
   <section class="panel">
+    <div class="panel-header">
+      <h2>AI Research: Exponential expansion and growth in the 2000s</h2>
+        <p>
+          AI Reasearch has been around longer than many people think. Many people label Alan Turing's 1950 paper "Computing Machinery and Intelligence" as the first schollarly article on
+          the subject, but the concept of mechanical minds had been floating around in people's minds long before that. <br>
+          <br>
+          What is even more interesting is that it isn't just Computer Scientists who have been publishing AI research over the years. Especially in recent decades we can see that fields
+          like Medicine, Psychology, and even Art have been contributing to the growth of AI research. <br>
+          <br>
+          Use the Field A and Field B dropdowns to compare how different academic fields have contributed to AI research over time.<br>
+        </p>
+    </div>
     <FieldTrends />
   </section>
 
   <section class="panel">
+    <div class="panel-header">
+      <h2>AI Research Around the World</h2>
+        <p>
+          The potential power of AI systems has driven many countries to invest in AI research in recent years. 
+          Most notibly, China and the US have been the strongest publishers of new AI research. <br><br>
+          Use the Year Slider to see just how many papers in AI research are being published around the world. <br>
+        </p>
+    </div>
     <AiGeoMap />
   </section>
 
   <section class="panel">
+    <div class="panel-header">
+      <h2>Panel TITLE</h2>
+        <p>
+          NOT DONE YET<br>
+          ADD MORE TEXT <br>
+        </p>
+    </div>
     <CoauthorNetwork />
   </section>
 

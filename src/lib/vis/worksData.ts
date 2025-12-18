@@ -16,8 +16,8 @@ let cache: WorkRow[] | null = null;
 // Basic ISO2 -> country-name mapping for most research-heavy countries.
 // If you see a country not mapped correctly, you can extend this object.
 const iso2ToName: Record<string, string> = {
-	US: "United States of America",
-	GB: "United Kingdom",
+	US: "USA",
+	GB: "England",
 	FR: "France",
 	DE: "Germany",
 	CN: "China",

@@ -46,8 +46,8 @@
     const svg = d3.select(svgElement);
 
     // Create scales
-    const xScale = d3.scaleLinear()
-      .domain([0, d3.max(bubble_chart_data, d => d.num_publications) * 1.1 || 100])
+    const xScale = d3.scaleLog()
+      .domain([1, d3.max(bubble_chart_data, d => d.num_publications) * 1.1 || 100])
       .range([margin.left, width - margin.right]);
 
     const yScale = d3.scaleLinear()
@@ -82,7 +82,7 @@
         .attr('text-anchor', 'middle')
         .style('font-size', '14px')
         .style('font-weight', 'bold')
-        .text('Number of Publications');
+        .text('Number of Publications In the Given Year (Log Scale)');
 
       axesGroup.append('text')
         .attr('class', 'y-label')
@@ -92,7 +92,7 @@
         .attr('text-anchor', 'middle')
         .style('font-size', '14px')
         .style('font-weight', 'bold')
-        .text('Cross Collaboration Metric');
+        .text('Cross Collaboration Index');
 
       // Create bubbles group
       svg.append('g').attr('class', 'bubbles');
