@@ -278,6 +278,13 @@
   </section>
   <section class="panel">
     <h2>AI Collaboration Network (AI X Social Sciences)</h2>
+    <p>
+      Artificial Intelligence acts as a central hub connecting a range of social
+      science subfields. Larger nodes indicate subfields with more frequent
+      participation in AI-related research within the social sciences, while
+      denser links reflect stronger interdisciplinary integration between AI and
+      social science domains.<br />
+    </p>
     <AiSocialNetwork {topics} />
   </section>
 
