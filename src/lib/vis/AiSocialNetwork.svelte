@@ -74,7 +74,7 @@
   // Load CSV + filtering logic (AI × Social Sciences)
   // -------------------------------------------------
   onMount(async () => {
-    topicsRaw = await d3.csv("/topics_sampled_medium.csv");
+    topicsRaw = await d3.csv("./topics_sampled_medium.csv");
 
     // Step 1 — papers containing AI
     const aiIDs = new Set(topicsRaw.filter(isAI).map((d) => d.work_id));
