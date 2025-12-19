@@ -4,26 +4,37 @@
 
   let networkContainer: HTMLDivElement;
 
-  // Step 1: CSV Raw Data
+  // Raw CSV data
   let topicsRaw = [];
-  let topicsAI = [];
+  let topicsFiltered = [];
 
-  // Case-insensitive AI detection
+  // --------------------------------------
+  // Detect Artificial Intelligence topics
+  // --------------------------------------
   const isAI = (d) => {
-    const t1 = d.topic_display_name?.toLowerCase() || "";
-    const t2 = d.topic_sub_field_display_name?.toLowerCase() || "";
-    const t3 = d.topic_field_display_name?.toLowerCase() || "";
+    const a = d.topic_display_name?.toLowerCase() || "";
+    const b = d.topic_sub_field_display_name?.toLowerCase() || "";
+    const c = d.topic_field_display_name?.toLowerCase() || "";
     return (
-      t1.includes("artificial intelligence") ||
-      t2.includes("artificial intelligence") ||
-      t3.includes("artificial intelligence")
+      a.includes("artificial intelligence") ||
+      b.includes("artificial intelligence") ||
+      c.includes("artificial intelligence")
     );
   };
 
-  // Step 2: Build nodes/links from subfields
+  // --------------------------------------
+  // Detect Social Sciences topics
+  // --------------------------------------
+  const isSocialScience = (d) =>
+    d.topic_domain_display_name?.toLowerCase() === "social sciences";
+
+  // Graph structure
   let nodes = [];
   let links = [];
 
+  // -------------------------------------------------
+  // Build network from AI + Social Science rows only
+  // -------------------------------------------------
   function buildNetwork(data) {
     const subfieldCount = d3.rollup(
       data,
@@ -59,19 +70,35 @@
     });
   }
 
+  // -------------------------------------------------
+  // Load CSV + filtering logic (AI × Social Sciences)
+  // -------------------------------------------------
   onMount(async () => {
-    topicsRaw = await d3.csv("./topics_sampled_medium.csv");
+    topicsRaw = await d3.csv("/topics_sampled_medium.csv");
 
+    // Step 1 — papers containing AI
     const aiIDs = new Set(topicsRaw.filter(isAI).map((d) => d.work_id));
 
-    topicsAI = topicsRaw.filter((d) => aiIDs.has(d.work_id));
+    // Step 2 — papers containing Social Sciences
+    const ssIDs = new Set(
+      topicsRaw.filter(isSocialScience).map((d) => d.work_id),
+    );
 
-    buildNetwork(topicsAI);
+    // Step 3 — intersection = AI × Social Science papers
+    const intersection = new Set([...aiIDs].filter((id) => ssIDs.has(id)));
 
+    // Step 4 — keep only AI + SS rows (remove physics, biology, etc.)
+    topicsFiltered = topicsRaw.filter(
+      (d) => intersection.has(d.work_id) && (isAI(d) || isSocialScience(d)),
+    );
+
+    buildNetwork(topicsFiltered);
     drawNetwork();
   });
 
-  // Step 3: Draw network
+  // --------------------------------------
+  // Draw force-directed network graph
+  // --------------------------------------
   function drawNetwork() {
     if (!networkContainer || nodes.length === 0) return;
 
@@ -85,7 +112,6 @@
       .attr("height", "100%")
       .attr("viewBox", `${-50} ${-50} ${width + 100} ${height + 100}`);
 
-    // A group inside for zooming
     const g = svg.append("g");
 
     const color = d3.scaleOrdinal(d3.schemeTableau10);
@@ -93,7 +119,7 @@
     const sizeScale = d3
       .scaleSqrt()
       .domain(d3.extent(nodes, (d) => d.count))
-      .range([5, 30]);
+      .range([6, 35]);
 
     const linkScale = d3
       .scaleLinear()
@@ -107,18 +133,14 @@
         d3
           .forceLink(links)
           .id((d) => d.id)
-          .distance(100),
+          .distance(120),
       )
       .force("charge", d3.forceManyBody().strength(-450))
       .force(
         "collision",
-        d3.forceCollide().radius((d) => sizeScale(d.count) + 6),
+        d3.forceCollide().radius((d) => sizeScale(d.count) + 8),
       )
-      .force("center", d3.forceCenter(width / 2, height / 2))
-      .force(
-        "labelForce",
-        d3.forceCollide().radius((d) => sizeScale(d.count) + 18),
-      );
+      .force("center", d3.forceCenter(width / 2, height / 2));
 
     const link = g
       .append("g")
@@ -139,7 +161,7 @@
       .attr("r", (d) => sizeScale(d.count))
       .attr("fill", (d) => color(d.id))
       .attr("stroke", "#000")
-      .attr("stroke-width", 0.3)
+      .attr("stroke-width", 0.4)
       .call(
         d3
           .drag()
@@ -170,11 +192,7 @@
       .attr("dx", 10)
       .attr("dy", 4);
 
-    // ------------------------------------
-    // ⭐⭐⭐ HOVER HIGHLIGHT ADDED HERE ⭐⭐⭐
-    // ------------------------------------
-
-    // 构建邻接表，用于判断相连节点
+    // Highlight logic
     const adjacency = {};
     links.forEach((l) => {
       adjacency[l.source.id + "-" + l.target.id] = true;
@@ -199,8 +217,6 @@
         label.style("opacity", 1);
       });
 
-    // ------------------------------------
-
     simulation.on("tick", () => {
       link
         .attr("x1", (d) => d.source.x)
@@ -212,14 +228,11 @@
       label.attr("x", (d) => d.x).attr("y", (d) => d.y);
     });
 
-    // zoom/pan
     svg.call(
       d3
         .zoom()
         .scaleExtent([0.2, 4])
-        .on("zoom", (event) => {
-          g.attr("transform", event.transform);
-        }),
+        .on("zoom", (event) => g.attr("transform", event.transform)),
     );
   }
 </script>
