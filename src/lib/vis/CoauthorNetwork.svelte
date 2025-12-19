@@ -973,12 +973,6 @@
 
 <h2>How do AI research fields connect through co-authorship?</h2>
 
-<p class="hint">
-  Each circle is an author. Use the <b>Field view</b> menu to focus on one
-  research field; rings mark authors who also collaborate with other fields.
-  Click an author on the right to see their closest collaborators <b>inside</b>
-  and <b>outside</b> that field.
-</p>
 
 <!-- Controls -->
 <div class="toolbar">

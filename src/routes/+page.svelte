@@ -16,44 +16,41 @@
   import Stacked_Bar from "$lib/Stacked_Bar.svelte";
   import Bubble_chart from "$lib/Bubble_chart.svelte";
   import Line from "$lib/Line.svelte";
-    import Bar from "$lib/Bar.svelte";
+  import Bar from "$lib/Bar.svelte";
 
-    // --- Topic data ---
+  // --- Topic data ---
   let topics_bar: Tbar_chart_pubs[] = [];
   let topics: TTopic[] = [];
   let author_data: Tsankey_authors[] = [];
   let bubble_chart_data: Tbubble_chart[] = [];
   let uniqueTopics = 0;
 
-    let yearRange: [Date, Date] | undefined = $state();
+  let yearRange: [Date, Date] | undefined = $state();
 
-    function getYearCountArray(topics_bar: Tbar_chart_pubs[]) {
-        let yearCount: { [pub_year: number]: number } = {};
-        const allYears = [...new Set(topics_bar.map((d) => d.pub_year))];
-        
-        for (let pub_year of allYears) {
-            yearCount[pub_year] = topics_bar
-                .filter((d) => d.pub_year === pub_year)
-                .reduce((sum, d) => sum + d.id, 0);
-        }
+  function getYearCountArray(topics_bar: Tbar_chart_pubs[]) {
+    let yearCount: { [pub_year: number]: number } = {};
+    const allYears = [...new Set(topics_bar.map((d) => d.pub_year))];
 
-        // Convert the map to an array of { year, count } objects
-        const yearCountArray = Object.entries(yearCount).map(
-            ([pub_year, count]) => ({
-                x: new Date(pub_year),
-                y: count as number,
-            }),
-        );
-
-        // Sort the array by year in ascending order
-        yearCountArray.sort((a, b) => (a.x < b.x ? -1 : 1));
-        return yearCountArray;
+    for (let pub_year of allYears) {
+      yearCount[pub_year] = topics_bar
+        .filter((d) => d.pub_year === pub_year)
+        .reduce((sum, d) => sum + d.id, 0);
     }
-    let yearCountArray = $derived(getYearCountArray(topics_bar));
-    console.log("yearCountArray2:", topics_bar);
 
+    // Convert the map to an array of { year, count } objects
+    const yearCountArray = Object.entries(yearCount).map(
+      ([pub_year, count]) => ({
+        x: new Date(pub_year),
+        y: count as number,
+      }),
+    );
 
-
+    // Sort the array by year in ascending order
+    yearCountArray.sort((a, b) => (a.x < b.x ? -1 : 1));
+    return yearCountArray;
+  }
+  let yearCountArray = $derived(getYearCountArray(topics_bar));
+  console.log("yearCountArray2:", topics_bar);
 
   async function loadCsv() {
     try {
@@ -63,7 +60,6 @@
           pub_year: Number(row.pub_year),
           topic_field_display_name: String(row.topic_field_display_name),
           id: Number(row.id),
-         
         };
       });
 
@@ -92,7 +88,7 @@
     } catch (error) {
       console.error("Error loading CSV:", error);
     }
-   console.log("uniques:", fieldCount);
+    console.log("uniques:", fieldCount);
     // try {
     //   const csvUrl = "./author_publication_sankey.csv";
     //   author_data = await d3.csv(csvUrl, (row) => {
@@ -125,19 +121,13 @@
     // } catch (error) {
     //   console.error("Error loading CSV:", error);
     // }
-
   }
 
-
-
-
   onMount(loadCsv);
-  
+
   // --- Network Data & Visualization ---
 
   let fieldCount = 0;
-
-  
 </script>
 
 <main class="page">
@@ -175,33 +165,38 @@
       </div>
     </div>
   </header>
-<section class="panel">
-      <h1>About The Data</h1>
+  <section class="panel">
+    <h1>About The Data</h1>
 
-          <div class="panel-content">
-
+    <div class="panel-content">
       <div class="panel-header">
         <p>
-          This interactive visualization dashboard derrives it's data from OpenAlex, a free API that holds over 240 Million academic publications. 
-          OpenAlex automaticall tracks a massive set of information about each publication including auuthors, topics of study, citation, and more.<br>
-          For more details on the source data please visit https://openalex.org/ or click the image at the bottom of this section.<br>
-          <br>
-          Because this dataset is so large, and we are limited by browser performance, we have sampled a subset of the data to use for this page.
-          Different samples have been taken for different sections of this report based on the needs of each visualization.<br>
-          <br>
+          This interactive visualization dashboard derrives it's data from
+          OpenAlex, a free API that holds over 240 Million academic
+          publications. OpenAlex automaticall tracks a massive set of
+          information about each publication including auuthors, topics of
+          study, citation, and more.<br />
+          For more details on the source data please visit https://openalex.org/
+          or click the image at the bottom of this section.<br />
+          <br />
+          Because this dataset is so large, and we are limited by browser performance,
+          we have sampled a subset of the data to use for this page. Different samples
+          have been taken for different sections of this report based on the needs
+          of each visualization.<br />
+          <br />
 
-          Again, a huge thanks to OpenAlex for providing such a rich and accessible dataset for academic research!
-          
+          Again, a huge thanks to OpenAlex for providing such a rich and
+          accessible dataset for academic research!
         </p>
       </div>
       <div class="panel-image">
-      <a href="https://openalex.org/">
-        <img src="./open_alex_logo.webp" alt="OpenAlex Logo"  width=200 />
-      </a>
+        <a href="https://openalex.org/">
+          <img src="./open_alex_logo.webp" alt="OpenAlex Logo" width="200" />
+        </a>
+      </div>
     </div>
-    </div>  
-    </section>
-  
+  </section>
+
   <!-- <Bar_topics
   topics={yearRange
   ? topics.filter(
@@ -210,8 +205,8 @@
     : topics}
     />
     <br /> -->
-    
-    <!-- <Line data={yearCountArray} bind:yearRange />
+
+  <!-- <Line data={yearCountArray} bind:yearRange />
     
     </div>
     </section> -->
@@ -229,10 +224,10 @@
         </p>
       </div>
 
-      <div class="panel-body">
-        <Bubble_chart {bubble_chart_data} />
-      </div>
-    </section>
+    <div class="panel-body">
+      <Bubble_chart {bubble_chart_data} />
+    </div>
+  </section>
 
     <!-- Jeff: 100% stacked bar chart -->
     <section class="panel">
@@ -248,10 +243,10 @@
         </p>
       </div>
 
-      <div class="panel-body">
-        <Stacked_Bar {author_data} />
-      </div>
-    </section>
+    <div class="panel-body">
+      <Stacked_Bar {author_data} />
+    </div>
+  </section>
 
     <!-- Wenwen: Network -->
     <section class="panel">
@@ -265,77 +260,98 @@
       <AiFieldNetwork {topics} />
     </section>
 
-    
-
   <!-- Mingyang: Author -->
   <section class="panel">
     <div class="panel-header">
-      <h2>AI Research: Exploring Publication Counts Across Fields of Study</h2>
-        <p>
-          Different fields of study have always had wildly different popularities, in this visualization we can see that over time there have beed a few fields with 
-          far more authors than others. One clear observation is, staring in the 1900s the Arts and Humanities lead was taken by Medicine, and still today Medicine is the 
-          top field in terms of authors and volume of publications <br>
-          <br>
-          Use the Year Slider at the bottom of the chart to explore compare author counts across fields of study in different years.<br>
-        </p>
+      <h2>Exploring Publication Counts Across Fields of Study</h2>
+      <p>
+        Different fields of study have always had wildly different popularities,
+        in this visualization we can see that over time there have beed a few
+        fields with far more authors than others. One clear observation is,
+        staring in the 1900s the Arts and Humanities lead was taken by Medicine,
+        and still today Medicine is the top field in terms of authors and volume
+        of publications <br />
+        <br />
+        Use the Year Slider at the bottom of the chart to explore compare author
+        counts across fields of study in different years.<br />
+      </p>
     </div>
     <FieldsGalaxy />
   </section>
 
   <section class="panel">
     <div class="panel-header">
-      <h2>AI Research: Exponential expansion and growth in the 2000s</h2>
-        <p>
-          AI Reasearch has been around longer than many people think. Many people label Alan Turing's 1950 paper "Computing Machinery and Intelligence" as the first schollarly article on
-          the subject, but the concept of mechanical minds had been floating around in people's minds long before that. <br>
-          <br>
-          What is even more interesting is that it isn't just Computer Scientists who have been publishing AI research over the years. Especially in recent decades we can see that fields
-          like Medicine, Psychology, and even Art have been contributing to the growth of AI research. <br>
-          <br>
-          Use the Field A and Field B dropdowns to compare how different academic fields have contributed to AI research over time.<br>
-        </p>
+      <h2>AI Researcher: Exponential expansion and growth in the 2000s</h2>
+      <p>
+        AI Reasearch has been around longer than many people think. Many people
+        label Alan Turing's 1950 paper "Computing Machinery and Intelligence" as
+        the first schollarly article on the subject, but the concept of
+        mechanical minds had been floating around in people's minds long before
+        that. <br />
+        <br />
+        What is even more interesting is that it isn't just Computer Scientists who
+        have been publishing AI research over the years. Especially in recent decades
+        we can see that fields like Medicine, Psychology, and even Art have been
+        contributing to the growth of AI research. <br />
+        <br />
+        Use the Field A and Field B dropdowns to compare how different academic fields
+        have contributed to AI research over time.<br />
+      </p>
     </div>
     <FieldTrends />
   </section>
 
   <section class="panel">
     <div class="panel-header">
-      <h2>AI Research Around the World</h2>
-        <p>
-          The potential power of AI systems has driven many countries to invest in AI research in recent years. 
-          Most notibly, China and the US have been the strongest publishers of new AI research. <br><br>
-          Use the Year Slider to see just how many papers in AI research are being published around the world. <br>
-        </p>
+      <h2>AI Researcher Around the World</h2>
+      <p>
+        The potential power of AI systems has driven many countries to invest in
+        AI research in recent years. Most notibly, China and the US have been
+        the strongest publishers of new AI research. <br /><br />
+        Use the Year Slider to see just how many papers in AI research are being
+        published around the world. <br />
+      </p>
     </div>
     <AiGeoMap />
   </section>
 
   <section class="panel">
     <div class="panel-header">
-      <h2>Panel TITLE</h2>
-        <p>
-          NOT DONE YET<br>
-          ADD MORE TEXT <br>
-        </p>
+      <h2>AI Researcher Collaboration Network</h2>
+      <p>
+        As AI continues to gain prominence, an increasing number of researchers
+        are embarking on AI-related studies. Some of these researchers are
+        extending their collaborations beyond their original fields. With this
+        system, users can explore how these researchers engage with both their
+        primary discipline and other fields through collaborative efforts.<br
+        /><br />
+        This visualization will help identify key players in the AI research landscape
+        and reveal potential interdisciplinary connections that could drive future
+        innovations.<br /><br />
+        Each circle is an author. Use the Field view menu to focus on one research
+        field; rings mark authors who also collaborate with other fields. Click an
+        author on the right to see their closest collaborators inside and outside
+        that field. <br />
+      </p>
     </div>
     <CoauthorNetwork />
   </section>
 
-
-
-  <!-- Jikai: Wordcloud & Stack area -->
+  <!-- Jikai: Wordcloud-->
   <section class="panel">
     <div class="panel-header">
       <h2>Topic Word Cloud</h2>
       <p>
-        A word cloud visualization representing the most prominent topics (Top 30 each year) in AI research.
+        A word cloud visualization representing the most prominent topics (Top
+        30 each year) in AI research.<br />
       </p>
-    <div class="panel-body">
-      <WordCloud/>
+      <div class="panel-body">
+        <WordCloud />
+      </div>
     </div>
-  </section>  
+  </section>
 
-  <section class="panel">
+  <!-- <section class="panel">
     <div class="panel-header">
       <h2>Stacked Area Chart of Topics Over Time</h2>
       <p>
@@ -349,7 +365,7 @@
         height={300}
       />
     </div>
-  </section>
+  </section>-->
 
   <footer class="footer">
     <p>
@@ -357,8 +373,11 @@
       publications.
     </p>
   </footer>
-  
 </main>
+
+<!-- 
+LLMs including ChatGPT, and so on have been used for help with doing this task.
+-->
 
 <style>
   :global(body) {
@@ -508,7 +527,3 @@
     margin-top: 8px;
   }
 </style>
-
-<!-- 
-LLMs including ChatGPT, and so on have been used for help with doing this task.
--->
