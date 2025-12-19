@@ -17,6 +17,7 @@
   import Bubble_chart from "$lib/Bubble_chart.svelte";
   import Line from "$lib/Line.svelte";
   import Bar from "$lib/Bar.svelte";
+  import AiSocialNetwork from "$lib/vis/AiSocialNetwork.svelte";
 
   // --- Topic data ---
   let topics_bar: Tbar_chart_pubs[] = [];
@@ -267,11 +268,17 @@
     <div class="panel-header">
       <h2>AI Collaboration Network (All Subfield)</h2>
       <p>
-        NOT DONE YET<br />
-        ADD MORE TEXT <br />
+        Artificial Intelligence acts as a central hub connecting a wide range of
+        scientific subfields. Larger nodes indicate more frequent participation
+        in AI-related research, and denser links reflect stronger
+        interdisciplinary ties.<br />
       </p>
     </div>
     <AiFieldNetwork {topics} />
+  </section>
+  <section class="panel">
+    <h2>AI Collaboration Network (AI X Social Sciences)</h2>
+    <AiSocialNetwork {topics} />
   </section>
 
   <!-- Mingyang: Author -->
