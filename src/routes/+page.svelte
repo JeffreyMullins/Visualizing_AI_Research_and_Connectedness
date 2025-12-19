@@ -271,7 +271,7 @@
         Artificial Intelligence acts as a central hub connecting a wide range of
         scientific subfields. Larger nodes indicate more frequent participation
         in AI-related research, and denser links reflect stronger
-        interdisciplinary ties.<br />
+        interdisciplinary ties.
       </p>
     </div>
     <AiFieldNetwork {topics} />
@@ -283,7 +283,7 @@
       science subfields. Larger nodes indicate subfields with more frequent
       participation in AI-related research within the social sciences, while
       denser links reflect stronger interdisciplinary integration between AI and
-      social science domains.<br />
+      social science domains.
     </p>
     <AiSocialNetwork {topics} />
   </section>
