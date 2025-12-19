@@ -260,10 +260,12 @@
     <AiFieldNetwork {topics} />
   </section>
   <section class="panel">
+    <div class="panel-header"></div>
     <h2>AI Collaboration Network (AI X Social Sciences)</h2>
     <p>
       This network focuses specifically on the intersection between Artificial Intelligence and social science disciplines, illustrating how AI connects with social science subfields. Node size reflects the relative engagement of each social science area with AI, and links emphasize the structure of AI–social science collaborations.
     </p>
+    </div>
     <AiSocialNetwork {topics} />
   </section>
 
