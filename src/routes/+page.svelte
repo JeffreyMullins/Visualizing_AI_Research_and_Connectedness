@@ -252,12 +252,9 @@
   <!-- Wenwen: Network -->
   <section class="panel">
     <div class="panel-header">
-      <h2>AI Collaboration Network (All Subfield)</h2>
+      <h2>AI Collaboration Network (All Subfields)</h2>
       <p>
-        Artificial Intelligence acts as a central hub connecting a wide range of
-        scientific subfields. Larger nodes indicate more frequent participation
-        in AI-related research, and denser links reflect stronger
-        interdisciplinary ties.
+        This network provides a global view of how Artificial Intelligence is embedded across diverse scientific subfields. Node size represents the overall prominence of each subfield in AI-related research, while link density highlights cross-disciplinary co-occurrence patterns.
       </p>
     </div>
     <AiFieldNetwork {topics} />
@@ -265,11 +262,7 @@
   <section class="panel">
     <h2>AI Collaboration Network (AI X Social Sciences)</h2>
     <p>
-      Artificial Intelligence acts as a central hub connecting a range of social
-      science subfields. Larger nodes indicate subfields with more frequent
-      participation in AI-related research within the social sciences, while
-      denser links reflect stronger interdisciplinary integration between AI and
-      social science domains.
+      This network focuses specifically on the intersection between Artificial Intelligence and social science disciplines, illustrating how AI connects with social science subfields. Node size reflects the relative engagement of each social science area with AI, and links emphasize the structure of AI–social science collaborations.
     </p>
     <AiSocialNetwork {topics} />
   </section>
