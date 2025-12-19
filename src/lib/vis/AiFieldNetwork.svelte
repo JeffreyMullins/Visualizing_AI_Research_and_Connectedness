@@ -27,21 +27,21 @@
   function buildNetwork(data) {
     const subfieldCount = d3.rollup(
       data,
-      v => v.length,
-      d => d.topic_sub_field_display_name
+      (v) => v.length,
+      (d) => d.topic_sub_field_display_name,
     );
 
     nodes = Array.from(subfieldCount, ([sub, count]) => ({
       id: sub,
-      count
+      count,
     }));
 
     const linkMap = new Map();
-    const grouped = d3.group(data, d => d.work_id);
+    const grouped = d3.group(data, (d) => d.work_id);
 
     for (const [workId, rows] of grouped) {
       const subs = Array.from(
-        new Set(rows.map(r => r.topic_sub_field_display_name))
+        new Set(rows.map((r) => r.topic_sub_field_display_name)),
       );
       if (subs.length <= 1) continue;
 
@@ -60,11 +60,11 @@
   }
 
   onMount(async () => {
-    topicsRaw = await d3.csv("./topics_sampled.csv");
+    topicsRaw = await d3.csv("./topics_sampled_medium.csv");
 
-    const aiIDs = new Set(topicsRaw.filter(isAI).map(d => d.work_id));
+    const aiIDs = new Set(topicsRaw.filter(isAI).map((d) => d.work_id));
 
-    topicsAI = topicsRaw.filter(d => aiIDs.has(d.work_id));
+    topicsAI = topicsRaw.filter((d) => aiIDs.has(d.work_id));
 
     buildNetwork(topicsAI);
 
@@ -90,21 +90,35 @@
 
     const color = d3.scaleOrdinal(d3.schemeTableau10);
 
-    const sizeScale = d3.scaleSqrt()
-      .domain(d3.extent(nodes, d => d.count))
+    const sizeScale = d3
+      .scaleSqrt()
+      .domain(d3.extent(nodes, (d) => d.count))
       .range([5, 30]);
 
-    const linkScale = d3.scaleLinear()
-      .domain(d3.extent(links, d => d.count))
+    const linkScale = d3
+      .scaleLinear()
+      .domain(d3.extent(links, (d) => d.count))
       .range([1, 6]);
 
     const simulation = d3
       .forceSimulation(nodes)
-      .force("link", d3.forceLink(links).id(d => d.id).distance(100))
+      .force(
+        "link",
+        d3
+          .forceLink(links)
+          .id((d) => d.id)
+          .distance(100),
+      )
       .force("charge", d3.forceManyBody().strength(-450))
-      .force("collision", d3.forceCollide().radius(d => sizeScale(d.count) + 6))
+      .force(
+        "collision",
+        d3.forceCollide().radius((d) => sizeScale(d.count) + 6),
+      )
       .force("center", d3.forceCenter(width / 2, height / 2))
-      .force("labelForce", d3.forceCollide().radius(d => sizeScale(d.count) + 18));
+      .force(
+        "labelForce",
+        d3.forceCollide().radius((d) => sizeScale(d.count) + 18),
+      );
 
     const link = g
       .append("g")
@@ -114,7 +128,7 @@
       .data(links)
       .enter()
       .append("line")
-      .attr("stroke-width", d => linkScale(d.count));
+      .attr("stroke-width", (d) => linkScale(d.count));
 
     const node = g
       .append("g")
@@ -122,12 +136,13 @@
       .data(nodes)
       .enter()
       .append("circle")
-      .attr("r", d => sizeScale(d.count))
-      .attr("fill", d => color(d.id))
+      .attr("r", (d) => sizeScale(d.count))
+      .attr("fill", (d) => color(d.id))
       .attr("stroke", "#000")
       .attr("stroke-width", 0.3)
       .call(
-        d3.drag()
+        d3
+          .drag()
           .on("start", (event, d) => {
             if (!event.active) simulation.alphaTarget(0.2).restart();
             d.fx = d.x;
@@ -141,7 +156,7 @@
             if (!event.active) simulation.alphaTarget(0);
             d.fx = null;
             d.fy = null;
-          })
+          }),
       );
 
     const label = g
@@ -150,7 +165,7 @@
       .data(nodes)
       .enter()
       .append("text")
-      .text(d => d.id)
+      .text((d) => d.id)
       .attr("font-size", "10px")
       .attr("dx", 10)
       .attr("dy", 4);
@@ -161,7 +176,7 @@
 
     // 构建邻接表，用于判断相连节点
     const adjacency = {};
-    links.forEach(l => {
+    links.forEach((l) => {
       adjacency[l.source.id + "-" + l.target.id] = true;
       adjacency[l.target.id + "-" + l.source.id] = true;
     });
@@ -172,9 +187,11 @@
 
     node
       .on("mouseover", (_, d) => {
-        node.style("opacity", o => (isConnected(d, o) ? 1 : 0.1));
-        link.style("opacity", o => (o.source.id === d.id || o.target.id === d.id ? 1 : 0.05));
-        label.style("opacity", o => (isConnected(d, o) ? 1 : 0.1));
+        node.style("opacity", (o) => (isConnected(d, o) ? 1 : 0.1));
+        link.style("opacity", (o) =>
+          o.source.id === d.id || o.target.id === d.id ? 1 : 0.05,
+        );
+        label.style("opacity", (o) => (isConnected(d, o) ? 1 : 0.1));
       })
       .on("mouseout", () => {
         node.style("opacity", 1);
@@ -186,20 +203,23 @@
 
     simulation.on("tick", () => {
       link
-        .attr("x1", d => d.source.x)
-        .attr("y1", d => d.source.y)
-        .attr("x2", d => d.target.x)
-        .attr("y2", d => d.target.y);
+        .attr("x1", (d) => d.source.x)
+        .attr("y1", (d) => d.source.y)
+        .attr("x2", (d) => d.target.x)
+        .attr("y2", (d) => d.target.y);
 
-      node.attr("cx", d => d.x).attr("cy", d => d.y);
-      label.attr("x", d => d.x).attr("y", d => d.y);
+      node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+      label.attr("x", (d) => d.x).attr("y", (d) => d.y);
     });
 
     // zoom/pan
     svg.call(
-      d3.zoom().scaleExtent([0.2, 4]).on("zoom", (event) => {
-        g.attr("transform", event.transform);
-      })
+      d3
+        .zoom()
+        .scaleExtent([0.2, 4])
+        .on("zoom", (event) => {
+          g.attr("transform", event.transform);
+        }),
     );
   }
 </script>
@@ -207,12 +227,12 @@
 <div bind:this={networkContainer} class="network-container"></div>
 
 <style>
-.network-container {
-  width: 100%;
-  height: 650px;
-  background: #fff;
-  border-radius: 16px;
-  border: 1px solid #e5e7eb;
-  overflow: hidden;
-}
+  .network-container {
+    width: 100%;
+    height: 650px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+  }
 </style>
